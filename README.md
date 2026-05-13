@@ -14,7 +14,7 @@ module and related SDK are under active development. In the meantime, the origin
 still the best resource:
 
 - [Recon-ng Development Guide](https://github.com/lanmaster53/recon-ng/wiki/Development-Guide) 
-- [Recon-ng Wiki](https://github.com/lanmaster53/recon-ng/wiki).
+- [Recon-ng Wiki](https://github.com/lanmaster53/recon-ng/wiki)
 
 ## :warning: Relationship to recon-ng
 While Recon-NGX builds upon the ideas and code of recon-ng, it is an independent
