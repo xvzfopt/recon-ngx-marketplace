@@ -1,1 +1,14 @@
+# Binary files
 *.pyc
+*.rdb
+
+# Project files
+venv/
+scripts/
+
+# IDE Files
+.idea/
+*sublime*
+
+# Test/Tmp Files
+test/tmp/
