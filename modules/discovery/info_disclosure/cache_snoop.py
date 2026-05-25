@@ -7,6 +7,7 @@ import dns.query
 from recon.sdk import BaseModule
 from recon.sdk import ModuleMetadata
 from recon.sdk import ModuleOption
+from recon.sdk import validators
 from recon.sdk.exceptions import *
 
 # =====================================================================================
@@ -35,6 +36,7 @@ class Module(BaseModule):
                 default="",
                 required=True,
                 description="IP address of authoritative nameserver",
+                validators=[validators.Ipv4AddressValidator]
             ),
             ModuleOption(
                 name="domains",
