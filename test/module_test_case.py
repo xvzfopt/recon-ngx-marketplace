@@ -44,7 +44,9 @@ class ModuleTestCase(TestCase):
     # Workspace Settings
     WORKSPACE_NAME      = "test"
 
-
+    # =====================================================================================
+    # Functions
+    # =====================================================================================
     def setUp(self):
         '''
         Sets up the test environment.
