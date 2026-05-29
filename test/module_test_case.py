@@ -108,15 +108,10 @@ class ModuleTestCase(TestCase):
         mod_name = fqn.split("/")[-1]
         load_name = fqn.replace("/", "_")
 
-        # Load Module spec file
-        spec = importlib.util.spec_from_file_location(load_name, path)
-
-        # Import module from spec
-        module = importlib.util.module_from_spec(spec)
+        module = utils.load_file_module(load_name, path)
         sys.modules[load_name] = module
 
         # Create Module Instance
-        spec.loader.exec_module(module)
         mod_instance = module.Module(mod_name, fqn, self._recon)
 
         return mod_instance
