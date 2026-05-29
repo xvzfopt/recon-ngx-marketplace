@@ -155,8 +155,9 @@ def merge_modules_index(existing_index, new_index, key='path'):
                 merged_index.append({**existing_entry, **new_entry})
                 break
 
-        # If there wasn't any update, add entry to merged index
+        # If there wasn't any update, add new entry to merged index
         if not updated:
+            new_entry["last_updated"] = datetime.strftime(datetime.now(), '%Y-%m-%d')
             merged_index.append(new_entry)
 
     return merged_index
