@@ -7,7 +7,7 @@ based off the [recon-ng](https://github.com/lanmaster53/recon-ng) framework deve
 > The modules within this repository are intended for use with the Recon-NGX framework, which 
 > can be found [Here](https://github.com/xvzfopt/recon-ngx)
 
-## loud_speaker: Current Status
+## :loud_speaker: Current Status
 This section shows the current module status. It will be updated as more recon-ng 
 modules are refactored to be compatible with Recon-NGX
 > Functional Modules: **1/109**
