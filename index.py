@@ -55,7 +55,7 @@ def build_index():
     # Process meta of discovered Modules
     # =====================================================================================
     for module_path in sorted(module_paths):
-        fqn = os.path.split(module_path)[0]
+        fqn = "/".join(module_path.split("/")[1:]).replace(".py", "")
         module_data = {}
         module_name = fqn.split("/")[-1]
         module_file_path = os.path.join(base_modules_path, module_path)
@@ -138,6 +138,8 @@ def merge_modules_index(existing_index, new_index, key='path'):
 
     # Iterate new index modules
     for new_entry in new_index:
+        updated = False
+
         # Check if new entry is present in existing index
         for existing_entry in existing_index:
             if new_entry["path"] == existing_entry["path"]:
@@ -149,8 +151,13 @@ def merge_modules_index(existing_index, new_index, key='path'):
                     new_entry['last_updated'] = datetime.strftime(datetime.now(), '%Y-%m-%d')
 
                 # Overlay new entry data onto existing, then add to merged index
+                updated = True
                 merged_index.append({**existing_entry, **new_entry})
                 break
+
+        # If there wasn't any update, add entry to merged index
+        if not updated:
+            merged_index.append(new_entry)
 
     return merged_index
 
