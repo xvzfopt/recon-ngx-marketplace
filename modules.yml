@@ -3,8 +3,7 @@
   description: Uses the DNS cache snooping technique to check for visited domains
   files:
   - av_domains.lst
-  last_updated: '2026-05-29'
   name: DNS Cache Snooper
-  path: modules/discovery/info_disclosure
+  path: discovery/info_disclosure/cache_snoop
   required_keys: []
   version: '2.0'
