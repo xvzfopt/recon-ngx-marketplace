@@ -1,9 +1,11 @@
-- author: xvzf_opt (https://x.com/xvzf_opt), thrapt (thrapt@gmail.com)
+- authors:
+  - xvzf_opt (https://x.com/xvzf_opt)
+  - thrapt (thrapt@gmail.com)
   dependencies: []
   description: Uses the DNS cache snooping technique to check for visited domains
   files:
   - av_domains.lst
-  last_updated: '2026-05-29'
+  last_updated: '2026-06-05'
   name: DNS Cache Snooper
   path: discovery/info_disclosure/cache_snoop
   required_keys: []

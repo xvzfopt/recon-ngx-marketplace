@@ -71,7 +71,7 @@ def build_index():
         module_meta = module.Module.meta
         module_data["name"]             = module_meta.name
         module_data["path"]             = fqn
-        module_data["author"]           = module_meta.author
+        module_data["authors"]          = module_meta.authors
         module_data["description"]      = module_meta.description
         module_data["version"]          = module_meta.version
         module_data["dependencies"]     = module_meta.dependencies
@@ -125,7 +125,7 @@ def json_print(data):
     '''
     print(json.dumps(data, indent=2))
 
-def merge_modules_index(existing_index, new_index, key='path'):
+def merge_modules_index(existing_index, new_index):
     '''
     Merges the existing and new module indexes together
 
@@ -147,7 +147,7 @@ def merge_modules_index(existing_index, new_index, key='path'):
 
                 # Check if Module has been updated
                 if new_entry != existing_entry:
-                    output(f"Changes detected in {existing_entry[key]}.")
+                    output(f"Changes detected in {existing_entry["path"]}.")
                     new_entry['last_updated'] = datetime.strftime(datetime.now(), '%Y-%m-%d')
 
                 # Overlay new entry data onto existing, then add to merged index

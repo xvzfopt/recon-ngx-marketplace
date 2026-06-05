@@ -23,7 +23,10 @@ class Module(BaseModule):
     # =====================================================================================
     meta = ModuleMetadata(
         name="DNS Cache Snooper",
-        author='xvzf_opt (https://x.com/xvzf_opt), thrapt (thrapt@gmail.com)',
+        authors=[
+            'xvzf_opt (https://x.com/xvzf_opt)',
+            'thrapt (thrapt@gmail.com)'
+        ],
         description='Uses the DNS cache snooping technique to check for visited domains',
         version='2.0',
         comments=[
