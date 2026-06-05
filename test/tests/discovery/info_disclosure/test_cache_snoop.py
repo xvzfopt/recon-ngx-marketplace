@@ -24,7 +24,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
     VERBOSITY = 2
     FQN = "discovery/info_disclosure/cache_snoop"
     TEST_DOMAINS_FILENAME = "dns_cache_snoop_domains.txt"
-    TEST_DOMAINS_PATH     = os.path.join(ModuleTestCase.DATA_PATH, TEST_DOMAINS_FILENAME)
+    TEST_DOMAINS_PATH     = os.path.join(ModuleTestCase.TEST_DATA_PATH, TEST_DOMAINS_FILENAME)
 
     # =====================================================================================
     # General Methods
