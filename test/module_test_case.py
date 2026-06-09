@@ -89,6 +89,36 @@ class ModuleTestCase(TestCase):
         if not match:
             raise AssertionError(message)
 
+    def assertNotInOutput(self, pattern, message=None):
+        '''
+        Checks that a line matching the specified Regex was NOT found in the Console Output
+
+        :param pattern: The Regex pattern to check for
+        :type pattern: Pattern
+        '''
+        match = False
+
+        for line in self._console.get_output():
+            match = re.match(pattern, line)
+            if match:
+                break
+
+        if match:
+            raise AssertionError(message)
+
+    def assertExceptionStringEqual(self, expected, cm):
+        '''
+        Asserts that the exception string of the caught exception is equal to the expected stirng
+
+        :param expected: The expected exception string
+        :type expected: str
+        :param cm: The ContextManager instance (from with self.assertRaises() as cm)
+        :type cm: ContextManager
+        '''
+
+        exception_string = str(cm.exception)
+        if expected != exception_string:
+            raise AssertionError("Expected exception string to be '%s', but got '%s'" % (expected, exception_string))
 
     # =====================================================================================
     # Helpers
