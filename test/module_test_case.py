@@ -2,6 +2,7 @@
 # Imports: External
 # =====================================================================================
 import os
+import shutil
 import sys
 import re
 import importlib.util
@@ -52,6 +53,7 @@ class ModuleTestCase(TestCase):
         '''
         Sets up the test environment.
         '''
+        self._recon = None
         super(ModuleTestCase, self).setUp()
 
     def set_up_recon_ngx(self):
@@ -72,7 +74,51 @@ class ModuleTestCase(TestCase):
     # =====================================================================================
     # Custom Assertions
     # =====================================================================================
-    def assertInOutput(self, pattern, message=None):
+    def assertEmpty(self, container):
+        '''
+        Asserts that the provided container is empty
+
+        :param container: The container to check
+        :type container: any
+        '''
+        if len(container) > 0:
+            raise AssertionError("Expected container to be empty, but it has %s element(s)" % len(container))
+
+    def assertNotEmpty(self, container):
+        '''
+        Asserts that the provided container is Not empty
+
+        :param container: The container to check
+        :type container: any
+        '''
+        if len(container) <= 0:
+            raise AssertionError("Expected container to not be empty")
+
+    def assertLengthEqual(self, item, length):
+        '''
+        Checks that the specified item or container is of the specified length
+
+        :param item: The item to check
+        :type item: any
+        :param length: The expected length
+        :type length: int
+        '''
+        if len(item) != length:
+            raise AssertionError("Expected item to have length of %s, but got %s" % (length, len(item)))
+
+    def assertEndsWith(self, string, suffix):
+        '''
+        Checks that the provided string endswith the specified suffix
+
+        :param string: The string to check
+        :type string: str
+        :param suffix: The expected suffix
+        :type suffix: str
+        '''
+        if not string.endswith(suffix):
+            raise AssertionError("String does not end with '%s': %s" % (suffix, string))
+
+    def assertInOutput(self, pattern):
         '''
         Checks that a line matching the specified Regex was found in the Console Output
 
@@ -87,9 +133,9 @@ class ModuleTestCase(TestCase):
                 break
 
         if not match:
-            raise AssertionError(message)
+            raise AssertionError("Expected pattern matched output: %s" % pattern)
 
-    def assertNotInOutput(self, pattern, message=None):
+    def assertNotInOutput(self, pattern):
         '''
         Checks that a line matching the specified Regex was NOT found in the Console Output
 
@@ -104,7 +150,7 @@ class ModuleTestCase(TestCase):
                 break
 
         if match:
-            raise AssertionError(message)
+            raise AssertionError("Unexpected pattern matched output: %s" % pattern)
 
     def assertExceptionStringEqual(self, expected, cm):
         '''
@@ -123,6 +169,40 @@ class ModuleTestCase(TestCase):
     # =====================================================================================
     # Helpers
     # =====================================================================================
+    def get_workspace_downloads_path(self):
+        '''
+        Gets the path to the workspace downloads directory
+
+        :returns: The path to the workspace downloads directory
+        :rtype: str
+        '''
+        path = None
+        if self._recon:
+            path = self._recon.get_current_workspace().get_downloads_path()
+        return path
+
+    def clear_downloads_directory(self):
+        '''
+        Clears all files in the workspace downloads directory
+        '''
+        path = self.get_workspace_downloads_path()
+        if path:
+            shutil.rmtree(path)
+            os.makedirs(path)
+
+    def get_downloaded_files(self):
+        '''
+        Gets a list of downloaded files from the workspace downloads directory
+
+        :returns: A list of downloaded files for the current Workspace
+        :rtype: list
+        '''
+        path = self.get_workspace_downloads_path()
+        if path and os.path.isdir(path):
+            return os.listdir(path)
+        return []
+
+
     def load_module(self, fqn, path):
         '''
         Loads a Recon-NGX Module and returns an instance of it
