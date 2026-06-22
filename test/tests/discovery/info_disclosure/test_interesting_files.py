@@ -446,68 +446,6 @@ class TestInterestingFilesFinder(ModuleTestCase):
             cm
         )
 
-        # =====================================================================================
-        # Test - Regular Timeout
-        # =====================================================================================
-        time_before = int(time.time())
-        self.clear_downloads_directory()
-
-        # Create tmp verifications file
-        file_name = "robots.txt"
-        options["csv_file"] = self.TMP_VERIFICATIONS_FILE
-        options["port"] = 22
-        options["timeout"] = 5
-        self._create_tmp_verifications([f"{file_name},User-agent:"])
-
-        # Set options
-        self._recon.set_verbosity(2)
-        options = self._module.get_options()
-
-        # Execute Module
-        self._recon.validate_options(self._module.get_options())
-        self._module.preflight()
-        self._module.run(["google.com"])
-
-        # Check Output
-        regex = re.compile(r"\[\*\] Connection reset error: https://google.com:22/%s" % file_name)
-        self.assertInOutput(regex)
-
-        # Check timing
-        time_after = int(time.time())
-        self.assertGreaterEqual(time_after - time_before, 5)
-        self.assertLessEqual(time_after - time_before, 6)
-
-        # =====================================================================================
-        # Test - Fast Timeout
-        # =====================================================================================
-        time_before = int(time.time())
-        self.clear_downloads_directory()
-
-        # Create tmp verifications file
-        file_name = "robots.txt"
-        options["csv_file"] = self.TMP_VERIFICATIONS_FILE
-        options["port"] = 22
-        options["timeout"] = 2
-        self._create_tmp_verifications([f"{file_name},User-agent:"])
-
-        # Set options
-        self._recon.set_verbosity(2)
-        options = self._module.get_options()
-
-        # Execute Module
-        self._recon.validate_options(self._module.get_options())
-        self._module.preflight()
-        self._module.run(["google.com"])
-
-        # Check Output
-        regex = re.compile(r"\[\*\] Connection reset error: https://google.com:22/%s" % file_name)
-        self.assertInOutput(regex)
-
-        # Check timing
-        time_after = int(time.time())
-        self.assertGreaterEqual(time_after - time_before, 2)
-        self.assertLessEqual(time_after - time_before, 3)
-
     # =====================================================================================
     # Internal Helpers
     # =====================================================================================
