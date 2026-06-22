@@ -70,11 +70,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
         # Check output for success
         for test_domain in test_domains:
             regex = re.compile(r"\[.\] %s => (Snooped!|Not Found.)\n" % test_domain)
-            self.assertInOutput(
-                regex,
-                "Could not find a Domain snoop attempt for %s. Verbosity level is too low, or a module "
-                "error occurred." % test_domain
-            )
+            self.assertInOutput(regex)
 
     def test_option_nameserver(self):
         '''
