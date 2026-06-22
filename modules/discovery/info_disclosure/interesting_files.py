@@ -52,8 +52,7 @@ class Module(BaseModule):
             ModuleOption(name='csv_file', default='interesting_files_verify.csv', required=True, description="Custom filename map", validators=[validators.ValidFileValidator]),
             ModuleOption(name='download', default=True, required=True, description='download discovered files', validators=[validators.BooleanValidator]),
             ModuleOption(name='protocol', default='https', required=True, description='request protocol', validators=[validators.ProtocolHTTPSValidator]),
-            ModuleOption(name='port', default=443, required=True, description='request port', validators=[validators.PortNumberValidator]),
-            ModuleOption(name='timeout', default=10, required=True, description='Connection timeout to use when attempting to fetch a file', validators=[validators.NumberValidator])
+            ModuleOption(name='port', default=443, required=True, description='request port', validators=[validators.PortNumberValidator])
         ],
         files=['interesting_files_verify.csv']
     )
@@ -72,7 +71,6 @@ class Module(BaseModule):
         self._port = self.get_option_value("port")
         self._csv_path = os.path.join(self.get_data_path(), self.get_option_value("csv_file"))
         self._downloads_dir = self.get_downloads_path()
-        self._timeout = self.get_option_value("timeout")
 
         # Ignore unicode warnings when trying to un-gzip text type 200 repsonses
         warnings.simplefilter("ignore")
@@ -105,7 +103,7 @@ class Module(BaseModule):
 
                     # Try to fetch file
                     try:
-                        resp = self.request('GET', url, timeout=self._timeout)
+                        resp = self.request('GET', url)
                         status = resp.status_code
                     except KeyboardInterrupt:
                         raise KeyboardInterrupt

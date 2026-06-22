@@ -416,36 +416,6 @@ class TestInterestingFilesFinder(ModuleTestCase):
         regex = re.compile(r"\[200\] http://google.com:80/%s => '%s' found!" % (file_name, file_name))
         self.assertInOutput(regex)
 
-    def test_timeout_option(self):
-        '''
-        Tests the TIMEOUT option
-        '''
-
-        # =====================================================================================
-        # Test - TIMEOUT not set
-        # =====================================================================================
-        # Set options
-        options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
-        options["timeout"] = ""
-        with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
-        self.assertExceptionStringEqual("Value required for the 'TIMEOUT' option.", cm)
-
-        # =====================================================================================
-        # Test - Not a valid integer
-        # =====================================================================================
-        # Set options
-        options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
-        options["timeout"] = "testing123"
-        with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
-        self.assertExceptionStringEqual(
-            "Validation failed for the 'TIMEOUT' option => Not a number",
-            cm
-        )
-
     # =====================================================================================
     # Internal Helpers
     # =====================================================================================
