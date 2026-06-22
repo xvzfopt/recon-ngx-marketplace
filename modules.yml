@@ -10,3 +10,17 @@
   path: discovery/info_disclosure/cache_snoop
   required_keys: []
   version: '2.0'
+- authors:
+  - xvzf_opt (https://x.com/xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  - thrapt (thrapt@gmail.com)
+  - Jay Turla (@shipcod3), and Mark Jeffery
+  dependencies: []
+  description: Checks hosts for interesting files in predictable locations.
+  files:
+  - interesting_files_verify.csv
+  last_updated: '2026-06-22'
+  name: Interesting Files Finder
+  path: discovery/info_disclosure/interesting_files
+  required_keys: []
+  version: '2.0'
