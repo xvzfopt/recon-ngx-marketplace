@@ -1,7 +1,7 @@
-robots.txt,user-agent:
+robots.txt,User-agent:
 sitemap.xml,<?xml
 sitemap.xml.gz,<?xml
-crossdomain.xml,<?xml
+crossdomain.xml,<cross-domain-policy
 phpinfo.php,phpinfo()
 test.php,phpinfo()
 elmah.axd,Error Log for
@@ -9,3 +9,13 @@ server-status,>Apache Status<
 jmx-console/,JBoss
 admin-console/,index.seam
 web-console/,Administration
+.well-known/security.txt,Contact:
+.well-known/assetlinks.json,delegate_permission
+humans.txt,TEAM
+manifest.json,"name":
+apple-app-site-association,"applinks"
+openapi.json,"openapi"
+swagger.json,"swagger"
+swagger/v1/swagger.json,"swagger"
+server-status,Server Version:
+.git/HEAD,refs:

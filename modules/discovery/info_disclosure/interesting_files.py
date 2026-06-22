@@ -1,91 +1,185 @@
-from recon.core.module import BaseModule
+# =====================================================================================
+# Imports: External
+# =====================================================================================
 import csv
-import gzip
 import os
 import warnings
-from io import BytesIO
+from requests.exceptions import ConnectionError
+from requests.exceptions import ReadTimeout
+from requests.exceptions import ConnectTimeout
+from recon.sdk.exceptions import ModuleValidationException
+from recon.sdk import validators
+from recon.sdk import BaseModule
+from recon.sdk import ModuleMetadata
+from recon.sdk import ModuleOption
+from recon.sdk import utils
 
-
+# =====================================================================================
+# Module Class: Interesting Files Finder
+# =====================================================================================
 class Module(BaseModule):
+    '''
+    Interesting Files Finder
+    '''
 
-    meta = {
-        'name': 'Interesting File Finder',
-        'author': 'Tim Tomes (@lanmaster53), thrapt (thrapt@gmail.com), Jay Turla (@shipcod3), and Mark Jeffery',
-        'version': '1.2',
-        'description': 'Checks hosts for interesting files in predictable locations.',
-        'comments': (
-            'Files: robots.txt, sitemap.xml, sitemap.xml.gz, crossdomain.xml, phpinfo.php, test.php, elmah.axd, server-status, jmx-console/, admin-console/, web-console/',
-            f'CSV Default: {os.path.join(BaseModule.data_path, "interesting_files_verify.csv")}',
-            'Google Dorks:',
+    # =====================================================================================
+    # Properties
+    # =====================================================================================
+    meta = ModuleMetadata(
+        name='Interesting Files Finder',
+        authors=[
+            'xvzf_opt (https://x.com/xvzf_opt)',
+            'Tim Tomes (@lanmaster53)',
+            'thrapt (thrapt@gmail.com)',
+            'Jay Turla (@shipcod3), and Mark Jeffery'
+        ],
+        version='2.0',
+        description='Checks hosts for interesting files in predictable locations.',
+        comments= [
+            'Files: robots.txt, sitemap.xml, sitemap.xml.gz, crossdomain.xml, phpinfo.php, test.php, '
+            'elmah.axd, server-status, jmx-console/, admin-console/, web-console/ '
+            '.well-known/security.txt, .well-known/assetlinks.json, humans.txt, manifest.json '
+            'apple-app-site-association, openapi.json, swagger.json, swagger/v1/swagger.json '
+            '.git/HEAD',
+            'CSV Default: interesting_files_verify.csv',
+            'Google Dork Examples:',
             '\tinurl:robots.txt ext:txt',
             '\tinurl:elmah.axd ext:axd intitle:"Error log for"',
-            '\tinurl:server-status "Apache Status"',
-        ),
-        'query': 'SELECT DISTINCT host FROM hosts WHERE host IS NOT NULL',
-        'options': (
-            ('csv_file', os.path.join(BaseModule.data_path, 'interesting_files_verify.csv'),
-             True, 'custom filename map'),
-            ('download', True, True, 'download discovered files'),
-            ('protocol', 'http', True, 'request protocol'),
-            ('port', 80, True, 'request port'),
-        ),
-        'files': ['interesting_files_verify.csv'],
-    }
+            '\tinurl:server-status "Apache Status"'
+        ],
+        query='SELECT DISTINCT host FROM hosts WHERE host IS NOT NULL',
+        options = [
+            ModuleOption(name='csv_file', default='interesting_files_verify.csv', required=True, description="Custom filename map", validators=[validators.ValidFileValidator]),
+            ModuleOption(name='download', default=True, required=True, description='download discovered files', validators=[validators.BooleanValidator]),
+            ModuleOption(name='protocol', default='https', required=True, description='request protocol', validators=[validators.ProtocolHTTPSValidator]),
+            ModuleOption(name='port', default=443, required=True, description='request port', validators=[validators.PortNumberValidator]),
+            ModuleOption(name='timeout', default=10, required=True, description='Connection timeout to use when attempting to fetch a file', validators=[validators.NumberValidator])
+        ],
+        files=['interesting_files_verify.csv']
+    )
 
-    def read_filenames_csv(self):
-        with open(os.path.expanduser(self.options['csv_file'])) as csvfile:
-            fname_csv = csv.reader(csvfile, delimiter=',', quotechar='"')
-            # verification string used to prevent false positives;
-            #   eg: if robots.txt redirects to login page & returns a 200
-            return [(fname, verify_str) for (fname, verify_str) in fname_csv]
+    # =====================================================================================
+    # Module Functions
+    # =====================================================================================
+    def module_pre(self):
+        '''
+        Override: Set up module properties and perform additional validation
+        '''
 
-    def uncompress(self, data_gz):
-        inbuffer = BytesIO(data_gz.encode())
-        data_ct = ''
-        f = gzip.GzipFile(mode='rb', fileobj=inbuffer)
-        try:
-            data_ct = f.read()
-        except IOError:
-            pass
-        f.close()
-        return data_ct
+        # Process Options
+        self._download = self.get_option_value("download")
+        self._protocol = self.get_option_value("protocol")
+        self._port = self.get_option_value("port")
+        self._csv_path = os.path.join(self.get_data_path(), self.get_option_value("csv_file"))
+        self._downloads_dir = self.get_downloads_path()
+        self._timeout = self.get_option_value("timeout")
+
+        # Ignore unicode warnings when trying to un-gzip text type 200 repsonses
+        warnings.simplefilter("ignore")
 
     def module_run(self, hosts):
-        download = self.options['download']
-        protocol = self.options['protocol']
-        port = self.options['port']
-        # ignore unicode warnings when trying to un-gzip text type 200 repsonses
-        warnings.simplefilter("ignore")
-        filetypes = self.read_filenames_csv()
+        '''
+        Override: Module runner
+
+        :param hosts: The lists of hosts for which interesting files will be retrieved
+        :type hosts: list
+        '''
+        interesting_files = self.load_interesting_files()
+        total_iterations = len(hosts) * len(interesting_files)
+        downloaded_files = {}
         count = 0
 
-        for host in hosts:
-            for (filename, verify) in filetypes:
-                url = f"{protocol}://{host}:{port}/{filename}"
-                try:
-                    resp = self.request('GET', url)
-                    code = resp.status_code
-                except KeyboardInterrupt:
-                    raise KeyboardInterrupt
-                except:
-                    code = 'Error'
-                if code == 200:
-                    # uncompress if necessary
-                    text = ('.gz' in filename and self.uncompress(resp.text)) or resp.text
-                    # check for file type since many custom 404s are returned as 200s
-                    if verify.lower() in text.lower():
-                        self.alert(f"{url} => {code}. '{filename}' found!")
-                        # urls that end with '/' are not necessary to download
-                        if download and not filename.endswith("/"):
-                            filepath = f"{self.workspace}/{protocol}_{host}_{filename}"
-                            dl = open(filepath, 'w')
-                            dl.write(resp.text)
-                            dl.close()
-                        count += 1
+        # =====================================================================================
+        # Iterate Hosts
+        # =====================================================================================
+        with self.get_progress_bar(total_iterations, unit="files") as progress:
+            for host in hosts:
+
+                # For each host, iterate interesting files list
+                for filename, verification_string in interesting_files:
+                    progress.update()
+                    status = "Error"
+
+                    # Build URL
+                    url = f"{self._protocol}://{host}:{self._port}/{filename}"
+
+                    # Try to fetch file
+                    try:
+                        resp = self.request('GET', url, timeout=self._timeout)
+                        status = resp.status_code
+                    except KeyboardInterrupt:
+                        raise KeyboardInterrupt
+                    # Handle Connection Timeouts
+                    except (ReadTimeout, ConnectTimeout):
+                        self.debug(f"Connection timeout error: {url}")
+                        continue
+                    # Handle Connection Errors
+                    except ConnectionError:
+                        self.debug(f"Connection reset error: {url}")
+                        continue
+
+                    # Check for success
+                    if status != 200:
+                        self.verbose(f"[{status}] {url}")
+                        continue
+
+                    # Decompress if needed
+                    if ".gz" in filename:
+                        text = utils.decompress_gz(resp.text)
                     else:
-                        self.output(f"{url} => {code}. '{filename}' found but unverified.")
-                else:
-                    self.verbose(f"{url} => {code}")
-        self.output(f"{count} interesting files found.")
-        if download and count:
-            self.output(f"Files downloaded to '{self.workspace}/'")
+                        text = resp.text
+
+                    # Verify file contents using verification string
+                    if verification_string.lower() not in text.lower():
+                        if self.get_verbosity() > 1:
+                            progress.write(f"[{status}] {url} => '{filename}' found but unverified.")
+                        continue
+
+                    # Download file
+                    progress.write(f"[{status}] {url} => '{filename}' found!")
+                    if self._download and not filename.endswith("/"):
+                        dest_filename = f"{self._protocol}_{host}_{filename.replace('/', '_')}"
+                        dest = f"{self._downloads_dir}/{dest_filename}"
+                        with open(dest, "w") as out_file:
+                            out_file.write(resp.text)
+                        downloaded_files[url] = dest_filename
+                    count += 1
+
+        # =====================================================================================
+        # Print Summary
+        # =====================================================================================
+        self.output(f"{count} interesting file(s) found.")
+        if self._download and count:
+            self.output(f"Files downloaded to '{self._downloads_dir}'")
+
+        # Print Downloaded files
+        if downloaded_files:
+            self.heading(f"Downloaded Files [{len(downloaded_files)}]")
+            for file in downloaded_files:
+                self.write(f"  > {file} --> {downloaded_files[file]}")
+            self.write("")
+
+    # =====================================================================================
+    # Internal Functions
+    # =====================================================================================
+    def load_interesting_files(self):
+        '''
+        Loads the Interesting filenames file
+
+        :returns: List of interesting files, and their verification string
+        :rtype: tuple(str, str
+        '''
+        interesting_files = []
+
+        with open(self._csv_path) as csvfile:
+            reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+            try:
+                for filename, verification_str in reader:
+                    interesting_files.append((filename, verification_str))
+            except ValueError:
+                raise ModuleValidationException(
+                    "Error parsing specified CSV_FILE: %s. Check file format is valid and try again." % self._csv_path
+                )
+
+        return interesting_files
+
