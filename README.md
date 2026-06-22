@@ -10,7 +10,7 @@ based off the [recon-ng](https://github.com/lanmaster53/recon-ng) framework deve
 ## :loudspeaker: Current Status
 This section shows the current module status. It will be updated as more recon-ng 
 modules are refactored to be compatible with Recon-NGX
-> Functional Modules: **1/109**
+> Functional Modules: **2/109**
 
 ## :computer: Information for Developers
 
