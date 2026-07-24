@@ -10,32 +10,26 @@
   path: discovery/info_disclosure/cache_snoop
   required_keys: []
   version: '2.0'
-- authors:
+- authors: &id001
   - xvzf_opt (https://x.com/xvzf_opt)
   - Tim Tomes (@lanmaster53)
   - thrapt (thrapt@gmail.com)
   - Jay Turla (@shipcod3), and Mark Jeffery
-  dependencies: []
+  dependencies: &id002 []
   description: Checks hosts for interesting files in predictable locations.
-  files:
+  files: &id003
   - interesting_files_verify.csv
   last_updated: '2026-06-22'
   name: Interesting Files Finder
   path: discovery/info_disclosure/interesting_files
-  required_keys: []
+  required_keys: &id004 []
   version: '2.0'
-- authors:
-  - xvzf_opt (@xvzf_opt)
-  - Tim Tomes (@lanmaster53)
-  - Ryan Hays (@_ryanhays)
-  dependencies:
-  - shodan
-  description: Harvests hosts from the Shodan API by using the 'hostname' search operator.
-    Updates the 'hosts' table with the results.
-  files: []
+- authors: *id001
+  dependencies: *id002
+  description: Checks hosts for interesting files in predictable locations.
+  files: *id003
   last_updated: '2026-07-24'
-  name: Shodan Hostname Enumerator
+  name: Interesting Files Finder
   path: recon/domains-hosts/shodan_hostname
-  required_keys:
-  - shodan_api
-  version: 2.0.1.rc0
+  required_keys: *id004
+  version: '2.0'

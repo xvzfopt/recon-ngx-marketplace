@@ -1,10 +1,7 @@
 # =====================================================================================
 # Imports: External
 # =====================================================================================
-try:
-    import shodan
-except ImportError:
-    pass
+import shodan
 import time
 from recon.sdk import BaseModule
 from recon.sdk import ModuleMetadata
