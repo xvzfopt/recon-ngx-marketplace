@@ -63,8 +63,8 @@ def build_index():
         # Attempt Module load
         try:
             module = utils.load_file_module(module_name, module_file_path)
-        except ImportError:
-            output("Skipping broken or unsupported module: %s" % module_name, True)
+        except ImportError as ex:
+            output("Skipping broken or unsupported module: %s --> %s" % (module_name, ex), True)
             continue
 
         # Process Meta
