@@ -28,7 +28,7 @@ class Module(BaseModule):
             "Tim Tomes (@lanmaster53)",
             "Ryan Hays (@_ryanhays)"
         ],
-        version="2.0.rc0",
+        version="2.0.1.rc0",
         description="Harvests hosts from the Shodan API by using the \'hostname\' search operator. Updates the "
                     "\'hosts\' table with the results.",
         required_keys=["shodan_api"],
@@ -45,8 +45,8 @@ class Module(BaseModule):
     )
 
     def module_run(self, domains):
-        limit = self.options['limit']
-        api = shodan.Shodan(self.keys.get('shodan_api'))
+        limit = self.get_option_value('limit')
+        api = shodan.Shodan(self.get_key('shodan_api'))
 
         for domain in domains:
             self.heading(domain, level=0)
