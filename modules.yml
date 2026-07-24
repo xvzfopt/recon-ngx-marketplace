@@ -28,7 +28,7 @@
     - xvzf_opt (https://x.com/xvzf_opt)
     - Tim Tomes (@lanmaster53)
     - Ryan Hays (@_ryanhays)
-  dependencies: []
+  dependencies: ["shodan"]
   description: Harvests hosts from the Shodan API
   last_updated: '2026-07-24'
   name: Shodan Hostname Enumerator
