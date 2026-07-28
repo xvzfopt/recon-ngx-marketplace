@@ -55,27 +55,26 @@ def build_index():
     # Process meta of discovered Modules
     # =====================================================================================
     for module_path in sorted(module_paths):
-        fqn = "/".join(module_path.split("/")[1:]).replace(".py", "")
+        fqn = "/".join(module_path.split("/")[1:])
         module_data = {}
         module_name = fqn.split("/")[-1]
-        module_file_path = os.path.join(base_modules_path, module_path)
+        module_abs_path = os.path.join(base_modules_path, module_path)
 
         # Attempt Module load
         try:
-            module = utils.load_file_module(module_name, module_file_path)
+            module_meta = utils.load_module_meta(module_abs_path)
         except ImportError as ex:
             output("Skipping broken or unsupported module: %s --> %s" % (module_name, ex), True)
             continue
 
         # Process Meta
-        module_meta = module.Module.meta
         module_data["name"]             = module_meta.name
         module_data["path"]             = fqn
         module_data["authors"]          = module_meta.authors
         module_data["description"]      = module_meta.description
         module_data["version"]          = module_meta.version
         module_data["dependencies"]     = module_meta.dependencies
-        module_data["files"]            = module_meta.files
+        module_data["files"]            = utils.find_directory_files(module_abs_path, excluded_dirs=["__pycache__"])
         module_data["required_keys"]    = module_meta.required_keys
         modules.append(module_data)
         output("Metadata built for module: %s " % module_name)
@@ -86,20 +85,16 @@ def find_modules():
     '''
     Crawls the modules directory and finds modules
 
-    :returns: List of found modules as file paths
+    :returns: List of found modules as package paths
     :rtype: list
     '''
     modules = []
 
     # Walk modules directory
     for dirpath, dirnames, filenames in os.walk('modules', followlinks=True):
-        # Ignore hidden files and directories
-        filenames = [f for f in filenames if not f[0] == '.']
-        dirnames[:] = [d for d in dirnames if not d[0] == '.']
-        if len(filenames) > 0:
-            # Ignore non-python files
-            for filename in [f for f in filenames if f.endswith('.py')]:
-                modules.append(os.path.join(dirpath, filename))
+        if utils.is_python_package(dirpath):
+            dirnames.clear()
+            modules.append(dirpath)
 
     return modules
 
