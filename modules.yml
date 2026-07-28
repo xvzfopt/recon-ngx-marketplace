@@ -1,5 +1,37 @@
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - thrapt (thrapt@gmail.com)
+  dependencies: []
+  description: Uses the DNS cache snooping technique to check for visited domains
+  files:
+  - __init__.py
+  - module.py
+  - meta.py
+  - data/av_domains.lst
+  last_updated: '2026-07-28'
+  name: DNS Cache Snooper
+  path: discovery/info_disclosure/cache_snoop
+  required_keys: []
+  version: '3.0'
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  - thrapt (thrapt@gmail.com)
+  - Jay Turla (@shipcod3), and Mark Jeffery
+  dependencies: []
+  description: Checks hosts for interesting files in predictable locations.
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  - data/interesting_files_verify.csv
+  last_updated: '2026-07-28'
+  name: Interesting Files Finder
+  path: discovery/info_disclosure/interesting_files
+  required_keys: []
+  version: '3.0'
+- authors:
+  - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
   - Ryan Hays (@_ryanhays)
   dependencies:
