@@ -38,8 +38,6 @@ class ModuleTestCase(TestCase):
     FRAMEWORK_PATH          = os.path.join(TOP_LEVEL_PATH, "recon-ngx")
     MARKETPLACE_PATH        = os.path.join(TOP_LEVEL_PATH, 'recon-ngx-marketplace')
     MODULES_PATH            = os.path.join(MARKETPLACE_PATH, 'modules')
-    DATA_PATH               = os.path.join(MARKETPLACE_PATH, 'data')
-    TEST_DATA_PATH          = os.path.join(MARKETPLACE_PATH, "test", "data")
     TMP_PATH                = os.path.join(MARKETPLACE_PATH, "test", "tmp")
     FRAMEWORK_VERSION_PATH  = os.path.join(FRAMEWORK_PATH, "VERSION")
 
@@ -66,7 +64,7 @@ class ModuleTestCase(TestCase):
             self.VERBOSITY, self.CHECK_VERSION,
             self.MARKETPLACE_ENABLED,
             self.ACCESSIBLE,
-            self.MODULES_PATH, self.TEST_DATA_PATH
+            self.MODULES_PATH
         )
         self._recon.set_workspace(self.WORKSPACE_NAME, False)
         self._console = self._recon.get_console()
@@ -128,6 +126,7 @@ class ModuleTestCase(TestCase):
         match = False
 
         for line in self._console.get_output():
+            line = utils.ansi_clean(line)
             match = re.match(pattern, line)
             if match:
                 break
@@ -219,7 +218,7 @@ class ModuleTestCase(TestCase):
         mod_name = fqn.split("/")[-1]
         load_name = fqn.replace("/", "_")
 
-        module = utils.load_file_module(load_name, path)
+        module = utils.load_package_module(load_name, path)
         sys.modules[load_name] = module
 
         # Create Module Instance
