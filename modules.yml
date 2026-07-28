@@ -1,30 +1,4 @@
 - authors:
-  - xvzf_opt (https://x.com/xvzf_opt)
-  - thrapt (thrapt@gmail.com)
-  dependencies: []
-  description: Uses the DNS cache snooping technique to check for visited domains
-  files:
-  - av_domains.lst
-  last_updated: '2026-06-05'
-  name: DNS Cache Snooper
-  path: discovery/info_disclosure/cache_snoop
-  required_keys: []
-  version: '2.0'
-- authors:
-  - xvzf_opt (https://x.com/xvzf_opt)
-  - Tim Tomes (@lanmaster53)
-  - thrapt (thrapt@gmail.com)
-  - Jay Turla (@shipcod3), and Mark Jeffery
-  dependencies: []
-  description: Checks hosts for interesting files in predictable locations.
-  files:
-  - interesting_files_verify.csv
-  last_updated: '2026-06-22'
-  name: Interesting Files Finder
-  path: discovery/info_disclosure/interesting_files
-  required_keys: []
-  version: '2.0'
-- authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
   - Ryan Hays (@_ryanhays)
@@ -33,7 +7,7 @@
   description: Harvests hosts from the Shodan API by using the 'hostname' search operator.
     Updates the 'hosts' table with the results.
   files: []
-  last_updated: '2026-07-27'
+  last_updated: '2026-07-28'
   name: Shodan Hostname Enumerator
   path: recon/domains-hosts/shodan_hostname
   required_keys:

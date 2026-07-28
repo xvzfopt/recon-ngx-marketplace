@@ -4,8 +4,12 @@
 import shodan
 import time
 from recon.sdk import BaseModule
-from recon.sdk import ModuleMetadata
-from recon.sdk import ModuleOption
+
+# =====================================================================================
+# Imports: Module Package
+# =====================================================================================
+from . import meta
+from .exceptions import ShodanAuthFailure
 
 # =====================================================================================
 # Module Class: Shodan Hostname Enumerator
@@ -16,31 +20,8 @@ class Module(BaseModule):
     '''
 
     # =====================================================================================
-    # Properties
+    # Module Functions
     # =====================================================================================
-    meta = ModuleMetadata(
-        name="Shodan Hostname Enumerator",
-        authors=[
-            'xvzf_opt (@xvzf_opt)',
-            "Tim Tomes (@lanmaster53)",
-            "Ryan Hays (@_ryanhays)"
-        ],
-        version="2.0.1.rc0",
-        description="Harvests hosts from the Shodan API by using the \'hostname\' search operator. Updates the "
-                    "\'hosts\' table with the results.",
-        required_keys=["shodan_api"],
-        query="SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL",
-        options=[
-            ModuleOption(
-                name="limit",
-                default=1,
-                required=True,
-                description="Limit number of api requests per input source (0 = unlimited)"
-            )
-        ],
-        dependencies=["shodan"]
-    )
-
     def module_run(self, domains):
         limit = self.get_option_value('limit')
         api = shodan.Shodan(self.get_key('shodan_api'))
@@ -55,6 +36,7 @@ class Module(BaseModule):
                 total_results = 1
                 while rec_count < total_results:
                     results = api.search(query, page=page)
+                    print("results:" % results)
                     total_results = results['total']
 
                     for host in results['matches']:
@@ -71,5 +53,5 @@ class Module(BaseModule):
                     page += 1
                     time.sleep(limit)
 
-            except shodan.exception.APIError:
-                pass
+            except shodan.exception.APIError as ex:
+                print("API Error: %s: %s" % (ex, ex.value))
