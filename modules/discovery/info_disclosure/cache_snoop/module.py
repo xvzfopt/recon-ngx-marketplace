@@ -74,4 +74,4 @@ class Module(BaseModule):
             else:
                 self.verbose(f"{domain} => Not Found.")
 
-        self.output("%s Domain(s) checked.")
+        self.output("Execution complete. %s Domain(s) checked." % len(domains))
