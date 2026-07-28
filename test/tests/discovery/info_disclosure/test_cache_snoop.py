@@ -24,7 +24,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
     VERBOSITY = 2
     FQN = "discovery/info_disclosure/cache_snoop"
     TEST_DOMAINS_FILENAME = "dns_cache_snoop_domains.txt"
-    TEST_DOMAINS_PATH     = os.path.join(ModuleTestCase.TEST_DATA_PATH, TEST_DOMAINS_FILENAME)
+    TEST_DOMAINS_PATH     = os.path.join(ModuleTestCase.TMP_PATH, TEST_DOMAINS_FILENAME)
 
     # =====================================================================================
     # General Methods
@@ -36,7 +36,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
         self.set_up_recon_ngx()
 
         # Build Modules Paths
-        mod_file_path = os.path.join(self.MODULES_PATH, "%s.py" % self.FQN)
+        mod_file_path = os.path.join(self.MODULES_PATH, self.FQN)
 
         # Load Module
         self._module = self.load_module(self.FQN, mod_file_path)
@@ -55,7 +55,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
         # Set options
         options = self._module.get_options()
         options["nameserver"] = "8.8.8.8"
-        options["domains"] = self.TEST_DOMAINS_FILENAME
+        options["domains"] = self.TEST_DOMAINS_PATH
 
         # Add some domains to the domain names file
         test_domains = ["google.com", "x.com", "misc123sdd.com", "rt.com"]
@@ -63,7 +63,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
             self.add_domains_to_domains_file(test_domain)
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run([])
 
@@ -85,7 +85,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
 
         # Execute Module
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertEqual(str(cm.exception), "Value required for the 'NAMESERVER' option.")
 
         # =====================================================================================
@@ -97,7 +97,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
 
         # Execute Module
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertEqual(str(cm.exception), "Value required for the 'NAMESERVER' option.")
 
         # =====================================================================================
@@ -109,7 +109,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
 
         # Execute Module
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertEqual(str(cm.exception), "Validation failed for the 'NAMESERVER' option => Not a valid IPv4 Address")
 
         # =====================================================================================
@@ -121,7 +121,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
 
         # Execute Module
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertEqual(str(cm.exception), "Validation failed for the 'NAMESERVER' option => Not a valid IPv4 Address")
 
     def test_options_domains_file(self):
@@ -138,7 +138,7 @@ class TestDNSCacheSnoop(ModuleTestCase):
 
         # Execute Module
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertEqual(str(cm.exception), "Value required for the 'DOMAINS' option.")
 
         # =====================================================================================
@@ -150,10 +150,12 @@ class TestDNSCacheSnoop(ModuleTestCase):
         options["DOMAINS"] = "does_not_exist.txt"
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
-        self._module.preflight()
-        self._module.run([])
-        self.assertInOutput(re.compile(r"\[!\] The specified domains file could not be found"))
+        with self.assertRaises(ModuleValidationException) as cm:
+            self._recon.validate_options(self._module)
+        self.assertExceptionStringEqual(
+            "Validation failed for the 'DOMAINS' option => The specified path does not point to a valid, existing file",
+            cm
+        )
 
     # =====================================================================================
     # Test Helpers

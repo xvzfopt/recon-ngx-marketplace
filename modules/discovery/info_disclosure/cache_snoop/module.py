@@ -19,40 +19,7 @@ class Module(BaseModule):
     '''
 
     # =====================================================================================
-    # Properties
-    # =====================================================================================
-    meta = ModuleMetadata(
-        name="DNS Cache Snooper",
-        authors=[
-            'xvzf_opt (https://x.com/xvzf_opt)',
-            'thrapt (thrapt@gmail.com)'
-        ],
-        description='Uses the DNS cache snooping technique to check for visited domains',
-        version='2.0',
-        comments=[
-            'Nameserver must be in IP form.',
-            'http://304geeks.blogspot.com/2013/01/dns-scraping-for-corporate-av-detection.html',
-        ],
-        options=[
-            ModuleOption(
-                name="nameserver",
-                default="",
-                required=True,
-                description="IP address of authoritative nameserver",
-                validators=[validators.Ipv4AddressValidator]
-            ),
-            ModuleOption(
-                name="domains",
-                default="av_domains.lst",
-                required=True,
-                description="File containing the list of domains to snoop for",
-            )
-        ],
-        files=['av_domains.lst']
-    )
-
-    # =====================================================================================
-    # Functions
+    # Module Functions
     # =====================================================================================
     def module_pre(self):
         '''
@@ -61,15 +28,11 @@ class Module(BaseModule):
 
         # Process Options
         self._nameserver = self.get_option_value('nameserver')
-        self._domains_file = os.path.join(self.get_data_path(), self.get_option_value("domains"))
 
-        # Check Domains file is valid
+        # Resolve Domains File Path
+        self._domains_file = self.get_option_value('domains')
         if not os.path.isfile(self._domains_file):
-            raise ModuleValidationException(
-                "The specified domains file could not be found (%s). Check the file name in the 'domains'"
-                " option is correct and try again."
-                % self._domains_file
-            )
+            self._domains_file = os.path.join(self.get_package_path(), self.get_option_value("domains"))
 
     def module_run(self):
         '''

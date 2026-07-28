@@ -11,7 +11,7 @@ from recon.sdk import validators
 meta = ModuleMetadata(
     name='Interesting Files Finder',
     authors=[
-        'xvzf_opt (https://x.com/xvzf_opt)',
+        'xvzf_opt (@xvzf_opt)',
         'Tim Tomes (@lanmaster53)',
         'thrapt (thrapt@gmail.com)',
         'Jay Turla (@shipcod3), and Mark Jeffery'
