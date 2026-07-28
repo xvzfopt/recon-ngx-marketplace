@@ -12,7 +12,7 @@
   name: DNS Cache Snooper
   path: discovery/info_disclosure/cache_snoop
   required_keys: []
-  version: 3.0.2
+  version: 3.0.3
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
