@@ -25,7 +25,6 @@ class TestInterestingFilesFinder(ModuleTestCase):
     # =====================================================================================
     VERBOSITY = 1
     FQN = "discovery/info_disclosure/interesting_files"
-    VERIFICATIONS_FILE      = os.path.join(ModuleTestCase.DATA_PATH, "interesting_files_verify.csv")
     TMP_VERIFICATIONS_FILE  = os.path.join(ModuleTestCase.TMP_PATH, "tmp_interesting_files_verify.csv")
 
     # =====================================================================================
@@ -38,7 +37,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         self.set_up_recon_ngx()
 
         # Build Modules Paths
-        mod_file_path = os.path.join(self.MODULES_PATH, "%s.py" % self.FQN)
+        mod_file_path = os.path.join(self.MODULES_PATH, self.FQN)
 
         # Load Module
         self._module = self.load_module(self.FQN, mod_file_path)
@@ -56,11 +55,10 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # Set options
         self._recon.set_verbosity(2)
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
         # options["domains"] = self.TEST_DOMAINS_FILENAME
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -80,8 +78,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
 
         # Set options
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
 
         # =====================================================================================
@@ -107,7 +104,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
         options["csv_file"] = ""
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual("Value required for the 'CSV_FILE' option.", cm)
 
         # =====================================================================================
@@ -118,7 +115,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
         options["csv_file"] = "/hello/fdf/122.txtff"
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual(
             "Validation failed for the 'CSV_FILE' option => The specified path does not point to a valid"
             ", existing file",
@@ -138,7 +135,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options["csv_file"] = self.TMP_VERIFICATIONS_FILE
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -161,7 +158,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
             tmp_verif_file.write(f"This is going to trigger an exception because this is not valid CSV format for the module")
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
         regex = re.compile(r"\[!\] Error parsing specified CSV_FILE")
@@ -177,10 +174,9 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # =====================================================================================
         # Set options
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
         options["download"] = ""
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual("Value required for the 'DOWNLOAD' option.", cm)
 
         # =====================================================================================
@@ -190,7 +186,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
         options["download"] = "dsds"
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual("Validation failed for the 'DOWNLOAD' option => Not a valid boolean value", cm)
 
         # =====================================================================================
@@ -209,7 +205,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options["download"] = "false"
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -233,7 +229,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options["download"] = "true"
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -252,10 +248,9 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # =====================================================================================
         # Set options
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
         options["protocol"] = ""
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual("Value required for the 'PROTOCOL' option.", cm)
 
         # =====================================================================================
@@ -263,10 +258,9 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # =====================================================================================
         # Set options
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
         options["protocol"] = "testing123"
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual(
             "Validation failed for the 'PROTOCOL' option => Not a valid HTTP protocol (HTTP/HTTPS)",
             cm
@@ -289,7 +283,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -312,7 +306,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -330,10 +324,9 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # =====================================================================================
         # Set options
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
         options["port"] = ""
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual("Value required for the 'PORT' option.", cm)
 
         # =====================================================================================
@@ -341,10 +334,9 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # =====================================================================================
         # Set options
         options = self._module.get_options()
-        options["csv_file"] = self.VERIFICATIONS_FILE
         options["port"] = "testing123"
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual(
             "Validation failed for the 'PORT' option => Not a valid port number",
             cm
@@ -355,7 +347,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         # =====================================================================================
         options["port"] = "-50"
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual(
             "Validation failed for the 'PORT' option => Not a valid port number",
             cm
@@ -363,7 +355,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
 
         options["port"] = "65536"
         with self.assertRaises(ModuleValidationException) as cm:
-            self._recon.validate_options(self._module.get_options())
+            self._recon.validate_options(self._module)
         self.assertExceptionStringEqual(
             "Validation failed for the 'PORT' option => Not a valid port number",
             cm
@@ -385,7 +377,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 
@@ -408,7 +400,7 @@ class TestInterestingFilesFinder(ModuleTestCase):
         options = self._module.get_options()
 
         # Execute Module
-        self._recon.validate_options(self._module.get_options())
+        self._recon.validate_options(self._module)
         self._module.preflight()
         self._module.run(["google.com"])
 

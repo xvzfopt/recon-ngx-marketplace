@@ -23,41 +23,6 @@ class Module(BaseModule):
     '''
 
     # =====================================================================================
-    # Properties
-    # =====================================================================================
-    meta = ModuleMetadata(
-        name='Interesting Files Finder',
-        authors=[
-            'xvzf_opt (https://x.com/xvzf_opt)',
-            'Tim Tomes (@lanmaster53)',
-            'thrapt (thrapt@gmail.com)',
-            'Jay Turla (@shipcod3), and Mark Jeffery'
-        ],
-        version='2.0',
-        description='Checks hosts for interesting files in predictable locations.',
-        comments= [
-            'Files: robots.txt, sitemap.xml, sitemap.xml.gz, crossdomain.xml, phpinfo.php, test.php, '
-            'elmah.axd, server-status, jmx-console/, admin-console/, web-console/ '
-            '.well-known/security.txt, .well-known/assetlinks.json, humans.txt, manifest.json '
-            'apple-app-site-association, openapi.json, swagger.json, swagger/v1/swagger.json '
-            '.git/HEAD',
-            'CSV Default: interesting_files_verify.csv',
-            'Google Dork Examples:',
-            '\tinurl:robots.txt ext:txt',
-            '\tinurl:elmah.axd ext:axd intitle:"Error log for"',
-            '\tinurl:server-status "Apache Status"'
-        ],
-        query='SELECT DISTINCT host FROM hosts WHERE host IS NOT NULL',
-        options = [
-            ModuleOption(name='csv_file', default='interesting_files_verify.csv', required=True, description="Custom filename map", validators=[validators.ValidFileValidator]),
-            ModuleOption(name='download', default=True, required=True, description='download discovered files', validators=[validators.BooleanValidator]),
-            ModuleOption(name='protocol', default='https', required=True, description='request protocol', validators=[validators.ProtocolHTTPSValidator]),
-            ModuleOption(name='port', default=443, required=True, description='request port', validators=[validators.PortNumberValidator])
-        ],
-        files=['interesting_files_verify.csv']
-    )
-
-    # =====================================================================================
     # Module Functions
     # =====================================================================================
     def module_pre(self):
@@ -69,8 +34,12 @@ class Module(BaseModule):
         self._download = self.get_option_value("download")
         self._protocol = self.get_option_value("protocol")
         self._port = self.get_option_value("port")
-        self._csv_path = os.path.join(self.get_data_path(), self.get_option_value("csv_file"))
         self._downloads_dir = self.get_downloads_path()
+
+        # Resolve CSV Path
+        self._csv_path = self.get_option_value("csv_file")
+        if not os.path.isfile(self._csv_path):
+            self._csv_path = os.path.join(self.get_package_path(), self.get_option_value("csv_file"))
 
         # Ignore unicode warnings when trying to un-gzip text type 200 repsonses
         warnings.simplefilter("ignore")
