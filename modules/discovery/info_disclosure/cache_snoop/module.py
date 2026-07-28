@@ -73,3 +73,5 @@ class Module(BaseModule):
                 self.alert(f"{domain} => Snooped!")
             else:
                 self.verbose(f"{domain} => Not Found.")
+
+        self.output("%s Domain(s) checked.")

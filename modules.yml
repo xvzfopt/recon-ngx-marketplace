@@ -12,7 +12,7 @@
   name: DNS Cache Snooper
   path: discovery/info_disclosure/cache_snoop
   required_keys: []
-  version: '3.0'
+  version: 3.0.1
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -29,7 +29,7 @@
   name: Interesting Files Finder
   path: discovery/info_disclosure/interesting_files
   required_keys: []
-  version: '3.0'
+  version: 3.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)

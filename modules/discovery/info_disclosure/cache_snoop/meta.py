@@ -15,7 +15,7 @@ meta = ModuleMetadata(
         'thrapt (thrapt@gmail.com)'
     ],
     description='Uses the DNS cache snooping technique to check for visited domains',
-    version='3.0',
+    version='3.0.1',
     comments=[
         'Nameserver must be in IP form.',
         'http://304geeks.blogspot.com/2013/01/dns-scraping-for-corporate-av-detection.html',
