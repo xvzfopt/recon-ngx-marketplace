@@ -32,6 +32,7 @@ class Module(BaseModule):
         Override: Module prelight
         '''
         self._test_results_file = None # Used for Test Cases
+        return super().preflight()
 
     def module_pre(self):
         '''
