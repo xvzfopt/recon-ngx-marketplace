@@ -5,6 +5,7 @@ import os
 import shutil
 import sys
 import re
+import yaml
 import importlib.util
 from pathlib import Path
 from unittest import TestCase
@@ -25,7 +26,7 @@ class ModuleTestCase(TestCase):
     '''
 
     # =====================================================================================
-    # Properties
+    # Properties: General
     # =====================================================================================
     APP_AUTHOR          = 'xvzf_opt'
     VERBOSITY           = 2
@@ -33,16 +34,24 @@ class ModuleTestCase(TestCase):
     MARKETPLACE_ENABLED = False
     ACCESSIBLE          = False
 
-    # Paths
+    # =====================================================================================
+    # Propertes: Paths
+    # =====================================================================================
     TOP_LEVEL_PATH          = Path(__file__).resolve().parent.parent.parent
     FRAMEWORK_PATH          = os.path.join(TOP_LEVEL_PATH, "recon-ngx")
     MARKETPLACE_PATH        = os.path.join(TOP_LEVEL_PATH, 'recon-ngx-marketplace')
     MODULES_PATH            = os.path.join(MARKETPLACE_PATH, 'modules')
     TMP_PATH                = os.path.join(MARKETPLACE_PATH, "test", "tmp")
+    DATA_PATH               = os.path.join(MARKETPLACE_PATH, "test", "data")
     FRAMEWORK_VERSION_PATH  = os.path.join(FRAMEWORK_PATH, "VERSION")
 
-    # Workspace Settings
-    WORKSPACE_NAME      = "test"
+    KEYS_FILE_PATH          = os.path.join(DATA_PATH, "keys.yaml")
+    KEYS_DB_PATH            = os.path.join(TMP_PATH, "keys.db")
+
+    # =====================================================================================
+    # Properties: Workspace
+    # =====================================================================================
+    WORKSPACE_NAME      = "_internal_test"
 
     # =====================================================================================
     # Functions
@@ -68,6 +77,25 @@ class ModuleTestCase(TestCase):
         )
         self._recon.set_workspace(self.WORKSPACE_NAME, False)
         self._console = self._recon.get_console()
+
+        # =====================================================================================
+        # Load Test Keys
+        # =====================================================================================
+        key_manager = self._recon.get_key_manager()
+        key_manager.initialise_db(self.KEYS_DB_PATH)
+
+        # Check Keys file
+        if not os.path.isfile(self.KEYS_FILE_PATH):
+            self._console.alert("Test Keys File was not found and will be created")
+            self._console.alert("Make sure to set API keys for test case usage in %s" % self.KEYS_FILE_PATH)
+            with open(self.KEYS_FILE_PATH, "w") as keys_file:
+                yaml.safe_dump({"example_key": "Example"}, keys_file)
+
+        # Read and Apply Keys
+        with open(self.KEYS_FILE_PATH, "r") as keys_file:
+            keys = yaml.safe_load(keys_file)
+            for key in keys:
+                key_manager.add_key(key, keys[key])
 
     # =====================================================================================
     # Custom Assertions
@@ -132,7 +160,7 @@ class ModuleTestCase(TestCase):
                 break
 
         if not match:
-            raise AssertionError("Expected pattern matched output: %s" % pattern)
+            raise AssertionError("Expected pattern did not match output: %s" % pattern)
 
     def assertNotInOutput(self, pattern):
         '''
