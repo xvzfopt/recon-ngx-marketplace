@@ -37,7 +37,7 @@ meta = ModuleMetadata(
         ModuleOption(name='download', default=True, required=True, description='download discovered files',
                      validators=[validators.BooleanValidator]),
         ModuleOption(name='protocol', default='https', required=True, description='request protocol',
-                     validators=[validators.ProtocolHTTPSValidator]),
+                     validators=[validators.ProtocolHTTPValidator]),
         ModuleOption(name='port', default=443, required=True, description='request port',
                      validators=[validators.PortNumberValidator])
     ]
