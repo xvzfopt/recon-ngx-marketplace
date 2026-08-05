@@ -48,4 +48,4 @@
   path: recon/domains-hosts/shodan_hostname
   required_keys:
   - shodan_api
-  version: 2.0.2
+  version: 2.0.3
