@@ -11,8 +11,6 @@ from recon.sdk.exceptions import ModuleValidationException
 # =====================================================================================
 # Imports: Module Package
 # =====================================================================================
-from . import meta
-from .exceptions import ShodanAuthFailure
 
 # =====================================================================================
 # Module Class: Shodan Hostname Enumerator
