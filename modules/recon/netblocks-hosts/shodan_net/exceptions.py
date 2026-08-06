@@ -1,0 +1,2 @@
+class ShodanAuthFailure(Exception):
+    pass
