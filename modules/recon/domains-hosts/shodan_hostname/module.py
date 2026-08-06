@@ -3,8 +3,6 @@
 # =====================================================================================
 import time
 import json
-
-from mistune.plugins.abbr import process_text
 from shodan import Shodan
 from shodan.exception import APIError
 from recon.sdk import BaseModule
