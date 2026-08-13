@@ -15,7 +15,7 @@ meta = ModuleMetadata(
         "Tim Tomes (@lanmaster53)",
         "Ryan Hays (@_ryanhays)"
     ],
-    version="2.0.3",
+    version="2.0.4",
     description="Harvests hosts from the Shodan API by using the \'hostname\' search operator. Updates the "
                 "\'hosts\' table with the results.",
     required_keys=["shodan_api"],
