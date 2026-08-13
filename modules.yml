@@ -32,6 +32,24 @@
   version: 3.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - Austin Tipton (@hiEntripy404)
+  - Ryan Hays (@_ryanhays)
+  dependencies:
+  - shodan
+  description: Harvests host and port information from the Shodan API by using the
+    'org' search operator. Updates the 'hosts' and 'ports' table with the results.
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-08-13'
+  name: Shodan Organisation Enumerator
+  path: recon/companies-multi/shodan_org
+  required_keys:
+  - shodan_api
+  version: 2.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
   - Ryan Hays (@_ryanhays)
   dependencies:
@@ -59,11 +77,11 @@
   description: Harvests hosts from the Shodan API by using the 'net' search operator.
     Updates the 'hosts' table with the results.
   files:
-  - meta.py
-  - module.py
   - __init__.py
   - exceptions.py
-  last_updated: '2026-08-06'
+  - meta.py
+  - module.py
+  last_updated: '2026-08-13'
   name: Shodan Network Enumerator
   path: recon/netblocks-hosts/shodan_net
   required_keys:
