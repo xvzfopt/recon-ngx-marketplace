@@ -8,10 +8,7 @@ from requests.exceptions import ConnectionError
 from requests.exceptions import ReadTimeout
 from requests.exceptions import ConnectTimeout
 from recon.sdk.exceptions import ModuleValidationException
-from recon.sdk import validators
 from recon.sdk import BaseModule
-from recon.sdk import ModuleMetadata
-from recon.sdk import ModuleOption
 from recon.sdk import utils
 
 # =====================================================================================
