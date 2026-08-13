@@ -1,2 +1,0 @@
-class ShodanAuthFailure(Exception):
-    pass
