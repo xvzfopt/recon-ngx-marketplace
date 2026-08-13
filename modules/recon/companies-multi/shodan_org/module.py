@@ -100,8 +100,6 @@ class Module(BaseModule):
                                 results = json.load(results_file)
                         else:
                             results = self._shodan.search(query, page=page)
-                            with open("test_results_company.json", "w") as results_file:
-                                json.dump(results, results_file, indent=2)
                             time.sleep(1)  # Throttle
                     except APIError as ex:
                         self.error("Encountered a fatal API Error: %s" % ex)

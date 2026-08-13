@@ -15,7 +15,7 @@ meta = ModuleMetadata(
         "Austin Tipton (@hiEntripy404)",
         "Ryan Hays (@_ryanhays)"
     ],
-    version="2.0.0",
+    version="2.0.1",
     description="Harvests host and port information from the Shodan API by using the \'org\' search operator. "
                 "Updates the \'hosts\' and \'ports\' table with the results.",
     required_keys=["shodan_api"],
