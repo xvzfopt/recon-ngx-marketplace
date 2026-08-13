@@ -5,10 +5,6 @@ import os
 import dns.message
 import dns.query
 from recon.sdk import BaseModule
-from recon.sdk import ModuleMetadata
-from recon.sdk import ModuleOption
-from recon.sdk import validators
-from recon.sdk.exceptions import *
 
 # =====================================================================================
 # Modules Class: DNS Cache Snooper
