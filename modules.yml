@@ -8,11 +8,11 @@
   - meta.py
   - module.py
   - data/av_domains.lst
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-13'
   name: DNS Cache Snooper
   path: discovery/info_disclosure/cache_snoop
   required_keys: []
-  version: 3.0.3
+  version: 3.0.4
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -22,14 +22,14 @@
   description: Checks hosts for interesting files in predictable locations.
   files:
   - __init__.py
-  - module.py
   - meta.py
+  - module.py
   - data/interesting_files_verify.csv
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-13'
   name: Interesting Files Finder
   path: discovery/info_disclosure/interesting_files
   required_keys: []
-  version: 3.0.0
+  version: 3.0.1
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Austin Tipton (@hiEntripy404)
@@ -39,15 +39,15 @@
   description: Harvests host and port information from the Shodan API by using the
     'org' search operator. Updates the 'hosts' and 'ports' table with the results.
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
   last_updated: '2026-08-13'
   name: Shodan Organisation Enumerator
   path: recon/companies-multi/shodan_org
   required_keys:
   - shodan_api
-  version: 2.0.0
+  version: 2.0.1
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -58,15 +58,14 @@
     Updates the 'hosts' table with the results.
   files:
   - __init__.py
-  - exceptions.py
-  - meta.py
   - module.py
-  last_updated: '2026-08-05'
+  - meta.py
+  last_updated: '2026-08-13'
   name: Shodan Hostname Enumerator
   path: recon/domains-hosts/shodan_hostname
   required_keys:
   - shodan_api
-  version: 2.0.3
+  version: 2.0.4
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Mike Siegel
@@ -78,12 +77,11 @@
     Updates the 'hosts' table with the results.
   files:
   - __init__.py
-  - exceptions.py
-  - meta.py
   - module.py
+  - meta.py
   last_updated: '2026-08-13'
   name: Shodan Network Enumerator
   path: recon/netblocks-hosts/shodan_net
   required_keys:
   - shodan_api
-  version: 2.0.0
+  version: 2.0.1
