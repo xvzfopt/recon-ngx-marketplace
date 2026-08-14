@@ -33,6 +33,7 @@ class ModuleTestCase(TestCase):
     CHECK_VERSION       = False
     MARKETPLACE_ENABLED = False
     ACCESSIBLE          = False
+    MARKETPLACE_BRANCH  = "master"
 
     # =====================================================================================
     # Propertes: Paths
@@ -73,7 +74,8 @@ class ModuleTestCase(TestCase):
             self.VERBOSITY, self.CHECK_VERSION,
             self.MARKETPLACE_ENABLED,
             self.ACCESSIBLE,
-            self.MODULES_PATH
+            self.MODULES_PATH,
+            self.MARKETPLACE_BRANCH
         )
         self._recon.set_workspace(self.WORKSPACE_NAME, False)
         self._console = self._recon.get_console()
