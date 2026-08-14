@@ -68,6 +68,25 @@
   version: 2.0.4
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  - Matt Puckett (@t3lc0)Ryan Hays (@_ryanhays)
+  dependencies:
+  - shodan
+  description: Harvests port and vulnerability information from the Shodan API by
+    using the 'ip' search operator. Updates the 'ports' and 'vulnerabilites' tables
+    with the results.
+  files:
+  - __init__.py
+  - meta.py
+  - module.py
+  last_updated: '2026-08-14'
+  name: Shodan IP Enumerator
+  path: recon/hosts-ports/shodan_ip
+  required_keys:
+  - shodan_api
+  version: 2.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   - Mike Siegel
   - Tim Tomes (@lanmaster53)
   - Ryan Hays (@_ryanhays)
