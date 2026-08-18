@@ -210,6 +210,15 @@ class ModuleTestCase(TestCase):
             path = self._recon.get_current_workspace().get_downloads_path()
         return path
 
+    def get_workspace_db(self):
+        '''
+        Gets the current Workspace Database
+
+        :returns: The DB of the current workspace
+        :rtype: WorkspaceDB
+        '''
+        return self._recon.get_current_workspace().get_db()
+
     def clear_downloads_directory(self):
         '''
         Clears all files in the workspace downloads directory
