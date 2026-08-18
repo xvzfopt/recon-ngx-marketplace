@@ -87,6 +87,23 @@
   version: 2.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  - Ryan Hays (@_ryanhays)
+  dependencies:
+  - shodan
+  description: Searches Shodan for devices within the specified proximity of a location
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-08-18'
+  name: Shodan Geolocation Search
+  path: recon/locations-pushpins/shodan_geo
+  required_keys:
+  - shodan_api
+  version: 2.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   - Mike Siegel
   - Tim Tomes (@lanmaster53)
   - Ryan Hays (@_ryanhays)
