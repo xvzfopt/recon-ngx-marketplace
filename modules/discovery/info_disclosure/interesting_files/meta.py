@@ -16,7 +16,7 @@ meta = ModuleMetadata(
         'thrapt (thrapt@gmail.com)',
         'Jay Turla (@shipcod3), and Mark Jeffery'
     ],
-    version='3.0.1',
+    version='3.0.2',
     description='Checks hosts for interesting files in predictable locations.',
     comments=[
         'Files: robots.txt, sitemap.xml, sitemap.xml.gz, crossdomain.xml, phpinfo.php, test.php, '
@@ -33,12 +33,12 @@ meta = ModuleMetadata(
     query='SELECT DISTINCT host FROM hosts WHERE host IS NOT NULL',
     options=[
         ModuleOption(name='csv_file', default='data/interesting_files_verify.csv', required=True,
-                     description="Custom filename map", validators=[validators.ValidFileValidator]),
+                     description="Custom filename map", validators=[validators.ValidFileValidator()]),
         ModuleOption(name='download', default=True, required=True, description='download discovered files',
-                     validators=[validators.BooleanValidator]),
+                     validators=[validators.BooleanValidator()]),
         ModuleOption(name='protocol', default='https', required=True, description='request protocol',
-                     validators=[validators.ProtocolHTTPValidator]),
+                     validators=[validators.ProtocolHTTPValidator()]),
         ModuleOption(name='port', default=443, required=True, description='request port',
-                     validators=[validators.PortNumberValidator])
+                     validators=[validators.PortNumberValidator()])
     ]
 )

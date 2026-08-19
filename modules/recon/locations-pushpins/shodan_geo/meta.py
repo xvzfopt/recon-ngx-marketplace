@@ -15,7 +15,7 @@ meta = ModuleMetadata(
         "Tim Tomes (@lanmaster53)",
         "Ryan Hays (@_ryanhays)"
     ],
-    version="2.0.0",
+    version="2.0.1",
     description="Searches Shodan for devices within the specified proximity of a location",
     required_keys=["shodan_api"],
     comments=[
@@ -30,21 +30,21 @@ meta = ModuleMetadata(
             default=1,
             required=True,
             description="Limit the number of pages of results that will be processed for each lookup",
-            validators=[validators.IntegerValidator]
+            validators=[validators.IntegerValidator()]
         ),
         ModuleOption(
             name="Radius",
             default=1,
             required=True,
             description="Radius in Kilometers to search around the target location(s)",
-            validators=[validators.IntegerValidator]
+            validators=[validators.IntegerValidator()]
         ),
         ModuleOption(
             name="Confirm",
             default=True,
             required=True,
             description="Whether confirmation is required to proceed with the Shodan API Query",
-            validators=[validators.BooleanValidator]
+            validators=[validators.BooleanValidator()]
         )
     ],
     dependencies=["shodan"]

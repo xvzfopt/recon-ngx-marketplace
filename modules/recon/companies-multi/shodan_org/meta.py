@@ -15,7 +15,7 @@ meta = ModuleMetadata(
         "Austin Tipton (@hiEntripy404)",
         "Ryan Hays (@_ryanhays)"
     ],
-    version="2.0.1",
+    version="2.0.2",
     description="Harvests host and port information from the Shodan API by using the \'org\' search operator. "
                 "Updates the \'hosts\' and \'ports\' table with the results.",
     required_keys=["shodan_api"],
@@ -26,14 +26,14 @@ meta = ModuleMetadata(
             default=1,
             required=True,
             description="Limit the number of pages of results that will be processed for each lookup",
-            validators=[validators.IntegerValidator]
+            validators=[validators.IntegerValidator()]
         ),
         ModuleOption(
             name="Confirm",
             default=True,
             required=True,
             description="Whether confirmation is required to proceed with the Shodan API Query",
-            validators=[validators.BooleanValidator]
+            validators=[validators.BooleanValidator()]
         )
     ],
     dependencies=["shodan"]

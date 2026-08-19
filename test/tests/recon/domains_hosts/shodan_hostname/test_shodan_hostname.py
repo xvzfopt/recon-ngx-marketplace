@@ -44,6 +44,9 @@ class TestShodanHostname(ModuleTestCase):
         self.test_results_path = os.path.join(os.path.dirname(__file__), self.TEST_RESULTS_FILENAME)
         self._module._test_results_file = self.test_results_path
 
+        # Wait to prevent annoying throttling
+        time.sleep(1)
+
     # =====================================================================================
     # Unit tests
     # =====================================================================================

@@ -15,7 +15,7 @@ meta = ModuleMetadata(
         'thrapt (thrapt@gmail.com)'
     ],
     description='Uses the DNS cache snooping technique to check for visited domains',
-    version='3.0.4',
+    version='3.0.5',
     comments=[
         'Nameserver must be in IP form.',
         'http://304geeks.blogspot.com/2013/01/dns-scraping-for-corporate-av-detection.html',
@@ -26,14 +26,14 @@ meta = ModuleMetadata(
             default="",
             required=True,
             description="IP address of authoritative nameserver",
-            validators=[validators.Ipv4AddressValidator]
+            validators=[validators.Ipv4AddressValidator()]
         ),
         ModuleOption(
             name="domains",
             default="data/av_domains.lst",
             required=True,
             description="File containing the list of domains to snoop for",
-            validators=[validators.ValidFileValidator]
+            validators=[validators.ValidFileValidator()]
         )
     ]
 )
