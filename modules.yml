@@ -5,14 +5,14 @@
   description: Uses the DNS cache snooping technique to check for visited domains
   files:
   - __init__.py
-  - meta.py
   - module.py
+  - meta.py
   - data/av_domains.lst
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-21'
   name: DNS Cache Snooper
   path: discovery/info_disclosure/cache_snoop
   required_keys: []
-  version: 3.0.4
+  version: 3.0.5
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -22,14 +22,32 @@
   description: Checks hosts for interesting files in predictable locations.
   files:
   - __init__.py
-  - meta.py
   - module.py
+  - meta.py
   - data/interesting_files_verify.csv
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-21'
   name: Interesting Files Finder
   path: discovery/info_disclosure/interesting_files
   required_keys: []
-  version: 3.0.1
+  version: 3.0.2
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  - Ryan Hays (@_ryanhays)
+  dependencies:
+  - shodan
+  description: Harvests hosts from the Shodan API by using the 'hostname' search operator.
+    Updates the 'hosts' table with the results.
+  files:
+  - __init__.py
+  - meta.py
+  - module.py
+  last_updated: '2026-08-21'
+  name: Shodan Hostname Enumerator
+  path: recon/companies-contacts/serp_linkedin_harvester
+  required_keys:
+  - shodan_api
+  version: 2.0.4
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Austin Tipton (@hiEntripy404)
@@ -40,14 +58,14 @@
     'org' search operator. Updates the 'hosts' and 'ports' table with the results.
   files:
   - __init__.py
-  - meta.py
   - module.py
-  last_updated: '2026-08-13'
+  - meta.py
+  last_updated: '2026-08-21'
   name: Shodan Organisation Enumerator
   path: recon/companies-multi/shodan_org
   required_keys:
   - shodan_api
-  version: 2.0.1
+  version: 2.0.2
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -60,12 +78,12 @@
   - __init__.py
   - module.py
   - meta.py
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-21'
   name: Shodan Hostname Enumerator
   path: recon/domains-hosts/shodan_hostname
   required_keys:
   - shodan_api
-  version: 2.0.4
+  version: 2.0.5
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -77,14 +95,14 @@
     with the results.
   files:
   - __init__.py
-  - meta.py
   - module.py
-  last_updated: '2026-08-14'
+  - meta.py
+  last_updated: '2026-08-21'
   name: Shodan IP Enumerator
   path: recon/hosts-ports/shodan_ip
   required_keys:
   - shodan_api
-  version: 2.0.0
+  version: 2.0.1
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)
@@ -93,15 +111,15 @@
   - shodan
   description: Searches Shodan for devices within the specified proximity of a location
   files:
-  - meta.py
-  - module.py
   - __init__.py
-  last_updated: '2026-08-18'
+  - module.py
+  - meta.py
+  last_updated: '2026-08-21'
   name: Shodan Geolocation Search
   path: recon/locations-pushpins/shodan_geo
   required_keys:
   - shodan_api
-  version: 2.0.0
+  version: 2.0.1
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Mike Siegel
@@ -115,9 +133,9 @@
   - __init__.py
   - module.py
   - meta.py
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-21'
   name: Shodan Network Enumerator
   path: recon/netblocks-hosts/shodan_net
   required_keys:
   - shodan_api
-  version: 2.0.1
+  version: 2.0.2
