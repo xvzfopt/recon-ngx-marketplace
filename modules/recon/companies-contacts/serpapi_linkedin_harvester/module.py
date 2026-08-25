@@ -266,7 +266,7 @@ class Module(BaseModule):
 
                 # Further processing
                 snippet = components[1]                 # Ignore Full name
-                snippet = snippet.split(" @ ")[0]       # Ignore Company
+                snippet = snippet.split("@")[0].strip() # Ignore Company
                 snippet = snippet.split(" at ")[0]      # Ignore Company
                 snippet = snippet.split(" | ")[0]       # Ignore LinkedIn
 
