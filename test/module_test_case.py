@@ -78,6 +78,7 @@ class ModuleTestCase(TestCase):
             self.MARKETPLACE_BRANCH
         )
         self._recon.set_workspace(self.WORKSPACE_NAME, False)
+        self.get_workspace_db().clear_tables()
         self._console = self._recon.get_console()
 
         # =====================================================================================
