@@ -1,0 +1,220 @@
+{
+  "search_metadata": {
+    "id": "6a8c03b75e3494f142cbd1b7",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/0Ud9C7kCuFa2eZZBoGtjDA/6a8c03b75e3494f142cbd1b7.json",
+    "markdown_endpoint": "https://serpapi.com/searches/0Ud9C7kCuFa2eZZBoGtjDA/6a8c03b75e3494f142cbd1b7.md",
+    "created_at": "2026-08-24 08:41:27 UTC",
+    "processed_at": "2026-08-24 08:41:27 UTC",
+    "yahoo_url": "https://search.yahoo.com/search?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&ei=UTF-8&fr=fp-tts",
+    "raw_html_file": "https://serpapi.com/searches/0Ud9C7kCuFa2eZZBoGtjDA/6a8c03b75e3494f142cbd1b7.html",
+    "total_time_taken": 1.05
+  },
+  "search_parameters": {
+    "engine": "yahoo",
+    "p": "site:linkedin.com/in/ \"Microsoft\"",
+    "device": "desktop"
+  },
+  "search_information": {
+    "error_message": "Yahoo! has returned malformed or illegal request error. Check search parameters."
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Satya Nadella - Chairman and CEO at Microsoft | LinkedIn",
+      "link": "https://www.linkedin.com/in/satyanadella",
+      "displayed_link": "LinkedInhttps://www.linkedin.com \u203a in \u203a satyanadella",
+      "snippet": "LinkedInhttps://www.linkedin.com \u203a in \u203a satyanadella",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "Microsoft"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Asha Sharma - Microsoft | LinkedIn",
+      "link": "https://www.linkedin.com/in/aboutasha",
+      "displayed_link": "LinkedInhttps://www.linkedin.com \u203a in \u203a aboutasha",
+      "snippet": "LinkedInhttps://www.linkedin.com \u203a in \u203a aboutasha",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "LinkedIn"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Rodrigo Kede Lima - Microsoft | LinkedIn",
+      "link": "https://sg.linkedin.com/in/rodrigo-kede-lima-51941129",
+      "displayed_link": "LinkedInhttps://sg.linkedin.com \u203a in \u203a rodrigo-kede-lima-51941129",
+      "snippet": "LinkedInhttps://sg.linkedin.com \u203a in \u203a rodrigo-kede-lima-51941129",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "LinkedIn",
+        "LinkedIn"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Matthew Milton - Microsoft | LinkedIn",
+      "link": "https://ca.linkedin.com/in/miltonmatt",
+      "displayed_link": "LinkedInhttps://ca.linkedin.com \u203a in \u203a miltonmatt",
+      "snippet": "LinkedInhttps://ca.linkedin.com \u203a in \u203a miltonmatt",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "Microsoft"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Philippe Rogge - Microsoft | LinkedIn",
+      "link": "https://be.linkedin.com/in/philipperogge",
+      "displayed_link": "LinkedInhttps://be.linkedin.com \u203a in \u203a philipperogge",
+      "snippet": "LinkedInhttps://be.linkedin.com \u203a in \u203a philipperogge",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "Microsoft",
+        "LinkedIn",
+        "LinkedIn"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "Rajiv Kumar - Microsoft | LinkedIn",
+      "link": "https://in.linkedin.com/in/rajivk-ms",
+      "displayed_link": "Linkedinhttps://in.linkedin.com \u203a in \u203a rajivk-ms",
+      "snippet": "Linkedinhttps://in.linkedin.com \u203a in \u203a rajivk-ms",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "LinkedIn",
+        "LinkedIn"
+      ]
+    },
+    {
+      "position": 7,
+      "title": "Dominic King, MD PhD - VP Health, Microsoft AI | LinkedIn",
+      "link": "https://uk.linkedin.com/in/dominic-king-md-phd-a949b412",
+      "displayed_link": "LinkedInhttps://uk.linkedin.com \u203a in \u203a dominic-king-md-phd-a949b412",
+      "snippet": "LinkedInhttps://uk.linkedin.com \u203a in \u203a dominic-king-md-phd-a949b412",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "Microsoft",
+        "LinkedIn"
+      ]
+    }
+  ],
+  "related_searches": {
+    "bottom": [
+      {
+        "query": "site:linkedin.com/in/ microsoft office",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIATKBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+office&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft 365",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAUKBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzUEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+365&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft word",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIATaBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzIEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+word&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft access",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAUaBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzYEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+access&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft edge",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIATqBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzMEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+edge&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft office 365",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAUqBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzcEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+office+365&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft teams",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAT6BXNyoA;_ylu=Y29sbwNiZjEEcG9zAzQEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+teams&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      },
+      {
+        "query": "site:linkedin.com/in/ microsoft store",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAU6BXNyoA;_ylu=Y29sbwNiZjEEcG9zAzgEdnRpZAMEc2VjA3JlbC1ib3Q-?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=site%3Alinkedin.com%2Fin%2F+microsoft+store&fr=fp-tts&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=yahoo&fr2=p%3As%2Cv%3Aw%2Cm%3Ars-bottom%2Cct%3Asct%2Csa_mk%3A0&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+      }
+    ]
+  },
+  "trending_searches": {
+    "results": [
+      {
+        "position": 1,
+        "title": "1Hawk Fire Near RenoHawk Fire near Reno forces 42,000 evacuations",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAXKBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=Hawk+Fire+Near+Reno&fr2=p%3As%2Cv%3Aw%2Cm%3Atn%2Cct%3Aall%2Cpg%3A1%2Cstl%3Atxt%2Ckt%3Aorg%2Cb%3A",
+        "trending": 0
+      },
+      {
+        "position": 2,
+        "title": "2Caitlin Clark Indiana FeverClark sets record in Fever's win over Sky",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAXaBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=Caitlin+Clark+Indiana+Fever&fr2=p%3As%2Cv%3Aw%2Cm%3Atn%2Cct%3Aall%2Cpg%3A1%2Cstl%3Atxt%2Ckt%3Aorg%2Cb%3A",
+        "trending": 0
+      },
+      {
+        "position": 3,
+        "title": "3Detroit Lions Preseason WinLions defeat Commanders 17-13 in preseason.",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAXqBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=Detroit+Lions+Preseason+Win&fr2=p%3As%2Cv%3Aw%2Cm%3Atn%2Cct%3Aall%2Cpg%3A1%2Cstl%3Atxt%2Ckt%3Aorg%2Cb%3A",
+        "trending": 0
+      },
+      {
+        "position": 4,
+        "title": "4Ashton Jeanty InjuryAshton Jeanty avoids serious injury, sprained ankle.",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAX6BXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=Ashton+Jeanty+Injury&fr2=p%3As%2Cv%3Aw%2Cm%3Atn%2Cct%3Aall%2Cpg%3A1%2Cstl%3Atxt%2Ckt%3Aorg%2Cb%3A",
+        "trending": 0
+      },
+      {
+        "position": 5,
+        "title": "5Shohei Ohtani ReturnOhtani nears pitching return for Dodgers",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAYKBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=Shohei+Ohtani+Return&fr2=p%3As%2Cv%3Aw%2Cm%3Atn%2Cct%3Aall%2Cpg%3A1%2Cstl%3Atxt%2Ckt%3Aorg%2Cb%3A",
+        "trending": 0
+      },
+      {
+        "position": 6,
+        "title": "6Hawaii StormsTropical depression brings more rain to Hawaii",
+        "link": "https://scout.yahoo.com/chat;_ylt=Awrira.3A4xqUwIAYaBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&q=Hawaii+Storms&fr2=p%3As%2Cv%3Aw%2Cm%3Atn%2Cct%3Aall%2Cpg%3A1%2Cstl%3Atxt%2Ckt%3Aorg%2Cb%3A",
+        "trending": 0
+      }
+    ]
+  },
+  "ads_results": [
+    {
+      "position": 1,
+      "block_position": "top",
+      "favicon": "https://up.yimg.com/ib/th?id=OADD2.7353165446278_174R48I6QYGP4X5RWB&pid=21.2&w=16&c=1&rs=1&qlt=95",
+      "title": "Microsoft 365 Personal - Microsoft Apps",
+      "link": "https://www.bing.com/aclick?ld=e8AEpNtmaCuMFzWun2p5GhSzVUCUyne8ri7gt_FbwBlwKcGr9IYOuWIWC-30PtUJoWQ1vje0-fqHlPfutlS0eTI0PppapGUI5-SEiF5x3JmFA3z-9Rgbtp1rJS7dHVp5y-ImKjA01p-ONsm7-z1iKrUxKKwPr4mfu-3qj-TCYmw6H2BxT3QGnroRKlb5AajfTmu8mAIbb8x8qCXxJvHpZ5fwm8sNk&u=aHR0cHMlM2ElMmYlMmZ3d3cud2FsbWFydC5jb20lMmZpcCUyZk1pY3Jvc29mdC0zNjUtUGVyc29uYWwtNi1Nb250aHMtRVNEJTJmMTIzNjczMDYzNDAlM2ZhZGlkJTNkMjIyMjIyMjIyNjQ0NjgyMDkzODQlMjZ3bWxzcGFydG5lciUzZHdtdGxhYnMlMjZ3bDAlM2RiJTI2d2wxJTNkbyUyNndsMiUzZGMlMjZ3bDMlM2Q3Mjc3NDM4ODY3MTk0NSUyNndsNCUzZGRhdC0yMzI0NTczNzQwOTQ2ODkyJTNhbG9jLTE5MCUyNndsNSUzZDI1MDcxOCUyNndsNiUzZCUyNndsNyUzZCUyNndsMTQlM2RNaWNyb3NvZnQlMjZ2ZWglM2RzZW0lMjZtc2Nsa2lkJTNkMDQ3MDBmMmY2MjIwMTkzOGE3ZGI2NWEzNjE5NzQ4ZWM&rlid=04700f2f62201938a7db65a3619748ec",
+      "snippet": "Free 2-day Shipping On Millions of Items. No Membership Fee. Shop Now!"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://search.yahoo.com/search;_ylt=Awrira.3A4xqUwIAWKBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BhZ2luYXRpb24-?fr=fp-tts&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&b=8&pz=7&bct=0&xargs=0&pstart=3",
+    "other_pages": {
+      "2": "https://search.yahoo.com/search;_ylt=Awrira.3A4xqUwIAVKBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BhZ2luYXRpb24-?fr=fp-tts&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&b=8&pz=7&bct=0&xargs=0&pstart=3",
+      "3": "https://search.yahoo.com/search;_ylt=Awrira.3A4xqUwIAVaBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BhZ2luYXRpb24-?fr=fp-tts&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&b=15&pz=7&bct=0&xargs=0&pstart=5",
+      "4": "https://search.yahoo.com/search;_ylt=Awrira.3A4xqUwIAVqBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BhZ2luYXRpb24-?fr=fp-tts&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&b=22&pz=7&bct=0&xargs=0&pstart=7",
+      "5": "https://search.yahoo.com/search;_ylt=Awrira.3A4xqUwIAV6BXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BhZ2luYXRpb24-?fr=fp-tts&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&b=29&pz=7&bct=0&xargs=0&pstart=9"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?b=8&device=desktop&engine=yahoo&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22",
+    "next": "https://serpapi.com/search.json?b=8&device=desktop&engine=yahoo&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?b=8&device=desktop&engine=yahoo&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22",
+      "3": "https://serpapi.com/search.json?b=15&device=desktop&engine=yahoo&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22",
+      "4": "https://serpapi.com/search.json?b=22&device=desktop&engine=yahoo&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22",
+      "5": "https://serpapi.com/search.json?b=29&device=desktop&engine=yahoo&p=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "search_metadata": {
+    "id": "6a8c5ad7ff596e8afabe54c8",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/Siu78h38kErh4INPy4KsIg/6a8c5ad7ff596e8afabe54c8.json",
+    "markdown_endpoint": "https://serpapi.com/searches/Siu78h38kErh4INPy4KsIg/6a8c5ad7ff596e8afabe54c8.md",
+    "created_at": "2026-08-24 14:53:11 UTC",
+    "processed_at": "2026-08-24 14:53:11 UTC",
+    "duckduckgo_url": "https://duckduckgo.com/?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&kl=us-en",
+    "raw_html_file": "https://serpapi.com/searches/Siu78h38kErh4INPy4KsIg/6a8c5ad7ff596e8afabe54c8.html",
+    "prettify_html_file": "https://serpapi.com/searches/Siu78h38kErh4INPy4KsIg/6a8c5ad7ff596e8afabe54c8.prettify",
+    "total_time_taken": 8.17
+  },
+  "search_parameters": {
+    "engine": "duckduckgo",
+    "q": "site:linkedin.com/in/ \"Microsoft\"",
+    "kl": "us-en"
+  },
+  "search_information": {
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Satya Nadella - Chairman and CEO at Microsoft | LinkedIn",
+      "link": "https://www.linkedin.com/in/satyanadella",
+      "snippet": "Chairman and CEO at Microsoft \u00b7 As chairman and CEO of Microsoft, I define my mission and that of my company as empowering every person and every organization on the planet to achieve more ...",
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.linkedin.com.ico"
+    },
+    {
+      "position": 2,
+      "title": "Jared Spataro - Chief Marketing Officer, AI at Work @ Microsoft ...",
+      "link": "https://www.linkedin.com/in/jaredspa",
+      "snippet": "Chief Marketing Officer, AI at Work @ Microsoft | Predicting, shaping and innovating for the future of work | Tech optimist \u00b7 Jared operates at the intersection of building AI technology and ...",
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.linkedin.com.ico"
+    },
+    {
+      "position": 3,
+      "title": "Matthew Milton - Microsoft | LinkedIn",
+      "link": "https://ca.linkedin.com/in/miltonmatt",
+      "snippet": "As President of Microsoft Canada, I lead a talented team of experts that leverage our\u2026 \u00b7 Experience: Microsoft \u00b7 Education: The University of Western Ontario \u00b7 Location: Canada \u00b7 500+ connections on LinkedIn. View Matthew Milton's profile on LinkedIn, a professional community of 1 billion members.",
+      "favicon": "https://external-content.duckduckgo.com/ip3/ca.linkedin.com.ico"
+    },
+    {
+      "position": 4,
+      "title": "\u200fMichal Braverman-Blumenstyk\u200f - \u200fCorporate Vice President at Microsoft ...",
+      "link": "https://il.linkedin.com/in/michal-braverman-blumenstyk",
+      "snippet": "\u200fCorporate Vice President at Microsoft Corporation, Managing Director of Israel R&amp;D Center and CTO of Microsoft Security\u200f \u00b7 \u200fI am a Corporate Vice President at Microsoft, and I hold two pivotal roles: CTO of Microsoft Security and Managing Director of the Microsoft Israel R&amp;D Center. With over two decades of experience in cybersecurity across both startups and enterprises, I am ...",
+      "favicon": "https://external-content.duckduckgo.com/ip3/il.linkedin.com.ico"
+    },
+    {
+      "position": 5,
+      "title": "Philippe Rogge - Microsoft | LinkedIn",
+      "link": "https://be.linkedin.com/in/philipperogge",
+      "snippet": "Experience: Microsoft \u00b7 Location: Belgium \u00b7 500+ connections on LinkedIn. View Philippe Rogge's profile on LinkedIn, a professional community of 1 billion members.",
+      "favicon": "https://external-content.duckduckgo.com/ip3/be.linkedin.com.ico"
+    },
+    {
+      "position": 6,
+      "title": "Rodrigo Kede Lima - Microsoft | LinkedIn",
+      "link": "https://sg.linkedin.com/in/rodrigo-kede-lima-51941129",
+      "snippet": "I lead Microsoft's business across Asia, one of the most dynamic and complex regions in\u2026 \u00b7 Experience: Microsoft \u00b7 Education: Pontif\u00edcia Universidade Cat\u00f3lica do Rio de Janeiro \u00b7 Location: Singapore \u00b7 500+ connections on LinkedIn. View Rodrigo Kede Lima's profile on LinkedIn, a professional community of 1 billion members.",
+      "favicon": "https://external-content.duckduckgo.com/ip3/sg.linkedin.com.ico"
+    },
+    {
+      "position": 7,
+      "title": "Dominic King, MD PhD - VP Health, Microsoft AI | LinkedIn",
+      "link": "https://uk.linkedin.com/in/dominic-king-md-phd-a949b412",
+      "snippet": "VP Health, Microsoft AI \u00b7 Experience: Microsoft AI \u00b7 Education: Imperial College London \u00b7 Location: United Kingdom \u00b7 500+ connections on LinkedIn. View Dominic King, MD PhD's profile on LinkedIn, a professional community of 1 billion members.",
+      "favicon": "https://external-content.duckduckgo.com/ip3/uk.linkedin.com.ico"
+    },
+    {
+      "position": 8,
+      "title": "Soyoung Lee \ub2d8 - Senior Business Program Manager Lead - LinkedIn",
+      "link": "https://kr.linkedin.com/in/soyoungleems",
+      "snippet": "Senior Business Program Manager Lead - Azure &amp; AI in Microsoft, author of 2 books about Community Leadership and partnership \u00b7 With a dynamic 25-year tenure in the IT industry, I stand at the forefront of the latest technological advancements as the Asia Time-zone Manager for Microsoft&#39;s Global Influencer Program. In this pivotal role, I strategize and execute initiatives that amplify ...",
+      "favicon": "https://external-content.duckduckgo.com/ip3/kr.linkedin.com.ico"
+    },
+    {
+      "position": 9,
+      "title": "Feng Sun - VP, STCA Ads at Microsoft | \u9886\u82f1",
+      "link": "https://cn.linkedin.com/in/feng-sun",
+      "snippet": "VP, STCA Ads at Microsoft \u00b7 Led large teams of engineering and applied research in areas of machine learning, big data, distributed system and online advertising. Designed and implemented key algorithm innovations in Microsoft search and display advertising, including ads selection, relevance, click/conversion prediction, personalization and behavior targeting. Specialties: Recommendation ...",
+      "favicon": "https://external-content.duckduckgo.com/ip3/cn.linkedin.com.ico"
+    },
+    {
+      "position": 10,
+      "title": "Jane Livesey - Microsoft | LinkedIn",
+      "link": "https://au.linkedin.com/in/jane-livesey-234276",
+      "snippet": "As President for Microsoft Australia and New Zealand, I am privileged to lead our\u2026 \u00b7 Experience: Microsoft \u00b7 Education: Lincoln University (NZ) \u00b7 Location: Lavender Bay \u00b7 500+ connections on LinkedIn. View Jane Livesey's profile on LinkedIn, a professional community of 1 billion members.",
+      "favicon": "https://external-content.duckduckgo.com/ip3/au.linkedin.com.ico"
+    },
+    {
+      "position": 11,
+      "title": "Rajiv Kumar - Microsoft | LinkedIn",
+      "link": "https://in.linkedin.com/in/rajivk-ms",
+      "snippet": "I am the Managing Director of Microsoft India Development Center (IDC) and Corporate Vice\u2026 \u00b7 Experience: Microsoft \u00b7 Education: Kellogg School of Management \u00b7 Location: Hyderabad \u00b7 500+ connections on LinkedIn. View Rajiv Kumar's profile on LinkedIn, a professional community of 1 billion members.",
+      "favicon": "https://external-content.duckduckgo.com/ip3/in.linkedin.com.ico"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "microsoft 365 sign in",
+      "link": "https://duckduckgo.com/?q=microsoft%20365%20sign%20in&origin=related"
+    },
+    {
+      "query": "microsoft onedrive",
+      "link": "https://duckduckgo.com/?q=microsoft%20onedrive&origin=related"
+    },
+    {
+      "query": "microsoft outlook email",
+      "link": "https://duckduckgo.com/?q=microsoft%20outlook%20email&origin=related"
+    },
+    {
+      "query": "microsoft account sign in",
+      "link": "https://duckduckgo.com/?q=microsoft%20account%20sign%20in&origin=related"
+    },
+    {
+      "query": "microsoft word free download",
+      "link": "https://duckduckgo.com/?q=microsoft%20word%20free%20download&origin=related"
+    },
+    {
+      "query": "microsoft windows 10 download center",
+      "link": "https://duckduckgo.com/?q=microsoft%20windows%2010%20download%20center&origin=related"
+    },
+    {
+      "query": "microsoft official site home page",
+      "link": "https://duckduckgo.com/?q=microsoft%20official%20site%20home%20page&origin=related"
+    },
+    {
+      "query": "microsoft office help chat",
+      "link": "https://duckduckgo.com/?q=microsoft%20office%20help%20chat&origin=related"
+    },
+    {
+      "query": "microsoft sign up",
+      "link": "https://duckduckgo.com/?q=microsoft%20sign%20up&origin=related"
+    },
+    {
+      "query": "microsoft corporate office",
+      "link": "https://duckduckgo.com/?q=microsoft%20corporate%20office&origin=related"
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=duckduckgo&kl=us-en&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=11"
+  }
+}

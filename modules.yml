@@ -32,22 +32,24 @@
   version: 3.0.2
 - authors:
   - xvzf_opt (@xvzf_opt)
-  - Tim Tomes (@lanmaster53)
-  - Ryan Hays (@_ryanhays)
   dependencies:
-  - shodan
-  description: Harvests hosts from the Shodan API by using the 'hostname' search operator.
-    Updates the 'hosts' table with the results.
+  - serpapi
+  description: Harvests profiles from LinkedIn related to the given company by using
+    SerpApi to search across various Search Engines. Profiles are added to the 'profiles'
+    table, while contact information is added to  the 'contacts' table. This module
+    does not access LinkedIn at any time, but does require a SerpApi key
   files:
-  - __init__.py
   - meta.py
   - module.py
-  last_updated: '2026-08-21'
-  name: Shodan Hostname Enumerator
-  path: recon/companies-contacts/serp_linkedin_harvester
+  - engines.py
+  - __init__.py
+  - mock_results.py
+  last_updated: '2026-08-25'
+  name: SerpApi LinkedIn Harvester
+  path: recon/companies-contacts/serpapi_linkedin_harvester
   required_keys:
-  - shodan_api
-  version: 2.0.4
+  - serpapi_api
+  version: 1.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Austin Tipton (@hiEntripy404)

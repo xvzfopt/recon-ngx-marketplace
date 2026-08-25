@@ -1,0 +1,383 @@
+{
+  "search_metadata": {
+    "id": "6a8c5ac80d0b293a1e40fabf",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/JvR3gxJKr1uCDEiUUyXRBg/6a8c5ac80d0b293a1e40fabf.json",
+    "markdown_endpoint": "https://serpapi.com/searches/JvR3gxJKr1uCDEiUUyXRBg/6a8c5ac80d0b293a1e40fabf.md",
+    "pixel_position_endpoint": "https://serpapi.com/searches/JvR3gxJKr1uCDEiUUyXRBg/6a8c5ac80d0b293a1e40fabf.json_with_pixel_position",
+    "created_at": "2026-08-24 14:52:56 UTC",
+    "processed_at": "2026-08-24 14:52:56 UTC",
+    "google_url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/JvR3gxJKr1uCDEiUUyXRBg/6a8c5ac80d0b293a1e40fabf.html",
+    "total_time_taken": 1.31
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "site:linkedin.com/in/ \"Microsoft\"",
+    "google_domain": "google.com",
+    "device": "desktop"
+  },
+  "search_information": {
+    "query_displayed": "site:linkedin.com/in/ \"Microsoft\"",
+    "total_results": 14900000,
+    "time_taken_displayed": 0.38,
+    "organic_results_state": "Results for exact spelling"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Omar Shahine - Microsoft",
+      "link": "https://www.linkedin.com/in/omarshahine",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/omarshahine&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECCAQAQ",
+      "displayed_link": "19.3K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "I lead a team building personal assistants for Microsoft 365 customers. My goal is to\u2026 \u00b7 Experience: Microsoft \u00b7 Location: Seattle \u00b7 500+ connections on ...",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "Microsoft"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "Seattle, Washington, United States",
+            "Microsoft"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "I lead a team building personal assistants for Microsoft 365 customers. My goal is to\u2026 \u00b7 Experience: Microsoft \u00b7 Location: Seattle \u00b7 500+ connections on ...",
+          "source_info_link": "https://www.linkedin.com/in/omarshahine",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/omarshahine&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fomarshahine",
+      "source": "LinkedIn \u00b7 Omar Shahine"
+    },
+    {
+      "position": 2,
+      "title": "John Smith - Business Program Manager Commercial ...",
+      "link": "https://www.linkedin.com/in/john-smith-4a76366",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/john-smith-4a76366&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECBsQAQ",
+      "displayed_link": "530+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "6 months after joining Microsoft found myself as employee #20 in Xbox. Spent 17+ years in 3rd party game publishing. Had the pleasure of being deeply involved ...",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "Redmond, Washington, United States",
+            "Business Program Manager Commercial Marketplace",
+            "Microsoft"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "6 months after joining Microsoft found myself as employee #20 in Xbox. Spent 17+ years in 3rd party game publishing. Had the pleasure of being deeply involved ...",
+          "source_info_link": "https://www.linkedin.com/in/john-smith-4a76366",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/john-smith-4a76366&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjohn-smith-4a76366",
+      "source": "LinkedIn \u00b7 John Smith",
+      "read_more_link": "https://www.linkedin.com/in/john-smith-4a76366#:~:text=6%20months%20after%20joining%20Microsoft,pleasure%20of%20being%20deeply%20involved"
+    },
+    {
+      "position": 3,
+      "title": "Scott Hanselman - Microsoft",
+      "link": "https://www.linkedin.com/in/shanselman",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/shanselman&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECBYQAQ",
+      "displayed_link": "142.3K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "Scott Hanselman is an influencer. Microsoft. Portland, Oregon, United States. 142K followers 500+ connections.",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "Portland, Oregon, United States",
+            "VP, Member of Technical Staff",
+            "Microsoft"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "Scott Hanselman is an influencer. Microsoft. Portland, Oregon, United States. 142K followers 500+ connections.",
+          "source_info_link": "https://www.linkedin.com/in/shanselman",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/shanselman&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fshanselman",
+      "source": "LinkedIn \u00b7 Scott Hanselman",
+      "read_more_link": "https://www.linkedin.com/in/shanselman#:~:text=Microsoft,142K%20followers%20500%2B%20connections"
+    },
+    {
+      "position": 4,
+      "title": "Dona Sarkar - Chief Troublemaker-Microsoft Enterprise AI ...",
+      "link": "https://www.linkedin.com/in/donasarkar",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/donasarkar&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECBoQAQ",
+      "displayed_link": "55K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "Currently, at my day job, I'm running 100 experiments as the Chief Troublemaker of the Enterprise AI Advocacy program at Microsoft. My goal is that people all ...",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Currently, at my day job, I'm running 100 experiments as the Chief Troublemaker of the Enterprise AI Advocacy program at Microsoft. My goal is that people all ...",
+          "source_info_link": "https://www.linkedin.com/in/donasarkar",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/donasarkar&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdonasarkar",
+      "source": "LinkedIn \u00b7 Dona Sarkar",
+      "read_more_link": "https://www.linkedin.com/in/donasarkar#:~:text=Currently%2C%20at%20my%20day%20job%2C,goal%20is%20that%20people%20all"
+    },
+    {
+      "position": 5,
+      "title": "Tim Bakke - Content Strategy Lead, AI Business Solutions ...",
+      "link": "https://www.linkedin.com/in/timbakke",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/timbakke&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECBcQAQ",
+      "displayed_link": "1.1K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "As part of Microsoft's worldwide Executive Briefing Program, I lead global content strategy across our Experience Centers in Redmond, Singapore, Munich, and ...",
+      "snippet_highlighted_words": [
+        "Microsoft's"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "As part of Microsoft's worldwide Executive Briefing Program, I lead global content strategy across our Experience Centers in Redmond, Singapore, Munich, and ...",
+          "source_info_link": "https://www.linkedin.com/in/timbakke",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/timbakke&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftimbakke",
+      "source": "LinkedIn \u00b7 Tim Bakke",
+      "read_more_link": "https://www.linkedin.com/in/timbakke#:~:text=As%20part%20of%20Microsoft's%20worldwide,Singapore%2C%20Munich%2C%20and%20Silicon%20Valley."
+    },
+    {
+      "position": 6,
+      "title": "Greg Urquhart - General Manager, AI Business Solutions",
+      "link": "https://www.linkedin.com/in/urquhartgreg",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/urquhartgreg&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECCMQAQ",
+      "displayed_link": "3.2K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "I lead the Global AI Business Solutions (Business Process) \"Black Belt\" Sales and Technical organization. We work with our industry and geo focused Microsoft ...",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "Sacramento, California, United States",
+            "General Manager, Global D365 Sales Leader - AI Business Solutions",
+            "Microsoft"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "I lead the Global AI Business Solutions (Business Process) \"Black Belt\" Sales and Technical organization. We work with our industry and geo focused Microsoft ...",
+          "source_info_link": "https://www.linkedin.com/in/urquhartgreg",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/urquhartgreg&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Furquhartgreg",
+      "source": "LinkedIn \u00b7 Greg Urquhart",
+      "read_more_link": "https://www.linkedin.com/in/urquhartgreg#:~:text=I%20lead%20the%20Global%20AI,industry%20and%20geo%20focused%20Microsoft"
+    },
+    {
+      "position": 7,
+      "title": "Yugali Gullapalli - Product at Microsoft",
+      "link": "https://www.linkedin.com/in/yugali",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/yugali&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECCkQAQ",
+      "displayed_link": "3.3K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "Before joining full-time as a PM and Developer at Microsoft, I graduated with a Masters's degree in Computer Sciences from the University of Wisconsin-Madison ...",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "Redmond, Washington, United States",
+            "Senior Technical Product Manager",
+            "Microsoft"
+          ]
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "Before joining full-time as a PM and Developer at Microsoft, I graduated with a Masters's degree in Computer Sciences from the University of Wisconsin-Madison ...",
+          "source_info_link": "https://www.linkedin.com/in/yugali",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/yugali&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fyugali",
+      "source": "LinkedIn \u00b7 Yugali Gullapalli",
+      "read_more_link": "https://www.linkedin.com/in/yugali#:~:text=Before%20joining%20full%2Dtime%20as%20a,of%20Wisconsin%2DMadison%20in%20May%202019."
+    },
+    {
+      "position": 8,
+      "title": "Michael Mattmiller - Microsoft",
+      "link": "https://www.linkedin.com/in/mikematt",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/mikematt&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECC8QAQ",
+      "displayed_link": "6.8K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "Experience: Microsoft \u00b7 Education: The George Washington University \u00b7 Location: Seattle \u00b7 500+ connections on LinkedIn. View Michael Mattmiller's profile on ...",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Experience: Microsoft \u00b7 Education: The George Washington University \u00b7 Location: Seattle \u00b7 500+ connections on LinkedIn. View Michael Mattmiller's profile on ...",
+          "source_info_link": "https://www.linkedin.com/in/mikematt",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/mikematt&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmikematt",
+      "source": "LinkedIn \u00b7 Michael Mattmiller"
+    },
+    {
+      "position": 9,
+      "title": "April Dunnam - Cloud Advocate \ud83e\udd51 at Microsoft \u25c9 YouTube ...",
+      "link": "https://www.linkedin.com/in/aprildunnam",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/aprildunnam&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECDIQAQ",
+      "displayed_link": "29.2K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "As a Principal Cloud Advocate at Microsoft, I focus on making complex AI and automation concepts accessible to builders, developers, and organizations ...",
+      "snippet_highlighted_words": [
+        "Microsoft"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "As a Principal Cloud Advocate at Microsoft, I focus on making complex AI and automation concepts accessible to builders, developers, and organizations ...",
+          "source_info_link": "https://www.linkedin.com/in/aprildunnam",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/aprildunnam&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Faprildunnam",
+      "source": "LinkedIn \u00b7 April Dunnam",
+      "read_more_link": "https://www.linkedin.com/in/aprildunnam#:~:text=As%20a%20Principal%20Cloud%20Advocate,365%20and%20Power%20Platform%20ecosystem."
+    },
+    {
+      "position": 10,
+      "title": "Keith Boyd - Senior Director at Microsoft | Driving $8B+ ...",
+      "link": "https://www.linkedin.com/in/keithalanboyd",
+      "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.linkedin.com/in/keithalanboyd&ved=2ahUKEwiG-JSiwrmWAxWbFFkFHVE6E4wQFnoECCoQAQ",
+      "displayed_link": "3.9K+ followers",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png",
+      "snippet": "Today, as a Senior IT Director in Microsoft Digital, I lead the global organization behind Microsoft's Executive Briefing Center program, Inside Track content ...",
+      "snippet_highlighted_words": [
+        "Microsoft",
+        "Microsoft's"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Today, as a Senior IT Director in Microsoft Digital, I lead the global organization behind Microsoft's Executive Briefing Center program, Inside Track content ...",
+          "source_info_link": "https://www.linkedin.com/in/keithalanboyd",
+          "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAAAm0lEQVR4AWP4__8_RRhMyLfs3sNQvOk_KRikB24ATNB2yhEQJtoQuAEwzVAAYtPVAMJe4Cjf8l-0bsd_RkIGQAGc_ej9t_-TDt_7_-vPXzD_6Yfv_-2nHSXWAAT49P33_z9__4HZl559JM2Aqm3XwXyXGcfA_H___pFmgFj9DjCfp3IrTIgkA5ADbbAbQA6mKDPp9x7YBTOAIgwAVba5DGceMlQAAAAASUVORK5CYII.png"
+        },
+        "languages": [
+          "en"
+        ],
+        "regions": [
+          "US"
+        ]
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.linkedin.com/in/keithalanboyd&tbm=ilp",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&q=About+https%3A%2F%2Fwww.linkedin.com%2Fin%2Fkeithalanboyd",
+      "source": "LinkedIn \u00b7 Keith Boyd",
+      "read_more_link": "https://www.linkedin.com/in/keithalanboyd#:~:text=Today%2C%20as%20a%20Senior%20IT,platform%2C%20and%20strategic%20customer%20engagements."
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=10&sourceid=chrome&ie=UTF-8",
+    "other_pages": {
+      "2": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=10&sourceid=chrome&ie=UTF-8",
+      "3": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=20&sourceid=chrome&ie=UTF-8",
+      "4": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=30&sourceid=chrome&ie=UTF-8",
+      "5": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=40&sourceid=chrome&ie=UTF-8"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=30",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&start=40"
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "search_metadata": {
+    "id": "6a8c03d53d34dd57ffd385bc",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/2mjZcgdBOG6WAUM0JJT6qw/6a8c03d53d34dd57ffd385bc.json",
+    "markdown_endpoint": "https://serpapi.com/searches/2mjZcgdBOG6WAUM0JJT6qw/6a8c03d53d34dd57ffd385bc.md",
+    "created_at": "2026-08-24 08:41:57 UTC",
+    "processed_at": "2026-08-24 08:41:57 UTC",
+    "baidu_url": "https://www.baidu.com/s?wd=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&oq=site%3Alinkedin.com%2Fin%2F+%22Microsoft%22&tn=baidu&ie=utf-8&f=8",
+    "raw_html_file": "https://serpapi.com/searches/2mjZcgdBOG6WAUM0JJT6qw/6a8c03d53d34dd57ffd385bc.html",
+    "total_time_taken": 11.25
+  },
+  "search_parameters": {
+    "q": "site:linkedin.com/in/ \"Microsoft\"",
+    "f": "8",
+    "device": "desktop",
+    "engine": "baidu"
+  },
+  "search_information": {
+    "organic_results_state": "Fully empty",
+    "query_displayed": "site:linkedin.com/in/ \"Microsoft\""
+  },
+  "error": "Baidu hasn't returned any results for this query.",
+  "top_searches": [
+    {
+      "position": 1,
+      "text": "\u8425\u9020\u98ce\u6e05\u6c14\u6b63\u7684\u653f\u6cbb\u751f\u6001",
+      "link": "https://www.baidu.com/s?wd=%E8%90%A5%E9%80%A0%E9%A3%8E%E6%B8%85%E6%B0%94%E6%AD%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E7%94%9F%E6%80%81&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=766fdv9usDu7P2BfkGVnz0AlR7am79enVP%2FbdqANb7y9QCZUWo4n2QVcrUE&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_1&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E8%90%A5%E9%80%A0%E9%A3%8E%E6%B8%85%E6%B0%94%E6%AD%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E7%94%9F%E6%80%81"
+    },
+    {
+      "position": 2,
+      "text": "\u56db\u5ddd\u5730\u9707\u5c40\uff1a7.7\u7ea7\u5730\u9707\u9884\u8b66\u4e3a\u5192\u540d\u53d1\u5e03",
+      "link": "https://www.baidu.com/s?wd=%E5%9B%9B%E5%B7%9D%E5%9C%B0%E9%9C%87%E5%B1%80%EF%BC%9A7.7%E7%BA%A7%E5%9C%B0%E9%9C%87%E9%A2%84%E8%AD%A6%E4%B8%BA%E5%86%92%E5%90%8D%E5%8F%91%E5%B8%83&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=766fdv9usDu7P2BfkGVnz0AlR7am79enVP%2FbdqANb7y9QCZUWo4n2QVcrUE&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_2&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%9B%9B%E5%B7%9D%E5%9C%B0%E9%9C%87%E5%B1%80%EF%BC%9A7.7%E7%BA%A7%E5%9C%B0%E9%9C%87%E9%A2%84%E8%AD%A6%E4%B8%BA%E5%86%92%E5%90%8D%E5%8F%91%E5%B8%83",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 3,
+      "text": "\u654c\u654c\u754f\u6d89\u4e8b\u6d88\u6740\u516c\u53f8\u5df2\u4eba\u53bb\u697c\u7a7a",
+      "link": "https://www.baidu.com/s?wd=%E6%95%8C%E6%95%8C%E7%95%8F%E6%B6%89%E4%BA%8B%E6%B6%88%E6%9D%80%E5%85%AC%E5%8F%B8%E5%B7%B2%E4%BA%BA%E5%8E%BB%E6%A5%BC%E7%A9%BA&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=766fdv9usDu7P2BfkGVnz0AlR7am79enVP%2FbdqANb7y9QCZUWo4n2QVcrUE&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_3&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E6%95%8C%E6%95%8C%E7%95%8F%E6%B6%89%E4%BA%8B%E6%B6%88%E6%9D%80%E5%85%AC%E5%8F%B8%E5%B7%B2%E4%BA%BA%E5%8E%BB%E6%A5%BC%E7%A9%BA",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 4,
+      "text": "\u4e2d\u56fd\u673a\u5668\u4eba\u8dd1\u51fa\u201c\u4e2d\u56fd\u5236\u9020\u201d\u52a0\u901f\u5ea6",
+      "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%B7%91%E5%87%BA%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%88%B6%E9%80%A0%E2%80%9D%E5%8A%A0%E9%80%9F%E5%BA%A6&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=766fdv9usDu7P2BfkGVnz0AlR7am79enVP%2FbdqANb7y9QCZUWo4n2QVcrUE&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_4&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%B8%AD%E5%9B%BD%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%B7%91%E5%87%BA%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%88%B6%E9%80%A0%E2%80%9D%E5%8A%A0%E9%80%9F%E5%BA%A6"
+    },
+    {
+      "position": 5,
+      "text": "\u592e\u89c6\u66dd\u5149\u9694\u7a7a\u7325\u4eb5",
+      "link": "https://www.baidu.com/s?wd=%E5%A4%AE%E8%A7%86%E6%9B%9D%E5%85%89%E9%9A%94%E7%A9%BA%E7%8C%A5%E4%BA%B5&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_5&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A4%AE%E8%A7%86%E6%9B%9D%E5%85%89%E9%9A%94%E7%A9%BA%E7%8C%A5%E4%BA%B5",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 6,
+      "text": "\u4e01\u4fca\u6656\uff1a\u4ee5\u540e\u4e16\u754c\u7b2c\u4e00\u90fd\u662f\u4e2d\u56fd\u7403\u5458",
+      "link": "https://www.baidu.com/s?wd=%E4%B8%81%E4%BF%8A%E6%99%96%EF%BC%9A%E4%BB%A5%E5%90%8E%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%80%E9%83%BD%E6%98%AF%E4%B8%AD%E5%9B%BD%E7%90%83%E5%91%98&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_6&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%B8%81%E4%BF%8A%E6%99%96%EF%BC%9A%E4%BB%A5%E5%90%8E%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%80%E9%83%BD%E6%98%AF%E4%B8%AD%E5%9B%BD%E7%90%83%E5%91%98"
+    },
+    {
+      "position": 7,
+      "text": "\u8d85\u5e02\u6563\u88c5\u96f6\u98df\u4f55\u4ee5\u5931\u5b88",
+      "link": "https://www.baidu.com/s?wd=%E8%B6%85%E5%B8%82%E6%95%A3%E8%A3%85%E9%9B%B6%E9%A3%9F%E4%BD%95%E4%BB%A5%E5%A4%B1%E5%AE%88&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_7&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E8%B6%85%E5%B8%82%E6%95%A3%E8%A3%85%E9%9B%B6%E9%A3%9F%E4%BD%95%E4%BB%A5%E5%A4%B1%E5%AE%88"
+    },
+    {
+      "position": 8,
+      "text": "\u7528AI\u5199\u6587\u7ae0 \u9a97\u4e0d\u4e86\u4eba\u4e86",
+      "link": "https://www.baidu.com/s?wd=%E7%94%A8AI%E5%86%99%E6%96%87%E7%AB%A0%20%E9%AA%97%E4%B8%8D%E4%BA%86%E4%BA%BA%E4%BA%86&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_8&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%94%A8AI%E5%86%99%E6%96%87%E7%AB%A0+%E9%AA%97%E4%B8%8D%E4%BA%86%E4%BA%BA%E4%BA%86"
+    },
+    {
+      "position": 9,
+      "text": "12306\u56de\u5e94\u65e0\u5ea7\u7968\u4e8c\u7b49\u5ea7\u540c\u4ef7",
+      "link": "https://www.baidu.com/s?wd=12306%E5%9B%9E%E5%BA%94%E6%97%A0%E5%BA%A7%E7%A5%A8%E4%BA%8C%E7%AD%89%E5%BA%A7%E5%90%8C%E4%BB%B7&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_9&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=12306%E5%9B%9E%E5%BA%94%E6%97%A0%E5%BA%A7%E7%A5%A8%E4%BA%8C%E7%AD%89%E5%BA%A7%E5%90%8C%E4%BB%B7",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 10,
+      "text": "\u56e2\u4f19\u73a9\u201c\u4ed9\u4eba\u8df3\u201d\u4e13\u5751\u5927\u5b66\u751f\u88ab\u5224\u5211",
+      "link": "https://www.baidu.com/s?wd=%E5%9B%A2%E4%BC%99%E7%8E%A9%E2%80%9C%E4%BB%99%E4%BA%BA%E8%B7%B3%E2%80%9D%E4%B8%93%E5%9D%91%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%A2%AB%E5%88%A4%E5%88%91&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_10&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%9B%A2%E4%BC%99%E7%8E%A9%E2%80%9C%E4%BB%99%E4%BA%BA%E8%B7%B3%E2%80%9D%E4%B8%93%E5%9D%91%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%A2%AB%E5%88%A4%E5%88%91"
+    },
+    {
+      "position": 11,
+      "text": "\u4e3a\u7167\u987e\u690d\u7269\u4eba\u4e08\u592b \u5973\u5b50\u7761\u4e869\u5e74\u6c99\u53d1",
+      "link": "https://www.baidu.com/s?wd=%E4%B8%BA%E7%85%A7%E9%A1%BE%E6%A4%8D%E7%89%A9%E4%BA%BA%E4%B8%88%E5%A4%AB%20%E5%A5%B3%E5%AD%90%E7%9D%A1%E4%BA%869%E5%B9%B4%E6%B2%99%E5%8F%91&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_11&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%B8%BA%E7%85%A7%E9%A1%BE%E6%A4%8D%E7%89%A9%E4%BA%BA%E4%B8%88%E5%A4%AB+%E5%A5%B3%E5%AD%90%E7%9D%A1%E4%BA%869%E5%B9%B4%E6%B2%99%E5%8F%91"
+    },
+    {
+      "position": 12,
+      "text": "\u53d1\u82e6\u7684\u4e1d\u74dc\u80fd\u964d\u706b\uff1f\u4e0d\u8981\u4fe1",
+      "link": "https://www.baidu.com/s?wd=%E5%8F%91%E8%8B%A6%E7%9A%84%E4%B8%9D%E7%93%9C%E8%83%BD%E9%99%8D%E7%81%AB%EF%BC%9F%E4%B8%8D%E8%A6%81%E4%BF%A1&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_12&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%8F%91%E8%8B%A6%E7%9A%84%E4%B8%9D%E7%93%9C%E8%83%BD%E9%99%8D%E7%81%AB%EF%BC%9F%E4%B8%8D%E8%A6%81%E4%BF%A1"
+    },
+    {
+      "position": 13,
+      "text": "\u4fc4\u519b\u5411\u58eb\u5175\u6295\u653e\u4fbf\u643a\u5f0f\u6fc0\u5149\u6b65\u67aa",
+      "link": "https://www.baidu.com/s?wd=%E4%BF%84%E5%86%9B%E5%90%91%E5%A3%AB%E5%85%B5%E6%8A%95%E6%94%BE%E4%BE%BF%E6%90%BA%E5%BC%8F%E6%BF%80%E5%85%89%E6%AD%A5%E6%9E%AA&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_13&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%BF%84%E5%86%9B%E5%90%91%E5%A3%AB%E5%85%B5%E6%8A%95%E6%94%BE%E4%BE%BF%E6%90%BA%E5%BC%8F%E6%BF%80%E5%85%89%E6%AD%A5%E6%9E%AA"
+    },
+    {
+      "position": 14,
+      "text": "\u7f57\u5efa\u5f6c\u88ab\u67e5",
+      "link": "https://www.baidu.com/s?wd=%E7%BD%97%E5%BB%BA%E5%BD%AC%E8%A2%AB%E6%9F%A5&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_14&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BD%97%E5%BB%BA%E5%BD%AC%E8%A2%AB%E6%9F%A5",
+      "tag": "\u65b0"
+    },
+    {
+      "position": 15,
+      "text": "\u5e7f\u4e1c\u4e00\u9547\u6709\u9ed1\u5c71\u7f8a\u906d\u87d2\u86c7\u88ad\u51fb",
+      "link": "https://www.baidu.com/s?wd=%E5%B9%BF%E4%B8%9C%E4%B8%80%E9%95%87%E6%9C%89%E9%BB%91%E5%B1%B1%E7%BE%8A%E9%81%AD%E8%9F%92%E8%9B%87%E8%A2%AD%E5%87%BB&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_1_15_15&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%B9%BF%E4%B8%9C%E4%B8%80%E9%95%87%E6%9C%89%E9%BB%91%E5%B1%B1%E7%BE%8A%E9%81%AD%E8%9F%92%E8%9B%87%E8%A2%AD%E5%87%BB"
+    },
+    {
+      "position": 16,
+      "text": "\u6b7c-16\u5347\u7a7a\uff01\u76f4\u51fb\u4e2d\u57c3\u7a7a\u519b\u8054\u5408\u6f14\u7ec3",
+      "link": "https://www.baidu.com/s?wd=%E6%AD%BC-16%E5%8D%87%E7%A9%BA%EF%BC%81%E7%9B%B4%E5%87%BB%E4%B8%AD%E5%9F%83%E7%A9%BA%E5%86%9B%E8%81%94%E5%90%88%E6%BC%94%E7%BB%83&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_16&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E6%AD%BC-16%E5%8D%87%E7%A9%BA%EF%BC%81%E7%9B%B4%E5%87%BB%E4%B8%AD%E5%9F%83%E7%A9%BA%E5%86%9B%E8%81%94%E5%90%88%E6%BC%94%E7%BB%83"
+    },
+    {
+      "position": 17,
+      "text": "\u5434\u5b9c\u6cfdvs\u9f50\u6d25\u65af",
+      "link": "https://www.baidu.com/s?wd=%E5%90%B4%E5%AE%9C%E6%B3%BDvs%E9%BD%90%E6%B4%A5%E6%96%AF&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_17&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%90%B4%E5%AE%9C%E6%B3%BDvs%E9%BD%90%E6%B4%A5%E6%96%AF",
+      "tag": "\u65b0"
+    },
+    {
+      "position": 18,
+      "text": "\u987e\u5b66\u660e\u7b494\u4eba\u88ab\u64a4\u9500\u5168\u56fd\u653f\u534f\u59d4\u5458\u8d44\u683c",
+      "link": "https://www.baidu.com/s?wd=%E9%A1%BE%E5%AD%A6%E6%98%8E%E7%AD%894%E4%BA%BA%E8%A2%AB%E6%92%A4%E9%94%80%E5%85%A8%E5%9B%BD%E6%94%BF%E5%8D%8F%E5%A7%94%E5%91%98%E8%B5%84%E6%A0%BC&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=79a3S7aQ6nqLoyxQeepqj8fSIgRf77EE07Pu6%2FvKxQ2nPkto19%2BXvst4f%2FI&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_18&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%A1%BE%E5%AD%A6%E6%98%8E%E7%AD%894%E4%BA%BA%E8%A2%AB%E6%92%A4%E9%94%80%E5%85%A8%E5%9B%BD%E6%94%BF%E5%8D%8F%E5%A7%94%E5%91%98%E8%B5%84%E6%A0%BC",
+      "tag": "\u65b0"
+    },
+    {
+      "position": 19,
+      "text": "\u6210\u90fd\u9ad8\u65b0\u51cf\u707e\u7814\u7a76\u6240\u53cd\u9a73\u5192\u540d\u9884\u8b66\u5730\u9707",
+      "link": "https://www.baidu.com/s?wd=%E6%88%90%E9%83%BD%E9%AB%98%E6%96%B0%E5%87%8F%E7%81%BE%E7%A0%94%E7%A9%B6%E6%89%80%E5%8F%8D%E9%A9%B3%E5%86%92%E5%90%8D%E9%A2%84%E8%AD%A6%E5%9C%B0%E9%9C%87&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_19&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E6%88%90%E9%83%BD%E9%AB%98%E6%96%B0%E5%87%8F%E7%81%BE%E7%A0%94%E7%A9%B6%E6%89%80%E5%8F%8D%E9%A9%B3%E5%86%92%E5%90%8D%E9%A2%84%E8%AD%A6%E5%9C%B0%E9%9C%87",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 20,
+      "text": "\u738b\u4ee5\u592a\u5439\u7b1b\u5b50\u7591\u88ab\u5de5\u4f5c\u4eba\u5458\u5410\u69fd\u96be\u542c",
+      "link": "https://www.baidu.com/s?wd=%E7%8E%8B%E4%BB%A5%E5%A4%AA%E5%90%B9%E7%AC%9B%E5%AD%90%E7%96%91%E8%A2%AB%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%91%98%E5%90%90%E6%A7%BD%E9%9A%BE%E5%90%AC&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_20&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%8E%8B%E4%BB%A5%E5%A4%AA%E5%90%B9%E7%AC%9B%E5%AD%90%E7%96%91%E8%A2%AB%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%91%98%E5%90%90%E6%A7%BD%E9%9A%BE%E5%90%AC",
+      "tag": "\u65b0"
+    },
+    {
+      "position": 21,
+      "text": "\u4e16\u754c\u4eba\u5f62\u673a\u5668\u4eba\u8fd0\u52a8\u4f1a",
+      "link": "https://www.baidu.com/s?wd=%E4%B8%96%E7%95%8C%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E4%BC%9A&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_21&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%B8%96%E7%95%8C%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E4%BC%9A"
+    },
+    {
+      "position": 22,
+      "text": "6\u59294\u4e2a\u53f0\u98ce \u50cf\u6d41\u6c34\u7ebf\u8d76\u5de5",
+      "link": "https://www.baidu.com/s?wd=6%E5%A4%A94%E4%B8%AA%E5%8F%B0%E9%A3%8E%20%E5%83%8F%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%B5%B6%E5%B7%A5&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_22&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=6%E5%A4%A94%E4%B8%AA%E5%8F%B0%E9%A3%8E+%E5%83%8F%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%B5%B6%E5%B7%A5",
+      "tag": "\u65b0"
+    },
+    {
+      "position": 23,
+      "text": "\u5e0c\u97f3\u4eca\u65e5\u5168\u7403\u53d1\u552e",
+      "link": "https://www.baidu.com/s?wd=%E5%B8%8C%E9%9F%B3%E4%BB%8A%E6%97%A5%E5%85%A8%E7%90%83%E5%8F%91%E5%94%AE&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_23&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%B8%8C%E9%9F%B3%E4%BB%8A%E6%97%A5%E5%85%A8%E7%90%83%E5%8F%91%E5%94%AE"
+    },
+    {
+      "position": 24,
+      "text": "\u53a6\u95e8\u901a\u62a5\u9910\u5385\u7528\u654c\u654c\u754f\u6d88\u6740",
+      "link": "https://www.baidu.com/s?wd=%E5%8E%A6%E9%97%A8%E9%80%9A%E6%8A%A5%E9%A4%90%E5%8E%85%E7%94%A8%E6%95%8C%E6%95%8C%E7%95%8F%E6%B6%88%E6%9D%80&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_24&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%8E%A6%E9%97%A8%E9%80%9A%E6%8A%A5%E9%A4%90%E5%8E%85%E7%94%A8%E6%95%8C%E6%95%8C%E7%95%8F%E6%B6%88%E6%9D%80",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 25,
+      "text": "\u5f20\u97f6\u6db5\u66fe\u56e0\u5fc3\u810f\u75c5\u627e\u6bcd\u4eb2\u8981\u94b1\u672a\u679c",
+      "link": "https://www.baidu.com/s?wd=%E5%BC%A0%E9%9F%B6%E6%B6%B5%E6%9B%BE%E5%9B%A0%E5%BF%83%E8%84%8F%E7%97%85%E6%89%BE%E6%AF%8D%E4%BA%B2%E8%A6%81%E9%92%B1%E6%9C%AA%E6%9E%9C&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_25&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%BC%A0%E9%9F%B6%E6%B6%B5%E6%9B%BE%E5%9B%A0%E5%BF%83%E8%84%8F%E7%97%85%E6%89%BE%E6%AF%8D%E4%BA%B2%E8%A6%81%E9%92%B1%E6%9C%AA%E6%9E%9C"
+    },
+    {
+      "position": 26,
+      "text": "\u56db\u5ddd\u5730\u9707\u5c40\u7ec8\u6b62\u9884\u8b66\u7b2c\u4e09\u65b9\u6388\u6743",
+      "link": "https://www.baidu.com/s?wd=%E5%9B%9B%E5%B7%9D%E5%9C%B0%E9%9C%87%E5%B1%80%E7%BB%88%E6%AD%A2%E9%A2%84%E8%AD%A6%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%88%E6%9D%83&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_26&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%9B%9B%E5%B7%9D%E5%9C%B0%E9%9C%87%E5%B1%80%E7%BB%88%E6%AD%A2%E9%A2%84%E8%AD%A6%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%88%E6%9D%83"
+    },
+    {
+      "position": 27,
+      "text": "\u8fde\u9501\u9910\u5385 \u654c\u654c\u754f\u6d88\u6740",
+      "link": "https://www.baidu.com/s?wd=%E8%BF%9E%E9%94%81%E9%A4%90%E5%8E%85%20%E6%95%8C%E6%95%8C%E7%95%8F%E6%B6%88%E6%9D%80&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_27&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E8%BF%9E%E9%94%81%E9%A4%90%E5%8E%85+%E6%95%8C%E6%95%8C%E7%95%8F%E6%B6%88%E6%9D%80",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 28,
+      "text": "\u9ec4\u5faa\u8d22\uff1a\u65b0\u52a0\u5761\u7edd\u4e0d\u53ef\u6210\u4e3a\u5355\u8bed\u793e\u4f1a",
+      "link": "https://www.baidu.com/s?wd=%E9%BB%84%E5%BE%AA%E8%B4%A2%EF%BC%9A%E6%96%B0%E5%8A%A0%E5%9D%A1%E7%BB%9D%E4%B8%8D%E5%8F%AF%E6%88%90%E4%B8%BA%E5%8D%95%E8%AF%AD%E7%A4%BE%E4%BC%9A&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_28&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%BB%84%E5%BE%AA%E8%B4%A2%EF%BC%9A%E6%96%B0%E5%8A%A0%E5%9D%A1%E7%BB%9D%E4%B8%8D%E5%8F%AF%E6%88%90%E4%B8%BA%E5%8D%95%E8%AF%AD%E7%A4%BE%E4%BC%9A"
+    },
+    {
+      "position": 29,
+      "text": "\u9ec4\u91d1\u6da8\u78344700\u7f8e\u5143",
+      "link": "https://www.baidu.com/s?wd=%E9%BB%84%E9%87%91%E6%B6%A8%E7%A0%B44700%E7%BE%8E%E5%85%83&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_29&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%BB%84%E9%87%91%E6%B6%A8%E7%A0%B44700%E7%BE%8E%E5%85%83"
+    },
+    {
+      "position": 30,
+      "text": "\u7f8e\u56fd\u5927\u6a21\u578b\u4ef7\u683c\u88ab\u4e2d\u56fd\u6253\u4e0b\u6765\u4e86",
+      "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E5%9B%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BB%B7%E6%A0%BC%E8%A2%AB%E4%B8%AD%E5%9B%BD%E6%89%93%E4%B8%8B%E6%9D%A5%E4%BA%86&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_16_30_30&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BE%8E%E5%9B%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BB%B7%E6%A0%BC%E8%A2%AB%E4%B8%AD%E5%9B%BD%E6%89%93%E4%B8%8B%E6%9D%A5%E4%BA%86",
+      "tag": "\u70ed"
+    },
+    {
+      "position": 31,
+      "text": "\u4e0a\u6d77\u4e00\u706b\u9505\u5e97\u5929\u964d\u8001\u9f20\u6389\u5165\u83dc\u76d8",
+      "link": "https://www.baidu.com/s?wd=%E4%B8%8A%E6%B5%B7%E4%B8%80%E7%81%AB%E9%94%85%E5%BA%97%E5%A4%A9%E9%99%8D%E8%80%81%E9%BC%A0%E6%8E%89%E5%85%A5%E8%8F%9C%E7%9B%98&ie=utf-8&rsv_pq=94838b610006b0a6&oq=site%3Alinkedin.com%2Fin%2F%20%22Microsoft%22&rsv_t=d67bZTAzrx2jBDMkLZWH6nqjdhaDeOSRyef8%2Fy0FaS9AN2%2F7Hbvb43eK2Vo&rqid=94838b610006b0a6&rsf=06551a820c825fc2f8e345426fd18be5_31_45_31&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%B8%8A%E6%B5%B7%E4%B8%80%E7%81%AB%E9%94%85%E5%BA%97%E5%A4%A9%E9%99%8D%E8%80%81%E9%BC%A0%E6%8E%89%E5%85%A5%E8%8F%9C%E7%9B%98"
+    }
+  ]
+}
