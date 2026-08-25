@@ -41,15 +41,15 @@
   files:
   - __init__.py
   - engines.py
-  - meta.py
   - mock_results.py
+  - meta.py
   - module.py
   last_updated: '2026-08-25'
   name: SerpApi LinkedIn Harvester
   path: recon/companies-contacts/serpapi_linkedin_harvester
   required_keys:
   - serpapi_api
-  version: 1.1.0
+  version: 1.2.0
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Austin Tipton (@hiEntripy404)
