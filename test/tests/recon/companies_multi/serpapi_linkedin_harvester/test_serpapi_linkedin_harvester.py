@@ -77,7 +77,8 @@ class TestSerpApiLinkedInHarvester(ModuleTestCase):
         self._module.run([self.TEST_COMPANY_NAME])
 
         self.assertInOutput(r".*Target \(1 of 1\).*")
-        self.assertInOutput(r".*Contacts & profiles created: 10")
+        self.assertInOutput(r".*Contacts created: 10")
+        self.assertInOutput(r".*Profiles created: 10")
 
         self.assertInOutput(r".*Processed page: 1")
         self.assertInOutput(r".*Page Limit reached: 1")

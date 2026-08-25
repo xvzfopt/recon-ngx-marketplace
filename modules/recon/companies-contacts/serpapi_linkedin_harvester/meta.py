@@ -18,7 +18,7 @@ meta = ModuleMetadata(
     authors=[
         'xvzf_opt (@xvzf_opt)'
     ],
-    version="1.0.0",
+    version="1.1.0",
     description="Harvests profiles from LinkedIn related to the given company by using SerpApi to search across various"
                 " Search Engines. Profiles are added to the 'profiles' table, while contact information is added to "
                 " the 'contacts' table."

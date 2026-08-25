@@ -107,6 +107,8 @@ class Module(BaseModule):
         # Iterate Target Companies
         # =====================================================================================
         count = 0
+        profiles_created = 0
+        contacts_created = 0
 
         with self.get_progress_bar(len(companies), unit="queries") as progress:
             for company in companies:
@@ -116,8 +118,8 @@ class Module(BaseModule):
                 # Page Lookups
                 # =====================================================================================
                 page_no = 1
+                results = None
                 while True:
-                    results = None
 
                     try:
                         # [Unit Test]: Read results from file
@@ -151,7 +153,11 @@ class Module(BaseModule):
                         break
 
                     for result in results["organic_results"]:
-                        self.process_search_result(company, result)
+                        contact_created, profile_created = self.process_search_result(company, result)
+                        if contact_created:
+                            contacts_created += 1
+                        if profile_created:
+                            profiles_created += 1
                         count += 1
 
                     # =====================================================================================
@@ -173,7 +179,8 @@ class Module(BaseModule):
         # # Print Summary
         # # =====================================================================================
         self.heading("Summary", level=0)
-        self.output("Contacts & profiles created: %s" % count)
+        self.output("Contacts created: %s" % contacts_created)
+        self.output("Profiles created: %s" % profiles_created)
 
         # =====================================================================================
         # Print API Account Data
@@ -222,8 +229,10 @@ class Module(BaseModule):
         # =====================================================================================
         # Created Contact and Profile
         # =====================================================================================
-        self.insert_contacts(f_name, m_name, l_name, title=job_title)
-        self.insert_profiles(username, "LinkedIn", link, "social")
+        contact_created = self.insert_contacts(f_name, m_name, l_name, title=job_title)
+        profile_created = self.insert_profiles(username, "LinkedIn", link, "social")
+
+        return contact_created, profile_created
 
     def extract_username(self, url):
         '''
