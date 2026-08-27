@@ -73,6 +73,9 @@ class TestShodanHostname(ModuleTestCase):
         self.assertInOutput(r".*Query Credits Remaining")
         self.assertInOutput(r".*Scan Credits Remaining")
 
+        results = self.get_workspace_db().query("select * from ports")
+        self.json_print(results)
+
     def test_invalid_api_key(self):
         '''
         Test Handling of connection errors

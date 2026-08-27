@@ -6,6 +6,7 @@ import json
 from shodan import Shodan
 from shodan.exception import APIError
 from recon.sdk import BaseModule
+from recon.sdk import utils
 from recon.sdk.exceptions import ModuleValidationException
 
 # =====================================================================================
@@ -112,7 +113,9 @@ class Module(BaseModule):
                         hosts_discovered += 1
                         for hostname in match['hostnames']:
 
+                            # =====================================================================================
                             # Process Host Data
+                            # =====================================================================================
                             host_data = {
                                 "host": hostname,
                                 "ip_address": match.get("ip_str"),
@@ -126,12 +129,17 @@ class Module(BaseModule):
                                 host_data["notes"] = "Org: %s" % match.get("org")
                             self.insert_hosts(**host_data)
 
+                            # =====================================================================================
                             # Process Port Data
+                            # =====================================================================================
+                            # Process Protocol
+                            protocol = utils.shodan_identify_protocol(match)
+
                             port_data = {
                                 "host": hostname,
                                 "ip_address": match.get("ip_str"),
                                 "port":match.get("port"),
-                                "protocol": match.get("transport")
+                                "protocol": protocol
                             }
                             self.insert_ports(**port_data)
                             ports_discovered += 1

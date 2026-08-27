@@ -16,7 +16,7 @@ meta = ModuleMetadata(
         "Matt Puckett (@t3lc0)"
         "Ryan Hays (@_ryanhays)"
     ],
-    version="2.0.1",
+    version="2.1.0",
     description="Harvests port and vulnerability information from the Shodan API by using the \'ip\' search operator. "
                 "Updates the \'ports\' and \'vulnerabilites\' tables with the results.",
     required_keys=["shodan_api"],

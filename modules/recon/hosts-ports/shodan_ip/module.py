@@ -5,6 +5,7 @@ import time
 import json
 from shodan import Shodan
 from shodan.exception import APIError
+from recon.sdk import utils
 from recon.sdk import BaseModule
 from recon.sdk.exceptions import ModuleValidationException
 
@@ -106,12 +107,18 @@ class Module(BaseModule):
                 # =====================================================================================
                 for service in host_info.get("data"):
 
+                    # =====================================================================================
+                    # Process Port Data
+                    # =====================================================================================
+                    # Process Protocol
+                    protocol = utils.shodan_identify_protocol(service)
+
                     # Process Port Data
                     port_data = {
                         "host": service.get("hostname", [""])[0],
                         "ip_address": ipaddr,
                         "port": service.get("port"),
-                        "protocol": service.get("transport")
+                        "protocol": protocol
                     }
                     self.insert_ports(**port_data)
 
