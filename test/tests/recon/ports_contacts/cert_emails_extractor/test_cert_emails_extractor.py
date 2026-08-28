@@ -23,7 +23,7 @@ class TestCertEmailExtractor(ModuleTestCase):
     # Properties
     # =====================================================================================
     VERBOSITY       = 1
-    FQN             = "recon/ports-contacts/cert_email_extractor"
+    FQN             = "recon/ports-contacts/cert_emails_extractor"
     TEST_TARGET     = ("127.0.0.1", "6767",)
     TEST_ROOT_PATH  = os.path.dirname(__file__)
     PATH_CERT       = os.path.join(TEST_ROOT_PATH, "cert.pem")
