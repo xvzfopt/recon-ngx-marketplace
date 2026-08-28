@@ -6,7 +6,10 @@ import shutil
 import sys
 import re
 import yaml
-import importlib.util
+import http.server
+import ssl
+import time
+from threading import Thread
 from pathlib import Path
 from unittest import TestCase
 
@@ -55,13 +58,14 @@ class ModuleTestCase(TestCase):
     WORKSPACE_NAME      = "_internal_test"
 
     # =====================================================================================
-    # Functions
+    # Set Up Functions
     # =====================================================================================
     def setUp(self):
         '''
         Sets up the test environment.
         '''
         self._recon = None
+        self._httpd = None
         super(ModuleTestCase, self).setUp()
 
     def set_up_recon_ngx(self):
@@ -99,6 +103,46 @@ class ModuleTestCase(TestCase):
             keys = yaml.safe_load(keys_file)
             for key in keys:
                 key_manager.add_key(key, keys[key])
+
+    def setUpHTTPServer(self, host="localhost", port=6767, certfile=None, keyfile=None):
+        '''
+        Set up an HTTP Server instance
+
+        :param host: The hostname/IP address on which to bind the server. Defaults to localhost
+        :type host: str, Optional
+        :param port: The port on which to bind the server. Defaults to 6767
+        :type port: int, Optional
+        :param certfile: The path to the certificate file, if serving over HTTPS. Defaults to None (HTTP)
+        :type certfile: str, Optional
+        :param keyfile: The path to the key file, if serving over HTTPS. Defaults to None (HTTP)
+        :type keyfile: str, Optional
+        '''
+        Thread(target=self._start_http_server_thread, daemon=True, kwargs={
+            "host": host,
+            "port": port,
+            "certfile": certfile,
+            "keyfile": keyfile
+        }).start()
+
+        # Give server chance to spin up
+        time.sleep(1)
+
+    # =====================================================================================
+    # Tear Down Functions
+    # =====================================================================================
+    def tearDown(self):
+        '''
+        Module Test Case tear down function
+        '''
+        if self._httpd:
+            self.tearDownHTTPServer()
+
+    def tearDownHTTPServer(self):
+        '''
+        Tears down the HTTP Server instance
+        '''
+        self._httpd.shutdown()
+        self._httpd.server_close()
 
     # =====================================================================================
     # Custom Assertions
@@ -220,6 +264,17 @@ class ModuleTestCase(TestCase):
         '''
         return self._recon.get_current_workspace().get_db()
 
+    def get_table_rows(self, table_name):
+        '''
+        Gets all rows in the specified table
+
+        :param table_name: The table to get rows for
+        :type table_name: str
+        :returns: A list of results
+        :rtype: list
+        '''
+        return self.get_workspace_db().query("SELECT * FROM %s" % table_name)
+
     def clear_downloads_directory(self):
         '''
         Clears all files in the workspace downloads directory
@@ -265,5 +320,49 @@ class ModuleTestCase(TestCase):
         mod_instance = module.Module(mod_name, fqn, self._recon)
 
         return mod_instance
+
+    # =====================================================================================
+    # Internal Functions
+    # =====================================================================================
+    def _start_http_server_thread(self, host="localhost", port=6767, certfile=None, keyfile=None):
+        '''
+        Start the HTTP Server Thread
+
+        :param host: The hostname/IP address on which to bind the server. Defaults to localhost
+        :type host: str, Optional
+        :param port: The port on which to bind the server. Defaults to 6767
+        :type port: int, Optional
+        :param certfile: The path to the certificate file, if serving over HTTPS. Defaults to None (HTTP)
+        :type certfile: str, Optional
+        :param keyfile: The path to the key file, if serving over HTTPS. Defaults to None (HTTP)
+        :type keyfile: str, Optional
+        '''
+        server_address = (host, port)
+
+        # =====================================================================================
+        # Initialise server
+        # =====================================================================================
+        self._httpd = http.server.HTTPServer(
+            server_address,
+            http.server.SimpleHTTPRequestHandler
+        )
+
+        # =====================================================================================
+        # Set up TLS
+        # =====================================================================================
+        if certfile and keyfile:
+            context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+
+            context.load_cert_chain(
+                certfile=certfile,
+                keyfile=keyfile
+            )
+
+            self._httpd.socket = context.wrap_socket(
+                self._httpd.socket,
+                server_side=True
+            )
+
+        self._httpd.serve_forever()
 
 
