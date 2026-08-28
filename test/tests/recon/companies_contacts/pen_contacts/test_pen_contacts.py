@@ -3,7 +3,6 @@
 # =====================================================================================
 import os
 import time
-import threading
 
 # =====================================================================================
 # Imports: Internal
@@ -12,22 +11,20 @@ from recon.sdk.exceptions import *
 from module_test_case import ModuleTestCase
 
 # =====================================================================================
-# Base Test Case Class
+# IANA PEN Contact Extractor Test Case Class
 # =====================================================================================
-class TestCertEmailExtractor(ModuleTestCase):
+class TestIANAPENContactExtractor(ModuleTestCase):
     '''
-    Tests the Cert Email Extractor Module
+    Tests the IANA PEN Contact Extractor Module
     '''
 
     # =====================================================================================
     # Properties
     # =====================================================================================
-    VERBOSITY       = 1
-    FQN             = "recon/ports-contacts/cert_email_extractor"
-    TEST_TARGET     = ("127.0.0.1", "6767",)
-    TEST_ROOT_PATH  = os.path.dirname(__file__)
-    PATH_CERT       = os.path.join(TEST_ROOT_PATH, "cert.pem")
-    PATH_KEY        = os.path.join(TEST_ROOT_PATH, "key.pem")
+    VERBOSITY = 1
+    FQN                     = "recon/companies-contacts/pen_contacts"
+    TEST_COMPANY_NAME       = "Microsoft"
+    TEST_REGISTY_FILENAME   = "test_pen_registry.txt"
 
     # =====================================================================================
     # General Methods
@@ -44,7 +41,9 @@ class TestCertEmailExtractor(ModuleTestCase):
         # Load Module
         self._module = self.load_module(self.FQN, mod_file_path)
 
-        self.setUpHTTPServer(certfile=self.PATH_CERT, keyfile=self.PATH_KEY)
+        # Misc Props
+        self.test_results_path = os.path.join(os.path.dirname(__file__), self.TEST_REGISTY_FILENAME)
+        self._module._test_results_file = self.test_results_path
 
     # =====================================================================================
     # Unit tests
@@ -52,37 +51,42 @@ class TestCertEmailExtractor(ModuleTestCase):
     def test_successful_run(self):
         '''
         Tests successful execution of the Module
-
-        :Note: Due to the way in which we're connecting to the HTTP server, it will throw a Broken Pipe Error. This is
-            fine, and expected behavior. We only want to connect to grab the TLS cert
         '''
 
         # Set options
-        self._recon.set_verbosity(1)
-        options = self._module.get_options()
+        self._recon.set_verbosity(2)
 
-        # Check Initial state
+        # Check Initial Database state
         contacts = self.get_table_rows("contacts")
         self.assertEmpty(contacts)
 
         # Execute Module
         self._recon.validate_options(self._module)
         self._module.preflight()
-        self._module.run([self.TEST_TARGET])
+        self._module._test_results_file = self.test_results_path
+        self._module.run([self.TEST_COMPANY_NAME])
 
-        # Check Output
         self.assertInOutput(r".*Target \(1 of 1\).*")
-        self.assertInOutput(r".*Email Addresses found: 3")
+        self.assertInOutput(r".*Contacts created: 5")
 
-        # Check real results
+        # =====================================================================================
+        # Check DB Results
+        # =====================================================================================
         contacts = self.get_table_rows("contacts")
-        self.assertLengthEqual(contacts, 3)
+        self.assertLengthEqual(contacts, 5)
 
-        emails_addresses = []
-        for contact in contacts:
-            emails_addresses.append(contact[3])
-        self.assertIn("subject@example.com", emails_addresses)
-        self.assertIn("san1@example.com", emails_addresses)
-        self.assertIn("san2@example.com", emails_addresses)
+        # Check Some entries
+        self.assertEqual(contacts[0][0], "Paul")
+        self.assertIsNone(contacts[0][1])
+        self.assertEqual(contacts[0][2], "Russell")
+        self.assertEqual(contacts[0][3], "paulr@microsoft.com")
 
+        self.assertEqual(contacts[1][0], "Yves")
+        self.assertEqual(contacts[1][1], "Frédéric")
+        self.assertEqual(contacts[1][2], "N´Soussoula")
+        self.assertEqual(contacts[1][3], "info@msuccug.de")
 
+        self.assertEqual(contacts[2][0], "Ed")
+        self.assertIsNone(contacts[2][1])
+        self.assertEqual(contacts[2][2], "Price")
+        self.assertEqual(contacts[2][3], "smallbasic@microsoft.com")

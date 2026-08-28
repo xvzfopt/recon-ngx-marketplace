@@ -22,7 +22,7 @@ class TestSerpApiLinkedInHarvester(ModuleTestCase):
     # Properties
     # =====================================================================================
     VERBOSITY = 1
-    FQN = "recon/companies-contacts/serpapi_linkedin_harvester"
+    FQN                                 = "recon/companies-multi/serpapi_linkedin_harvester"
     TEST_COMPANY_NAME                   = "Microsoft"
     TEST_RESULTS_FILENAME_BAIDU         = "test_results_serp_baidu.json"
     TEST_RESULTS_FILENAME_DUCKDUCKGO    = "test_results_serp_duckduckgo.json"

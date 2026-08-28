@@ -32,6 +32,21 @@
   version: 3.0.2
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - Jonathan M. Wilbur <jonathan@wilbur.space>
+  dependencies: []
+  description: Gathers contact information from the IANA Private Enterprise Number
+    (PEN) registry for the given company. Adds contact details to the 'contacts' table.
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-08-28'
+  name: IANA Private Enterprise Number Contact Extractor
+  path: recon/companies-contacts/pen_contacts
+  required_keys: []
+  version: 1.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   dependencies:
   - serpapi
   description: Harvests profiles from LinkedIn related to the given company by using
@@ -44,12 +59,12 @@
   - mock_results.py
   - meta.py
   - module.py
-  last_updated: '2026-08-25'
+  last_updated: '2026-08-28'
   name: SerpApi LinkedIn Harvester
-  path: recon/companies-contacts/serpapi_linkedin_harvester
+  path: recon/companies-multi/serpapi_linkedin_harvester
   required_keys:
   - serpapi_api
-  version: 1.2.0
+  version: 2.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Austin Tipton (@hiEntripy404)
@@ -148,9 +163,9 @@
   description: Harvests Email addresses exposed in TLS certificate metadata from web
     servers running over HTTPS
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
   last_updated: '2026-08-28'
   name: Certificate Email Extractor
   path: recon/ports-contacts/cert_email_extractor
