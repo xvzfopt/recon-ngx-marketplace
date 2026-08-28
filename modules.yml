@@ -47,6 +47,21 @@
   version: 1.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - Jonathan M. Wilbur <jonathan@wilbur.space>
+  dependencies: []
+  description: Gathers Domain Names from the IANA Private Enterprise Number (PEN)
+    registry for the given company, adding them to the 'domains' table.
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-08-28'
+  name: IANA Private Enterprise Number Domain Names Extractor
+  path: recon/companies-domains/pen_domains
+  required_keys: []
+  version: 1.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   dependencies:
   - serpapi
   description: Harvests profiles from LinkedIn related to the given company by using
@@ -178,9 +193,9 @@
   description: Harvests Domain Names exposed in TLS certificate metadata from web
     servers running over HTTPS
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
   last_updated: '2026-08-28'
   name: Certificate Domains Extractor
   path: recon/ports-domains/cert_domains_extractor
