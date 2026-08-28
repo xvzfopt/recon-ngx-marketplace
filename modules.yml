@@ -37,9 +37,9 @@
   description: Gathers contact information from the IANA Private Enterprise Number
     (PEN) registry for the given company. Adds contact details to the 'contacts' table.
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
   last_updated: '2026-08-28'
   name: IANA Private Enterprise Number Contact Extractor
   path: recon/companies-contacts/pen_contacts
@@ -56,8 +56,8 @@
   files:
   - __init__.py
   - engines.py
-  - mock_results.py
   - meta.py
+  - mock_results.py
   - module.py
   last_updated: '2026-08-28'
   name: SerpApi LinkedIn Harvester
@@ -168,6 +168,21 @@
   - module.py
   last_updated: '2026-08-28'
   name: Certificate Email Extractor
-  path: recon/ports-contacts/cert_email_extractor
+  path: recon/ports-contacts/cert_emails_extractor
+  required_keys: []
+  version: 1.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  dependencies:
+  - cryptography
+  description: Harvests Domain Names exposed in TLS certificate metadata from web
+    servers running over HTTPS
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-08-28'
+  name: Certificate Domains Extractor
+  path: recon/ports-domains/cert_domains_extractor
   required_keys: []
   version: 1.0.0
