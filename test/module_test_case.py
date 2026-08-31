@@ -179,6 +179,18 @@ class ModuleTestCase(TestCase):
         if len(item) != length:
             raise AssertionError("Expected item to have length of %s, but got %s" % (length, len(item)))
 
+    def assertStartsWith(self, string, prefix):
+        '''
+        Checks that the provided string startswith the specified prefix
+
+        :param string: The string to check
+        :type string: str
+        :param suffix: The expected suffix
+        :type suffix: str
+        '''
+        if not string.startswith(prefix):
+            raise AssertionError("String does not start with '%s': %s" % (prefix, string))
+
     def assertEndsWith(self, string, suffix):
         '''
         Checks that the provided string endswith the specified suffix
