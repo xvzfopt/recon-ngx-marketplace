@@ -18,7 +18,7 @@ meta = ModuleMetadata(
         'xvzf_opt (@xvzf_opt)'
     ],
     required_keys=["whoxy_api"],
-    version="1.0.0",
+    version="1.0.1",
     description="Uses the Whoxy API to query whois information for a domain, harvesting company and contact information",
     query="SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL",
     options=[

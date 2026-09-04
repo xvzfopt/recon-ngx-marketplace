@@ -133,15 +133,15 @@
   description: Uses the Whoxy API to query whois information for a domain, harvesting
     company and contact information
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
   last_updated: '2026-09-04'
   name: Whoxy Whois Intel
   path: recon/domains-companies/whoxy_whois_intel
   required_keys:
   - whoxy_api
-  version: 1.0.0
+  version: 1.0.1
 - authors:
   - xvzf_opt (@xvzf_opt)
   - Tim Tomes (@lanmaster53)

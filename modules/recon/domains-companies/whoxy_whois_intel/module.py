@@ -172,12 +172,17 @@ class Module(BaseModule):
             full_name       = self.filter_redaction(contact.get("full_name"))
             f_name, m_name, l_name = utils.parse_fullname(full_name)
 
+            # Process Email
+            email = self.filter_redaction(contact.get("email_address"))
+            if not email or "@" not in email:
+                continue
+
             # Add Contact
             contact_data = {
                 "first_name": f_name,
                 "middle_name": m_name,
                 "last_name": l_name,
-                "email": self.filter_redaction(contact.get("email_address")),
+                "email": email,
                 "region": self.filter_redaction(contact.get("state_name")),
                 "country": self.filter_redaction(contact.get("country_name")),
                 "city": self.filter_redaction(contact.get("city_name")),
