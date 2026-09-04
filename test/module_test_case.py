@@ -9,6 +9,7 @@ import yaml
 import http.server
 import ssl
 import time
+import json
 from threading import Thread
 from pathlib import Path
 from unittest import TestCase
@@ -255,6 +256,15 @@ class ModuleTestCase(TestCase):
     # =====================================================================================
     # Helpers
     # =====================================================================================
+    def json_print(self, data):
+        '''
+        Pretty prints data in JSON form
+
+        :param data: The data to print
+        :type data: any
+        '''
+        print(json.dumps(data, indent=2))
+
     def get_workspace_downloads_path(self):
         '''
         Gets the path to the workspace downloads directory
@@ -276,16 +286,18 @@ class ModuleTestCase(TestCase):
         '''
         return self._recon.get_current_workspace().get_db()
 
-    def get_table_rows(self, table_name):
+    def get_table_rows(self, table_name, include_column_names=False):
         '''
         Gets all rows in the specified table
 
         :param table_name: The table to get rows for
         :type table_name: str
+        :param include_column_names: Whether to include column names in the rows
+        :type include_column_names: bool
         :returns: A list of results
         :rtype: list
         '''
-        return self.get_workspace_db().query("SELECT * FROM %s" % table_name)
+        return self.get_workspace_db().query("SELECT * FROM %s" % table_name, include_column_names=include_column_names)
 
     def clear_downloads_directory(self):
         '''
