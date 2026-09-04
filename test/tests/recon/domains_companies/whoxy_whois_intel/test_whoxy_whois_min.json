@@ -1,0 +1,31 @@
+{
+  "status": 1,
+  "domain_name": "bbc.co.uk",
+  "query_time": "2026-09-04 08:11:07",
+  "domain_registered": "yes",
+  "update_date": "2025-10-29",
+  "expiry_date": "2034-12-13",
+  "domain_registrar": {
+    "registrar_name": "British Broadcasting Corporation [Tag = BBC]",
+    "website_url": "https://www.bbc.co.uk"
+  },
+  "name_servers": [
+    "ddns0.bbc.co.uk",
+    "ddns0.bbc.com",
+    "ddns1.bbc.co.uk",
+    "ddns1.bbc.com",
+    "dns0.bbc.co.uk",
+    "dns0.bbc.com",
+    "dns1.bbc.co.uk",
+    "dns1.bbc.com"
+  ],
+  "domain_status": [
+    "Registered until expiry date."
+  ],
+  "raw_whois": "--------------------------------------------------\nGenerator: x3.autowhois.com\nRegistry WHOIS: whois.nic.uk\nQuery Time: Fri, 04 Sep 2026 08:11:07 +0000\n--------------------------------------------------\n\nDomain name:\r\n        bbc.co.uk\r\n\r\n    Data validation:\r\n        Nominet was able to match the registrant's name and address against a 3rd party data source on 12-Jun-2014\r\n\r\n    Registrar:\r\n        British Broadcasting Corporation [Tag = BBC]\r\n        URL: https://www.bbc.co.uk\r\n\r\n    Relevant dates:\r\n        Registered on: before Aug-1996\r\n        Expiry date:  13-Dec-2034\r\n        Last updated:  29-Oct-2025\r\n\r\n    Registration status:\r\n        Registered until expiry date.\r\n\r\n    Name servers:\r\n        ddns0.bbc.co.uk           148.163.199.1  2607:f740:e04e::1\r\n        ddns0.bbc.com\r\n        ddns1.bbc.co.uk           148.163.199.65  2607:f740:e04e:4::1\r\n        ddns1.bbc.com\r\n        dns0.bbc.co.uk            198.51.44.9  2620:4d:4000:6259:7:9:0:1\r\n        dns0.bbc.com\r\n        dns1.bbc.co.uk            198.51.45.9  2a00:edc0:6259:7:9::2\r\n        dns1.bbc.com\r\n\r\n    WHOIS lookup made at 09:11:08 04-Sep-2026\r\n\r\n    ********************************************************************************\r\n    * WHOIS service for .UK will cease on 9th of February 2027                     *\r\n    * For more information on the replacement RDAP services please see:            *\r\n    * https://theukdomain.uk/rdap                                                  *\r\n    ********************************************************************************\r\n\r\n-- \r\nThis WHOIS information is provided for free by Nominet UK the central registry\r\nfor .uk domain names. This information and the .uk WHOIS are:\r\n\r\n    Copyright Nominet UK 1996 - 2026.\r\n\r\nYou may not access the .uk WHOIS or use any data from it except as permitted\r\nby the terms of use available in full at https://www.nominet.uk/whoisterms,\r\nwhich includes restrictions on: (A) use of the data for advertising, or its\r\nrepackaging, recompilation, redistribution or reuse (B) obscuring, removing\r\nor hiding any or all of this notice and (C) exceeding query rate or volume\r\nlimits. The data is provided on an 'as-is' basis and may lag behind the\r\nregister. Access may be withdrawn or restricted at any time.",
+  "query_stats": {
+    "api_credits_charged": 1,
+    "whois_retrieval_time": 0.89,
+    "user_ip_address": "185.24.11.164"
+  }
+}

@@ -7,6 +7,7 @@ import os.path
 from urllib.parse import quote
 
 import requests.exceptions
+from pytz import country_names
 
 from recon.sdk import BaseModule
 from recon.sdk import utils
@@ -19,11 +20,11 @@ from requests.exceptions import RequestException
 # =====================================================================================
 
 # =====================================================================================
-# Module Class: Whoxy Domain Discovery
+# Module Class: Whoxy Whois Intel
 # =====================================================================================
 class Module(BaseModule):
     '''
-    Whoxy Domain Discovery Module
+    Whoxy Whois Intel Module
     '''
 
     # =====================================================================================
@@ -48,7 +49,6 @@ class Module(BaseModule):
         '''
 
         # Process Options
-        self._page_limit = self.get_option_value("PageLimit")
         self._confirm_before_run = self.get_option_value("Confirm")
 
         # Process Keys
@@ -59,22 +59,23 @@ class Module(BaseModule):
         # =====================================================================================
         if self.get_credits_remaining() <= 0:
             raise ModuleValidationException(
-                "No Reverse Whois Lookup credits on this account. Please add credits to use this module"
+                "No Whois Lookup credits on this account. Please add credits to use this module"
             )
 
-    def module_run(self, companies):
+    def module_run(self, domains):
         '''
         Override: Module execution
         '''
         count = 0
-        domains_found = 0
+        total_contacts_created = 0
+        total_companies_created = 0
 
         # =====================================================================================
         # Check for sufficient credits
         # =====================================================================================
-        if self.get_credits_remaining() < len(companies):
+        if self.get_credits_remaining() < len(domains):
             raise ModuleValidationException(
-                f"Query requires {len(companies)} credit(s), but there are only {self.get_credits_remaining()} available."
+                f"Query requires {len(domains)} credit(s), but there are only {self.get_credits_remaining()} available."
                 f" Please add more credits to continue"
             )
 
@@ -83,7 +84,7 @@ class Module(BaseModule):
         # =====================================================================================
         proceed = "y"
         if self._confirm_before_run:
-            credits_to_use = len(companies)
+            credits_to_use = len(domains)
             proceed = self.read(
                 "Proceed with query? (%s Whoxy credit(s) will be used) [y/N]: " % credits_to_use, default="n"
             )
@@ -93,47 +94,37 @@ class Module(BaseModule):
         # =====================================================================================
         # Iterate Companies
         # =====================================================================================
-        with self.get_progress_bar(len(companies), unit="queries") as progress:
-            for company in companies:
-                page_no = 1
-                progress.write(f"Target ({count + 1} of {len(companies)}): {company}")
+        with self.get_progress_bar(len(domains), unit="queries") as progress:
+            for domain in domains:
+                progress.write(f"Target ({count + 1} of {len(domains)}): {domain}")
 
-                while page_no <= self._page_limit:
-                    self.debug("Fetching page: %s" % page_no)
-                    # =====================================================================================
-                    # Send Request
-                    # =====================================================================================
-                    if not self._test_results_file or not os.path.isfile(self._test_results_file):
-                        try:
-                            url = f"{self.BASE_URL}/?key={self._api_key}&reverse=whois&company={quote(company)}"
-                            response = self.request("GET", url)
-                            data = response.json()
-                        except requests.exceptions.JSONDecodeError as ex:
-                            self.debug("Bad API response: %s" % response.text)
-                            raise ModuleRuntimeException("Unexpected response from API. Please check debug output")
-                        except RequestException as ex:
-                            raise ModuleRuntimeException("Unable to reach Whoxy API: %s" % ex)
+                # =====================================================================================
+                # Send Request
+                # =====================================================================================
+                if not self._test_results_file or not os.path.isfile(self._test_results_file):
+                    try:
+                        url = f"{self.BASE_URL}/?key={self._api_key}&whois={domain}"
+                        response = self.request("GET", url)
+                        data = response.json()
+                    except requests.exceptions.JSONDecodeError as ex:
+                        self.debug("Bad API response: %s" % response.text)
+                        raise ModuleRuntimeException("Unexpected response from API. Please check debug output")
+                    except RequestException as ex:
+                        raise ModuleRuntimeException("Unable to reach Whoxy API: %s" % ex)
 
-                        # Check Response
-                        if response.status_code != 200:
-                            raise ModuleRuntimeException("Unexpected response from API: %s" % response.status_code)
-                    else:
-                        with open(self._test_results_file) as results_file:
-                            data = json.load(results_file)
+                    # Check Response
+                    if response.status_code != 200:
+                        raise ModuleRuntimeException("Unexpected response from API: %s" % response.status_code)
+                else:
+                    with open(self._test_results_file) as results_file:
+                        data = json.load(results_file)
 
-                    # =====================================================================================
-                    # Process Data
-                    # =====================================================================================
-                    if data["total_results"] == 0:
-                        break
-                    for result in data.get("search_result", []):
-                        domains_found += self.insert_domains(result["domain_name"])
-
-                    # Check Paging
-                    if data["current_page"] >= data["total_pages"]:
-                        self.debug("Final page reached")
-                        break
-                    page_no += 1
+                # =====================================================================================
+                # Process Data
+                # =====================================================================================
+                contacts_created, companies_created = self.process_record(data)
+                total_contacts_created += contacts_created
+                total_companies_created += companies_created
 
                 count += 1
                 progress.update()
@@ -142,7 +133,8 @@ class Module(BaseModule):
         # # Print Summary
         # # =====================================================================================
         self.heading("Summary", level=0)
-        self.output("Domain Names found: %s" % domains_found)
+        self.output("Contacts created: %s" % total_contacts_created)
+        self.output("Companies created: %s" % total_companies_created)
 
         # =====================================================================================
         # Print API Account Data
@@ -154,6 +146,52 @@ class Module(BaseModule):
     # =====================================================================================
     # Internal Helpers
     # =====================================================================================
+    def process_record(self, record):
+        '''
+        Processes a Whois record
+
+        :param record: The whois record to process
+        :type record: dict
+        '''
+        contacts_created = 0
+        companies_created = 0
+
+        # Extract contact data
+        registrant_contact      = record.get("registrant_contact")
+        administrative_contact  = record.get("administrative_contact")
+        technical_contact       = record.get("technical_contact")
+
+        # =====================================================================================
+        # Process Contacts
+        # =====================================================================================
+        for contact in [registrant_contact, administrative_contact, technical_contact]:
+            if not contact:
+                continue
+
+            # Process Name
+            full_name       = self.filter_redaction(contact.get("full_name"))
+            f_name, m_name, l_name = utils.parse_fullname(full_name)
+
+            # Add Contact
+            contact_data = {
+                "first_name": f_name,
+                "middle_name": m_name,
+                "last_name": l_name,
+                "email": self.filter_redaction(contact.get("email_address")),
+                "region": self.filter_redaction(contact.get("state_name")),
+                "country": self.filter_redaction(contact.get("country_name")),
+                "city": self.filter_redaction(contact.get("city_name")),
+                "phone": self.filter_redaction(contact.get("phone_number"))
+            }
+            contacts_created += self.insert_contacts(**contact_data)
+
+            # Add Company
+            company_name = self.filter_redaction(contact.get("company_name"))
+            if company_name:
+                companies_created += self.insert_companies(company=company_name)
+
+        return contacts_created, companies_created
+
     def get_credits_remaining(self):
         '''
         Gets the number of remaining credits for Reverse Whois Lookups
@@ -168,7 +206,7 @@ class Module(BaseModule):
             self._account_balance = self.fetch_account_balance()
 
         # Get Monthly account
-        remaining = self._account_balance.get("reverse_whois_balance", 0)
+        remaining = self._account_balance.get("live_whois_balance", 0)
 
         return remaining
 
@@ -198,5 +236,20 @@ class Module(BaseModule):
             raise ModuleRuntimeException("Unexpected response from API: %s" % response.status_code)
 
         return r_data
+
+    def filter_redaction(self, value):
+        '''
+        Checks if the specified whois field value has been redacted for privacy
+
+        :param value: The value to check
+        :type value: str
+        :returns: True if redacted, otherwise False
+        :rtype: bool
+        '''
+        filtered_value = None
+        if value and "redacted" not in value.lower() and "privacy" not in value.lower():
+            filtered_value = value
+        return filtered_value
+
 
 

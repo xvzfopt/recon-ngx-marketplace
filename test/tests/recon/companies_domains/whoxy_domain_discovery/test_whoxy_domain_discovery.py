@@ -87,6 +87,8 @@ class TestWhoxyDomainDiscovery(ModuleTestCase):
 
         # Set options
         self._recon.set_verbosity(2)
+        options = self._module.get_options()
+        options["confirm"] = "false"
 
         # Check Initial Database state
         domains = self.get_table_rows("domains")
@@ -100,10 +102,10 @@ class TestWhoxyDomainDiscovery(ModuleTestCase):
         # =====================================================================================
         # Test - No account credits
         # =====================================================================================
-        # self._module._account_balance = {"reverse_whois_balance": 0}
-        # # Execute Module
-        # self._module.run([self.TEST_COMPANY])
-        # self.assertInOutput(".*No Reverse Whois Lookup credits on this account. Please add credits to use this module")
+        self._module._account_balance = {"reverse_whois_balance": 0}
+        # Execute Module
+        self._module.run([self.TEST_COMPANY])
+        self.assertInOutput(".*No Reverse Whois Lookup credits on this account. Please add credits to use this module")
 
         # =====================================================================================
         # Test - Insufficient credits
