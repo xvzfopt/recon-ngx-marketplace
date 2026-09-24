@@ -91,6 +91,22 @@
   version: 1.1.0
 - authors:
   - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  dependencies: []
+  description: Uses the GitHub API to enumerate repositories and member profiles associated
+    with a company search string
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-09-24'
+  name: GitHub Company Miner
+  path: recon/companies-multi/github_company_miner
+  required_keys:
+  - github_api
+  version: 2.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   dependencies:
   - serpapi
   description: Harvests profiles from LinkedIn related to the given company by using

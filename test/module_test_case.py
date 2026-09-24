@@ -256,6 +256,12 @@ class ModuleTestCase(TestCase):
     # =====================================================================================
     # Helpers
     # =====================================================================================
+    def clear_console_output(self):
+        '''
+        Clears and resets the console output history
+        '''
+        self._console.clear_output()
+
     def json_print(self, data):
         '''
         Pretty prints data in JSON form
