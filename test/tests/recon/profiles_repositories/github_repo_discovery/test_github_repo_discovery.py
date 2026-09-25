@@ -22,10 +22,10 @@ class TestGitHubCompanyMiner(ModuleTestCase):
     # Properties
     # =====================================================================================
     VERBOSITY = 1
-    FQN = "recon/companies-multi/github_company_miner"
-    TEST_RESULTS_FILENAME_MEMBERS   = "test_results_members.json"
-    TEST_RESULTS_FILENAME_REPOS     = "test_results_repos.json"
-    TEST_COMPANY                    = "Microsoft"
+    FQN = "recon/profiles-repositories/github_repo_discovery"
+    TEST_RESULTS_FILENAME_REPOS = "test_results_repos.json"
+    TEST_RESULTS_FILENAME_GISTS = "test_results_gists.json"
+    TEST_USER                   = "jdoe123"
 
     # =====================================================================================
     # General Methods
@@ -43,8 +43,8 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         self._module = self.load_module(self.FQN, mod_file_path)
 
         # Misc Props
-        self.test_results_path_members = os.path.join(os.path.dirname(__file__), self.TEST_RESULTS_FILENAME_MEMBERS)
         self.test_results_path_repos = os.path.join(os.path.dirname(__file__), self.TEST_RESULTS_FILENAME_REPOS)
+        self.test_results_path_gists = os.path.join(os.path.dirname(__file__), self.TEST_RESULTS_FILENAME_GISTS)
 
     # =====================================================================================
     # Unit tests
@@ -59,29 +59,25 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         options = self._module.get_options()
 
         # Check initial Database state
-        profiles = self.get_table_rows("profiles")
         repos = self.get_table_rows("repositories")
-        self.assertEmpty(profiles)
         self.assertEmpty(repos)
 
         # Execute Module
         self._recon.validate_options(self._module)
         self._module.preflight()
-        self._module._test_results_file_members = self.test_results_path_members
         self._module._test_results_file_repos = self.test_results_path_repos
-        self._module.run([self.TEST_COMPANY])
+        self._module._test_results_file_gists = self.test_results_path_gists
+        self._module.run([self.TEST_USER])
 
         # Check Output
         self.assertInOutput(r".*Target \(1 of 1\).*")
-        self.assertInOutput(r".*Repositories discovered: 27")
-        self.assertInOutput(r".*Profiles discovered: 30")
-        self.assertInOutput(r".*Companies processed: 1")
+        self.assertInOutput(r".*Repositories discovered: 17")
+        self.assertInOutput(r".*Gists discovered: 1")
+        self.assertInOutput(r".*Users processed: 1")
 
         # Check actual DB entries
-        profiles = self.get_table_rows("profiles")
-        repos = self.get_table_rows("repositories")
-        self.assertLengthEqual(profiles, 30)
-        self.assertLengthEqual(repos, 30)
+        repos = self.get_table_rows("repositories", True)
+        self.assertLengthEqual(repos, 18)
 
     def test_run_failures(self):
         '''
@@ -102,7 +98,7 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         self._module.BASE_URL = URL.replace(".com", ".com/blah")
 
         with self.assertRaises(ModuleRuntimeException) as cm:
-            self._module.run([self.TEST_COMPANY])
+            self._module.run([self.TEST_USER])
         self.assertExceptionStringEqual("Unexpected response from API: 404", cm)
         self._module.BASE_URL = URL
 
@@ -113,7 +109,7 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         self._module.BASE_URL = URL.replace(".com", ".fdsfsd")
 
         with self.assertRaises(ModuleRuntimeException) as cm:
-            self._module.run([self.TEST_COMPANY])
+            self._module.run([self.TEST_USER])
         self.assertStartsWith(str(cm.exception), "Unable to reach GitHub API: ")
         self._module.BASE_URL = URL
 
@@ -134,7 +130,7 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         # =====================================================================================
         # Test - Bad API Key
         # =====================================================================================
-        self._module.run([self.TEST_COMPANY])
+        self._module.run([self.TEST_USER])
         self.assertInOutput(".*Invalid authentication key. Please check key and try again.*")
 
     def test_option_pagelimit(self):
@@ -149,9 +145,9 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         options = self._module.get_options()
         self._recon.validate_options(self._module)
         self._module.preflight()
-        self._module._test_results_file_members = self.test_results_path_members
         self._module._test_results_file_repos = self.test_results_path_repos
-        self._module.run([self.TEST_COMPANY])
+        self._module._test_results_file_gists = self.test_results_path_gists
+        self._module.run([self.TEST_USER])
 
         self.assertInOutput(".*Fetching page: 1")
         self.assertNotInOutput(".*Fetching page: 2")
@@ -162,9 +158,9 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         options["pagelimit"] = 5
         self._recon.validate_options(self._module)
         self._module.preflight()
-        self._module._test_results_file_members = self.test_results_path_members
         self._module._test_results_file_repos = self.test_results_path_repos
-        self._module.run([self.TEST_COMPANY])
+        self._module._test_results_file_gists = self.test_results_path_gists
+        self._module.run([self.TEST_USER])
 
         self.assertInOutput(".*Fetching page: 1")
         self.assertInOutput(".*Fetching page: 2")
@@ -202,9 +198,9 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         options = self._module.get_options()
         self._recon.validate_options(self._module)
         self._module.preflight()
-        self._module._test_results_file_members = self.test_results_path_members
         self._module._test_results_file_repos = self.test_results_path_repos
-        self._module.run([self.TEST_COMPANY])
+        self._module._test_results_file_gists = self.test_results_path_gists
+        self._module.run([self.TEST_USER])
 
         # Check Output
         self.assertInOutput(".*Ignoring fork")
@@ -217,9 +213,9 @@ class TestGitHubCompanyMiner(ModuleTestCase):
         options["ignoreforks"] = False
         self._recon.validate_options(self._module)
         self._module.preflight()
-        self._module._test_results_file_members = self.test_results_path_members
         self._module._test_results_file_repos = self.test_results_path_repos
-        self._module.run([self.TEST_COMPANY])
+        self._module._test_results_file_gists = self.test_results_path_gists
+        self._module.run([self.TEST_USER])
 
         # Check Output
         self.assertNotInOutput(".*Ignoring fork")

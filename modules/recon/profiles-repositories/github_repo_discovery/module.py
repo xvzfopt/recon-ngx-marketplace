@@ -16,11 +16,11 @@ from requests.exceptions import RequestException
 # =====================================================================================
 
 # =====================================================================================
-# Module Class: GitHub Company Miner
+# Module Class: GitHub Repo Discovery
 # =====================================================================================
 class Module(BaseModule):
     '''
-    GitHub Company Miner Module
+    GitHub Repo Discovery Module
     '''
 
     # =====================================================================================
@@ -35,8 +35,8 @@ class Module(BaseModule):
         '''
         Override: Module prelight
         '''
-        self._test_results_file_members = None # Used for Test Cases
         self._test_results_file_repos = None # Used for Test Cases
+        self._test_results_file_gists = None # Used for Test Cases
         self._headers = None
         return super().preflight()
 
@@ -52,23 +52,23 @@ class Module(BaseModule):
         # Process Keys
         self._api_key = self.keys.get("github_api")
 
-    def module_run(self, companies):
+    def module_run(self, usernames):
         '''
         Override: Module execution
         '''
         count = 0
         repos_discovered = 0
-        profiles_discovered = 0
+        gists_discovered = 0
 
         # =====================================================================================
-        # Iterate Companies
+        # Iterate Users
         # =====================================================================================
-        with self.get_progress_bar(len(companies), unit="queries") as progress:
-            for company in companies:
-                progress.write(f"Target ({count + 1} of {len(companies)}): {company}")
+        with self.get_progress_bar(len(usernames), unit="queries") as progress:
+            for username in usernames:
+                progress.write(f"Target ({count + 1} of {len(usernames)}): {username}")
 
-                profiles_discovered += self.discover_profiles(company)
-                repos_discovered += self.discover_repos(company)
+                repos_discovered += self.discover_repos(username)
+                gists_discovered += self.discover_gists(username)
                 count += 1
                 progress.update()
 
@@ -77,74 +77,18 @@ class Module(BaseModule):
         # # =====================================================================================
         self.heading("Summary", level=0)
         self.output("Repositories discovered: %s" % repos_discovered)
-        self.output("Profiles discovered: %s" % profiles_discovered)
-        self.output("Companies processed: %s" % count)
+        self.output("Gists discovered: %s" % gists_discovered)
+        self.output("Users processed: %s" % count)
 
     # =====================================================================================
     # Internal Helpers
     # =====================================================================================
-    def discover_profiles(self, company):
+    def discover_repos(self, username):
         '''
-        Discovers profiles associated with the specified company
+        Discovers repositories associated with the specified username
 
-        :param company: The target company
-        :type company: str
-        :returns: The number of discovered profiles
-        :rtype: int
-        '''
-        page = 1
-        count = 0
-
-        # =====================================================================================
-        # Page Lookups
-        # =====================================================================================
-        while page <= self._page_limit:
-            url = f"{self.BASE_URL}/orgs/{quote_plus(company)}/members?page={page}"
-            self.debug("Fetching page: %s" % page)
-
-            if self._test_results_file_members:
-                with open(self._test_results_file_members, "r") as results_file:
-                    results = json.load(results_file)
-            else:
-                try:
-                    response = self.request("GET", url, headers=self.get_headers())
-                    results = response.json()
-                except requests.exceptions.JSONDecodeError as ex:
-                    self.debug("Bad API response: %s" % response.text)
-                    raise ModuleValidationException("Unexpected response from GitHub API. Please check debug output")
-                except RequestException as ex:
-                    raise ModuleRuntimeException("Unable to reach GitHub API: %s" % ex)
-
-                # Check Response
-                if response.status_code == 401:
-                    raise ModuleValidationException("Invalid authentication key. Please check key and try again")
-                elif response.status_code != 200:
-                    raise ModuleRuntimeException("Unexpected response from API: %s" % response.status_code)
-
-            # =====================================================================================
-            # Process Data
-            # =====================================================================================
-            if not results:
-                break
-            for result in results:
-                profile_data = {
-                    "username": result["login"],
-                    "url": result["html_url"],
-                    "notes": company,
-                    "resource": "GitHub",
-                    "category": "contributor"
-                }
-                count += self.insert_profiles(**profile_data)
-            page += 1
-
-        return count
-
-    def discover_repos(self, company):
-        '''
-        Discovers repositories associated with the specified company
-
-        :param company: The target company
-        :type company: str
+        :param username: The target username
+        :type username: str
         :returns: The number of discovered repos
         :rtype: int
         '''
@@ -155,7 +99,7 @@ class Module(BaseModule):
         # Page Lookups
         # =====================================================================================
         while page <= self._page_limit:
-            url = f"{self.BASE_URL}/orgs/{quote_plus(company)}/repos?page={page}"
+            url = f"{self.BASE_URL}/users/{quote_plus(username)}/repos?page={page}"
             self.debug("Fetching page: %s" % page)
 
             if self._test_results_file_repos:
@@ -195,6 +139,65 @@ class Module(BaseModule):
                     "category": "repo"
                 }
                 count += self.insert_repositories(**repo_data)
+            page += 1
+
+        return count
+
+    def discover_gists(self, username):
+        '''
+        Discovers gists associated with the specified username
+
+        :param username: The target username
+        :type username: str
+        :returns: The number of discovered gists
+        :rtype: int
+        '''
+        page = 1
+        count = 0
+
+        # =====================================================================================
+        # Page Lookups
+        # =====================================================================================
+        while page <= self._page_limit:
+            url = f"{self.BASE_URL}/users/{quote_plus(username)}/gists?page={page}"
+            self.debug("Fetching page: %s" % page)
+
+            if self._test_results_file_gists:
+                with open(self._test_results_file_gists, "r") as results_file:
+                    results = json.load(results_file)
+            else:
+                try:
+                    response = self.request("GET", url, headers=self.get_headers())
+                    results = response.json()
+                except requests.exceptions.JSONDecodeError as ex:
+                    self.debug("Bad API response: %s" % response.text)
+                    raise ModuleValidationException("Unexpected response from GitHub API. Please check debug output")
+                except RequestException as ex:
+                    raise ModuleRuntimeException("Unable to reach GitHub API: %s" % ex)
+
+                # Check Response
+                if response.status_code == 401:
+                    raise ModuleValidationException("Invalid authentication key. Please check key and try again")
+                elif response.status_code != 200:
+                    raise ModuleRuntimeException("Unexpected response from API: %s" % response.status_code)
+
+            # =====================================================================================
+            # Process Data
+            # =====================================================================================
+            if not results:
+                break
+            for result in results:
+                files = result["files"].values()
+                for _file in files:
+                    gist_data = {
+                        "name": _file["filename"],
+                        "owner": result["owner"]["login"],
+                        "description": result["description"],
+                        "url": _file["raw_url"],
+                        "resource": "GitHub",
+                        "category": "gist"
+                    }
+                    count += self.insert_repositories(**gist_data)
             page += 1
 
         return count

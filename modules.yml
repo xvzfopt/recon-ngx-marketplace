@@ -268,12 +268,27 @@
   description: Uses the GitHub API to gather user information from harvested profiles.
     Updated the 'contacts' tablewith the results
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
   last_updated: '2026-09-25'
   name: GitHub User Miner
   path: recon/profiles-contacts/github_user_miner
   required_keys:
   - github_api
   version: 2.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  dependencies: []
+  description: Uses the GitHub API to enumerate a user's repositories and gists. Updates
+    the 'repositories' table with the results
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-09-25'
+  name: GitHub Repo Discovery
+  path: recon/profiles-repositories/github_repo_discovery
+  required_keys:
+  - github_api
+  version: 1.0.0

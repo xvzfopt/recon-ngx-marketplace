@@ -44,9 +44,6 @@ class TestGitHubUserMiner(ModuleTestCase):
         # Misc Props
         self.test_results_path = os.path.join(os.path.dirname(__file__), self.TEST_RESULTS_FILENAME)
 
-        # Wait to prevent annoying throttling
-        time.sleep(1)
-
     # =====================================================================================
     # Unit tests
     # =====================================================================================
