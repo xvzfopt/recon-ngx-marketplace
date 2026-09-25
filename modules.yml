@@ -96,10 +96,10 @@
   description: Uses the GitHub API to enumerate repositories and member profiles associated
     with a company search string
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
-  last_updated: '2026-09-24'
+  last_updated: '2026-09-25'
   name: GitHub Company Miner
   path: recon/companies-multi/github_company_miner
   required_keys:
@@ -261,3 +261,19 @@
   path: recon/ports-domains/cert_domains_extractor
   required_keys: []
   version: 1.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  dependencies: []
+  description: Uses the GitHub API to gather user information from harvested profiles.
+    Updated the 'contacts' tablewith the results
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-09-25'
+  name: GitHub User Miner
+  path: recon/profiles-contacts/github_user_miner
+  required_keys:
+  - github_api
+  version: 2.0.0
