@@ -283,12 +283,28 @@
   description: Uses the GitHub API to enumerate a user's repositories and gists. Updates
     the 'repositories' table with the results
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
-  last_updated: '2026-09-25'
+  last_updated: '2026-10-07'
   name: GitHub Repo Discovery
   path: recon/profiles-repositories/github_repo_discovery
   required_keys:
   - github_api
   version: 1.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  - Michael Henriksen (@michenriksen)
+  dependencies: []
+  description: Uses the GitHub API to gather users from repository commits. Updates
+    the 'profiles' and 'contacts 'tables with the results
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-10-07'
+  name: GitHub Commit Snooper
+  path: recon/repositories-multi/github_commit_snooper
+  required_keys:
+  - github_api
+  version: 2.0.0
