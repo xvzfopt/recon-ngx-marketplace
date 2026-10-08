@@ -299,12 +299,29 @@
   description: Uses the GitHub API to gather users from repository commits. Updates
     the 'profiles' and 'contacts 'tables with the results
   files:
+  - __init__.py
+  - meta.py
+  - module.py
+  last_updated: '2026-10-08'
+  name: GitHub Commit Snooper
+  path: recon/repositories-multi/github_commit_snooper
+  required_keys:
+  - github_api
+  version: 2.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  - Tim Tomes (@lanmaster53)
+  dependencies: []
+  description: Uses the GitHub API to search Gists for vulnerarbility keywords. Updates
+    the 'vulerabilities' table with the results
+  files:
   - meta.py
   - module.py
   - __init__.py
-  last_updated: '2026-10-07'
-  name: GitHub Commit Snooper
-  path: recon/repositories-multi/github_commit_snooper
+  - data/gist_keywords.txt
+  last_updated: '2026-10-08'
+  name: GitHub Gist Vulnerability Searcher
+  path: recon/repositories-vulnerabilities/github_gist_vulnerability_searcher
   required_keys:
   - github_api
   version: 2.0.0
