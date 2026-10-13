@@ -1,7 +1,18 @@
+# =====================================================================================
+# GitHub Dorks
+# --
+#
+# Note: There are limitations and rules for GitHub Dorking, such as a maximum query
+# length of 256 character. For full details, see the following docs:
+# https://docs.github.com/en/rest/search/search?apiVersion=2026-03-10#search-code
+#
+# =====================================================================================
+
 # http://blog.conviso.com.br/2013/06/github-hacking-for-fun-and-sensitive.html
 # private keys
 extension:pem private
 extension:conf FTP server configuration
+
 # email addresses
 extension:xls mail
 extension:sql mysql dump
