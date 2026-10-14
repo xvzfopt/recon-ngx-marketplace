@@ -97,12 +97,12 @@ class Module(BaseModule):
                     # Iterate Dorks
                     # =====================================================================================
                     for dork in self._dorks:
-                        progress.write(f"Query ({count + 1} of {queries_count})")
+                        query = f"repo:{repo} {dork}"
+                        progress.write(f"Query ({count + 1} of {queries_count}): {utils.truncate_string(query, 50)}")
                         page_no = 1
                         while page_no <= self._page_limit:
                             self.debug("Fetching page: %s" % page_no)
 
-                            query = f"repo:{repo} {dork}"
                             results = self.run_search(query, page_no)
 
                             # =====================================================================================
