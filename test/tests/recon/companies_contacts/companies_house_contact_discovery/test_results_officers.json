@@ -1,0 +1,216 @@
+{
+  "active_count": 0,
+  "etag": "b5b258c0f32272a79d3cbb9f501b5230585e1a58",
+  "items": [
+    {
+      "etag": "b5b258c0f32272a79d3cbb9f501b5230585e1a58",
+      "address": {
+        "address_line_1": "Madison Ave",
+        "address_line_2": "Floor 22a",
+        "country": "United States",
+        "locality": "New York",
+        "postal_code": "10015",
+        "premises": "172",
+        "region": "New York"
+      },
+      "appointed_on": "2020-03-05",
+      "is_pre_1992_appointment": false,
+      "country_of_residence": "United States",
+      "date_of_birth": {
+        "month": 4,
+        "year": 1970
+      },
+      "links": {
+        "self": "/company/12033618/appointments/qplnZjWb80Qllwqaqr0vx12q3E8",
+        "officer": {
+          "appointments": "/officers/ge8GBXNDKoUN5T5kQkuPNEtNBQI/appointments"
+        }
+      },
+      "name": "CAMPBELL-DI CIERI, Paul Jonathan",
+      "nationality": "British,American",
+      "officer_role": "director",
+      "person_number": "267851300002"
+    },
+    {
+      "etag": "a643aa4e112555aae3ca13801e176671403341cf",
+      "address": {
+        "address_line_1": "Microsoft Way",
+        "country": "United States",
+        "locality": "Redmond",
+        "postal_code": "98052",
+        "premises": "1",
+        "region": "Wa"
+      },
+      "appointed_on": "2020-03-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+        "self": "/company/12033618/appointments/1P1dL3aqABbu4CRr-vcyw5VQFx4",
+        "officer": {
+          "appointments": "/officers/NCT9FZSgrIyiEpcw4hkb8NOOClA/appointments"
+        }
+      },
+      "name": "MICROSOFT CORPORATION",
+      "officer_role": "corporate-director",
+      "identification": {
+        "identification_type": "other-corporate-body-or-firm",
+        "legal_authority": "WASHINGTON STATE",
+        "legal_form": "LISTED STOCK CORPORATION",
+        "place_registered": "UNITED STATES",
+        "registration_number": "600 413 485"
+      },
+      "person_number": "267852310001"
+    },
+    {
+      "etag": "92622000f311e98570fd416b686d112f4119d67c",
+      "address": {
+        "address_line_1": "Microsoft Campus",
+        "address_line_2": "Thames Valley Park, Reading, Berkshire",
+        "country": "England",
+        "locality": "Reading",
+        "postal_code": "RG6 1WG",
+        "premises": "Microsoft Campus"
+      },
+      "appointed_on": "2020-03-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+        "self": "/company/12033618/appointments/m0H85BwbVdMX7bnNpJcoUFCDURg",
+        "officer": {
+          "appointments": "/officers/ckRFSCE4b-nYCBZszm6XHj698Vs/appointments"
+        }
+      },
+      "name": "MICROSOFT LIMITED",
+      "officer_role": "corporate-director",
+      "identification": {
+        "identification_type": "uk-limited-company",
+        "registration_number": "01624297"
+      },
+      "person_number": "267852000001"
+    },
+    {
+      "etag": "efa9a8eb860e447fb3899a61050e52c9718161e4",
+      "address": {
+        "address_line_1": "6441 S Chickasaw Trail",
+        "address_line_2": "Unit 237",
+        "country": "United States",
+        "locality": "Orlando",
+        "postal_code": "32829",
+        "premises": "6441",
+        "region": "Fl"
+      },
+      "appointed_on": "2019-06-24",
+      "is_pre_1992_appointment": false,
+      "country_of_residence": "United States",
+      "date_of_birth": {
+        "month": 4,
+        "year": 1970
+      },
+      "links": {
+        "self": "/company/12033618/appointments/3Ejl3rTXj5pVEGR34i3Smwl91zg",
+        "officer": {
+          "appointments": "/officers/6zc7OmVLaeW2-teLB7f3PYDuAUY/appointments"
+        }
+      },
+      "name": "CAMBRIA, Paul",
+      "nationality": "American,Italian",
+      "officer_role": "director",
+      "resigned_on": "2019-06-28",
+      "person_number": "257147280001"
+    },
+    {
+      "etag": "491c5b7119087a09a735240f82d1cd3ab84639c3",
+      "address": {
+        "address_line_1": "S Chickasaw Trail",
+        "address_line_2": "Unit No. 237",
+        "country": "United States",
+        "locality": "Orlando",
+        "premises": "6441",
+        "region": "Florida 32829"
+      },
+      "appointed_on": "2019-06-05",
+      "is_pre_1992_appointment": false,
+      "country_of_residence": "United States",
+      "date_of_birth": {
+        "month": 4,
+        "year": 1970
+      },
+      "links": {
+        "self": "/company/12033618/appointments/GYkdeTNGQe3pr4VQthrVmnmJxRw",
+        "officer": {
+          "appointments": "/officers/6zc7OmVLaeW2-teLB7f3PYDuAUY/appointments"
+        }
+      },
+      "name": "CAMBRIA, Paul",
+      "nationality": "American,Italian",
+      "officer_role": "director",
+      "resigned_on": "2019-06-10",
+      "person_number": "257147280001"
+    },
+    {
+      "etag": "8914ee073c30a31ea0c5dfa0c9cb8b7fe6a56a8a",
+      "address": {
+        "address_line_1": "Esta Lane",
+        "country": "United States",
+        "locality": "Orlando",
+        "postal_code": "32827",
+        "premises": "7991",
+        "region": "Florida"
+      },
+      "appointed_on": "2019-06-10",
+      "is_pre_1992_appointment": false,
+      "country_of_residence": "United States",
+      "date_of_birth": {
+        "month": 6,
+        "year": 1964
+      },
+      "links": {
+        "self": "/company/12033618/appointments/UJvLxoeH3-Mk51p8FgZtf3Xy3lg",
+        "officer": {
+          "appointments": "/officers/OojuIdOFOt9bQMA5VDnFHGmS3xM/appointments"
+        }
+      },
+      "name": "ESCOBAR VALDIVIESO, Cesar Augusto",
+      "nationality": "Venezuelan",
+      "officer_role": "director",
+      "resigned_on": "2019-06-19",
+      "person_number": "259336050001"
+    },
+    {
+      "etag": "ee953031495b6e3d132775dd1919524576357a75",
+      "address": {
+        "address_line_1": "Via Rosa Agazzi",
+        "country": "Italy",
+        "locality": "San Miniato",
+        "postal_code": "56028",
+        "premises": "8",
+        "region": "Pisa"
+      },
+      "appointed_on": "2019-06-28",
+      "is_pre_1992_appointment": false,
+      "country_of_residence": "Italy",
+      "date_of_birth": {
+        "month": 1,
+        "year": 1973
+      },
+      "links": {
+        "self": "/company/12033618/appointments/PNJa6fL7D2YtFjpqR4B1Fros6mg",
+        "officer": {
+          "appointments": "/officers/EzhaHcFpLdJsDw0u5Bg_f4S3kIs/appointments"
+        }
+      },
+      "name": "WHITELEY, Brett James",
+      "nationality": "Australian",
+      "officer_role": "director",
+      "resigned_on": "2020-03-05",
+      "person_number": "259976810001"
+    }
+  ],
+  "items_per_page": 10,
+  "kind": "officer-list",
+  "links": {
+    "self": "/company/12033618/officers"
+  },
+  "resigned_count": 4,
+  "inactive_count": 3,
+  "start_index": 0,
+  "total_results": 7
+}

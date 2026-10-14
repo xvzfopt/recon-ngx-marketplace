@@ -1,0 +1,289 @@
+{
+  "items": [
+    {
+      "address": {
+        "address_line_1": "Canada Square",
+        "address_line_2": "Level 3",
+        "country": "England",
+        "locality": "London",
+        "postal_code": "E14 5LQ",
+        "premises": "25",
+        "region": "Canary Wharf"
+      },
+      "address_snippet": "25 Canada Square, Level 3, London, Canary Wharf, England, E14 5LQ",
+      "company_number": "12033618",
+      "company_status": "dissolved",
+      "company_type": "ltd",
+      "date_of_cessation": "2021-07-06",
+      "date_of_creation": "2019-06-05",
+      "description": "12033618 - Dissolved on 6 July 2021",
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/12033618"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "ONE DRIVE HOLDINGS LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Northumberland Road",
+        "address_line_2": "Ballsbridge",
+        "country": "Ireland",
+        "locality": "Dublin",
+        "premises": "39",
+        "region": "D04h1f3"
+      },
+      "address_snippet": "39 Northumberland Road, Ballsbridge, Dublin, D04h1f3, Ireland",
+      "company_number": "FC042061",
+      "company_status": "active",
+      "company_type": "oversea-company",
+      "date_of_creation": "2022-05-06",
+      "description": "FC042061 - First UK establishment opened on 6 May 2022",
+      "description_identifier": [
+        "first-uk-establishment-opened-on"
+      ],
+      "external_registration_number": "770977",
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/FC042061"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "ONE DRIVER APP HOLDINGS LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Corbets Tey Road",
+        "locality": "Upminster",
+        "postal_code": "RM14 2DF",
+        "premises": "325"
+      },
+      "address_snippet": "325 Corbets Tey Road, Upminster, RM14 2DF",
+      "company_number": "BR027179",
+      "company_status": "open",
+      "company_type": "uk-establishment",
+      "date_of_creation": "2022-05-06",
+      "description": "BR027179 - Opened on 6 May 2022",
+      "description_identifier": [
+        "opened-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/BR027179"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "ONE DRIVER APP HOLDINGS LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Tottenham Court Road, Suite 6670a",
+        "address_line_2": "Fitzrovia",
+        "country": "United Kingdom",
+        "locality": "London",
+        "postal_code": "W1T 2EW",
+        "premises": "60"
+      },
+      "address_snippet": "60 Tottenham Court Road, Suite 6670a, Fitzrovia, London, United Kingdom, W1T 2EW",
+      "company_number": "16759936",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2025-10-02",
+      "description": "16759936 - Incorporated on 2 October 2025",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/16759936"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "ALL IN ONE DRIVE LTD"
+    },
+    {
+      "address": {
+        "address_line_1": "4 Greek Street",
+        "country": "England",
+        "locality": "Stockport",
+        "postal_code": "SK3 8AB",
+        "premises": "Alpha House",
+        "region": "Cheshire"
+      },
+      "address_snippet": "Alpha House, 4 Greek Street, Stockport, Cheshire, England, SK3 8AB",
+      "company_number": "09903918",
+      "company_status": "active",
+      "company_type": "private-limited-guarant-nsc",
+      "date_of_creation": "2015-12-07",
+      "description": "09903918 - Incorporated on 7 December 2015",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/09903918"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "BRATTICE DRIVE (BLOCK ONE) RTM COMPANY LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "3 Greenhayes",
+        "locality": "Charmouth",
+        "postal_code": "DT6 6BJ",
+        "premises": "Merlyn",
+        "region": "Dorset"
+      },
+      "address_snippet": "Merlyn, 3 Greenhayes, Charmouth, Dorset, DT6 6BJ",
+      "company_number": "07289473",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2010-06-18",
+      "description": "07289473 - Incorporated on 18 June 2010",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/07289473"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "CLASS ONE DRIVER HIRE LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Commercial Street Commercial Street",
+        "address_line_2": "Rothwell",
+        "country": "England",
+        "locality": "Leeds",
+        "postal_code": "LS26 0QD",
+        "premises": "57a"
+      },
+      "address_snippet": "57a Commercial Street Commercial Street, Rothwell, Leeds, England, LS26 0QD",
+      "company_number": "09610764",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2015-05-27",
+      "description": "09610764 - Incorporated on 27 May 2015",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/09610764"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "CLASS ONE DRIVER MANAGEMENT CONSULTANCY LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Canary Wharf",
+        "country": "United Kingdom",
+        "locality": "London",
+        "postal_code": "E14 5AB",
+        "premises": "One Canada Square"
+      },
+      "address_snippet": "One Canada Square, Canary Wharf, London, United Kingdom, E14 5AB",
+      "company_number": "09442055",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2015-02-16",
+      "description": "09442055 - Incorporated on 16 February 2015",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/09442055"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "CW ONE PARK DRIVE LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Floor One Canada Square",
+        "address_line_2": "Canary Wharf",
+        "country": "United Kingdom",
+        "locality": "London",
+        "postal_code": "E14 5AB",
+        "premises": "30th"
+      },
+      "address_snippet": "30th Floor One Canada Square, Canary Wharf, London, United Kingdom, E14 5AB",
+      "company_number": "10675070",
+      "company_status": "active",
+      "company_type": "ltd",
+      "date_of_creation": "2017-03-16",
+      "description": "10675070 - Incorporated on 16 March 2017",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/10675070"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "CW ONE PARK DRIVE RESIDENTIAL LIMITED"
+    },
+    {
+      "address": {
+        "address_line_1": "Tanners Close Tanners Close",
+        "address_line_2": "Middleton Cheney",
+        "country": "England",
+        "locality": "Banbury",
+        "postal_code": "OX17 2GD",
+        "premises": "22"
+      },
+      "address_snippet": "22 Tanners Close Tanners Close, Middleton Cheney, Banbury, England, OX17 2GD",
+      "company_number": "15722781",
+      "company_status": "dissolved",
+      "company_type": "ltd",
+      "date_of_cessation": "2026-07-07",
+      "date_of_creation": "2024-05-15",
+      "description": "15722781 - Dissolved on 7 July 2026",
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "kind": "searchresults#company",
+      "links": {
+        "self": "/company/15722781"
+      },
+      "matches": {
+        "snippet": []
+      },
+      "snippet": "",
+      "title": "GIA ONE DRIVER LTD"
+    }
+  ],
+  "items_per_page": 10,
+  "kind": "search#companies",
+  "page_number": 1,
+  "start_index": 0,
+  "total_results": 10000
+}

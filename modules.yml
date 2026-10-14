@@ -32,6 +32,22 @@
   version: 3.0.2
 - authors:
   - xvzf_opt (@xvzf_opt)
+  dependencies:
+  - ''
+  description: Finds officers listed for a company in the Companies House Register.
+    Updates the 'contacts' table with the result
+  files:
+  - meta.py
+  - module.py
+  - __init__.py
+  last_updated: '2026-10-14'
+  name: Companies House - Contact Discovery
+  path: recon/companies-contacts/companies_house_contact_discovery
+  required_keys:
+  - companies_house_api
+  version: 1.0.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
   - Jonathan M. Wilbur <jonathan@wilbur.space>
   dependencies: []
   description: Gathers contact information from the IANA Private Enterprise Number
@@ -316,12 +332,12 @@
     code using GitHub Dorks and the 'repo' search operator. Updates the 'vulnerabilities'
     table with the results.
   files:
-  - meta.py
-  - module.py
   - __init__.py
   - exceptions.py
+  - meta.py
+  - module.py
   - data/github_dorks.txt
-  last_updated: '2026-10-13'
+  last_updated: '2026-10-14'
   name: GitHub Dorks Analyzer
   path: recon/repositories-vulnerabilities/github_dorks_analyzer
   required_keys:
