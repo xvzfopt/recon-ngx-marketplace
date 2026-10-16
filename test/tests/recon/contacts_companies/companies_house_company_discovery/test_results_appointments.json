@@ -1,0 +1,44 @@
+{
+  "active_count": 1,
+  "etag": "etag redacted",
+  "inactive_count": 0,
+  "is_corporate_officer": false,
+  "items": [
+    {
+      "address": {
+        "address_line_1": "address_line_1 redacted 01",
+        "locality": "locality redacted 01",
+        "postal_code": "postal_code redacted 01",
+        "premises": "premises redacted 01",
+        "region": "region redacted 01"
+      },
+      "appointed_on": "2020-02-01",
+      "appointed_to": {
+        "company_name": "company_name redacted 01",
+        "company_number": "company_number redacted 01",
+        "company_status": "active"
+      },
+      "name": "name redacted 01",
+      "is_pre_1992_appointment": false,
+      "links": {
+        "company": "/company/company_number redacted 01"
+      },
+      "name_elements": {
+        "forename": "forename redacted 01",
+        "title": "Mr",
+        "other_forenames": "other_forenames redacted 01",
+        "surname": "surname redacted 01"
+      },
+      "officer_role": "director"
+    }
+  ],
+  "items_per_page": 35,
+  "kind": "personal-appointment",
+  "links": {
+    "self": "/officers/officer-01-redacted-id/appointments"
+  },
+  "name": "name redacted 01",
+  "resigned_count": 0,
+  "start_index": 0,
+  "total_results": 1
+}

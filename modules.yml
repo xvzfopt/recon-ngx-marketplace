@@ -37,10 +37,10 @@
   description: Finds officers listed for a company in the Companies House Register.
     Updates the 'contacts' table with the result
   files:
+  - __init__.py
   - meta.py
   - module.py
-  - __init__.py
-  last_updated: '2026-10-14'
+  last_updated: '2026-10-16'
   name: Companies House - Contact Discovery
   path: recon/companies-contacts/companies_house_contact_discovery
   required_keys:
@@ -159,6 +159,22 @@
   required_keys:
   - shodan_api
   version: 2.1.0
+- authors:
+  - xvzf_opt (@xvzf_opt)
+  dependencies:
+  - ''
+  description: Finds companies associated with a contact in the Companies House Register.
+    Updates the 'companies' table with the result
+  files:
+  - meta.py
+  - __init__.py
+  - module.py
+  last_updated: '2026-10-16'
+  name: Companies House - Company Discovery
+  path: recon/contacts-companies/companies_house_company_discovery
+  required_keys:
+  - companies_house_api
+  version: 1.0.0
 - authors:
   - xvzf_opt (@xvzf_opt)
   dependencies: []

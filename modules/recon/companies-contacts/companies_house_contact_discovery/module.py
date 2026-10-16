@@ -15,11 +15,11 @@ from requests.exceptions import JSONDecodeError
 # =====================================================================================
 
 # =====================================================================================
-# Module Class: Companies House Search
+# Module Class: Companies House - Contact Discovery
 # =====================================================================================
 class Module(BaseModule):
     '''
-    Companies House Search Module
+    Companies House - Contact Discovery
     '''
 
     # =====================================================================================
